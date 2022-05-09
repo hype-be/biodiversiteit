@@ -1,0 +1,29 @@
+uuid: 7835a0b8-c4fc-4285-b06f-368cad032a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_iframe
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.one_column_media
+id: paragraph.one_column_media.field_media_iframe
+field_name: field_media_iframe
+entity_type: paragraph
+bundle: one_column_media
+label: Iframe
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: status
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

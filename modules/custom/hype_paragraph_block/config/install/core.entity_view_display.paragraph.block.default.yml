@@ -1,0 +1,42 @@
+uuid: 707c6aac-b34f-4fab-8e66-56194874695a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_block
+    - field.field.paragraph.block.field_color_picker
+    - field.field.paragraph.block.field_layout
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+    - color_field
+    - options
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_block:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_color_picker:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_layout:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

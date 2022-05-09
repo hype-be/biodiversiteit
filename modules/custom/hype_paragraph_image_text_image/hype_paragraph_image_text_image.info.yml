@@ -1,0 +1,13 @@
+name: 'HYPE image text image'
+description: 'A paragraph with 2 image fields, for each image there is a media size field, 1 WYSIWYG field (with text color picker), background color picker field.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - field
+  - field_group
+  - paragraphs
+  - color_field
+  - colorbutton
+version: 8.x-1.0
+package: 'HYPE paragraphs'

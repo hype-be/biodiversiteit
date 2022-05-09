@@ -1,0 +1,23 @@
+uuid: be68a222-26d3-4468-888d-2399bb804823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.one_column_media
+  module:
+    - options
+id: paragraph.one_column_media.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: one_column_media
+label: Layout
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,201 @@
+uuid: 556e0fc8-9ab1-4105-baf2-20f9469b046b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_columns.field_border_overlay
+    - field.field.paragraph.two_columns.field_color_picker
+    - field.field.paragraph.two_columns.field_column_size
+    - field.field.paragraph.two_columns.field_media_iframe
+    - field.field.paragraph.two_columns.field_media_img
+    - field.field.paragraph.two_columns.field_media_position
+    - field.field.paragraph.two_columns.field_media_size
+    - field.field.paragraph.two_columns.field_wysiwyg
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - color_field
+    - field_group
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_horizontal_tabs:
+      children:
+        - group_layout
+        - group_image
+        - group_text
+        - group_media_settings
+        - group_background
+        - group_published
+      label: 'Horizontal tabs'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_published:
+      children:
+        - status
+      label: Published
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 31
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_image:
+      children:
+        - field_media_img
+        - field_media_iframe
+      label: Media
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 27
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_text:
+      children:
+        - field_wysiwyg
+      label: Text
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 28
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_background:
+      children:
+        - field_color_picker
+      label: Background
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 30
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_layout:
+      children:
+        - field_column_size
+        - field_border_overlay
+      label: Layout
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 26
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_media_settings:
+      children:
+        - field_media_size
+        - field_media_position
+      label: 'Media settings'
+      region: content
+      parent_name: group_horizontal_tabs
+      weight: 29
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.two_columns.default
+targetEntityType: paragraph
+bundle: two_columns
+mode: default
+content:
+  field_border_overlay:
+    type: boolean_checkbox
+    weight: 25
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_color_picker:
+    type: color_field_widget_box
+    weight: 32
+    region: content
+    settings:
+      default_colors: '#9dc53c,#06543c,#2b8c43,#01a3cc,#e73d2e,#0d68aa,#ffcd00,#bd4035,#69b66e,#ffffff,#000000,#eef2ed'
+    third_party_settings: {  }
+  field_column_size:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_iframe:
+    type: media_library_widget
+    weight: 22
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_media_img:
+    type: media_library_widget
+    weight: 21
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_media_position:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_size:
+    type: options_select
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wysiwyg:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

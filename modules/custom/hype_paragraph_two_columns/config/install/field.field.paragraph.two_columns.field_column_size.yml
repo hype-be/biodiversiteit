@@ -1,0 +1,23 @@
+uuid: f6a21cdf-f246-48e1-af97-0ab28ff940ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_size
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - options
+id: paragraph.two_columns.field_column_size
+field_name: field_column_size
+entity_type: paragraph
+bundle: two_columns
+label: 'Column size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

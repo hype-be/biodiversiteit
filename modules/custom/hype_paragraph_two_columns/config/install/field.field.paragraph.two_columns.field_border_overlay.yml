@@ -1,0 +1,23 @@
+uuid: ca214eac-c06a-41bf-a6a4-bf97ad8183c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border_overlay
+    - paragraphs.paragraphs_type.two_columns
+id: paragraph.two_columns.field_border_overlay
+field_name: field_border_overlay
+entity_type: paragraph
+bundle: two_columns
+label: 'Border overlay'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

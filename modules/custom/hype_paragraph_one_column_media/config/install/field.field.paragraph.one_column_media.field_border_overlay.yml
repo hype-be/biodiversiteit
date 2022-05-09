@@ -1,0 +1,23 @@
+uuid: 6c01f0f1-27f1-4b9d-b58a-29dae1ea5caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border_overlay
+    - paragraphs.paragraphs_type.one_column_media
+id: paragraph.one_column_media.field_border_overlay
+field_name: field_border_overlay
+entity_type: paragraph
+bundle: one_column_media
+label: 'Border overlay'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

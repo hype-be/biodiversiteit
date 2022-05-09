@@ -1,0 +1,23 @@
+uuid: 25a7adde-6866-44d1-b851-6fa1e103f35c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_size
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - options
+id: paragraph.two_columns.field_media_size
+field_name: field_media_size
+entity_type: paragraph
+bundle: two_columns
+label: 'Media size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: contained
+default_value_callback: ''
+settings: {  }
+field_type: list_string

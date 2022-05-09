@@ -1,0 +1,44 @@
+uuid: 3ce72b9c-680c-408f-bc08-25f8b2782c3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spacer.field_color_picker
+    - field.field.paragraph.spacer.field_spacer_height
+    - field.field.paragraph.spacer.field_spacer_height_mobile
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - color_field
+id: paragraph.spacer.default
+targetEntityType: paragraph
+bundle: spacer
+mode: default
+content:
+  field_color_picker:
+    weight: 2
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_spacer_height:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_spacer_height_mobile:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

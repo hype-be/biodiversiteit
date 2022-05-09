@@ -1,0 +1,23 @@
+uuid: 40ff891f-40d0-4179-a991-9c6c1b005fda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_size
+    - paragraphs.paragraphs_type.image_text_image
+  module:
+    - options
+id: paragraph.image_text_image.field_media_size
+field_name: field_media_size
+entity_type: paragraph
+bundle: image_text_image
+label: 'Media size'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: fluid
+default_value_callback: ''
+settings: {  }
+field_type: list_string

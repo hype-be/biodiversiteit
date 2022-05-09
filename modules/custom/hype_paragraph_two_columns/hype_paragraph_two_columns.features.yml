@@ -1,0 +1,17 @@
+bundle: HYPE
+required:
+  - core.entity_form_display.paragraph.text_with_image.default.yml
+  - core.entity_view_display.paragraph.spacer.default.yml
+  - field.field.paragraph.spacer.field_spacer_height.yml
+  - paragraphs.paragraphs_type.spacer.yml
+  - field.field.paragraph.two_columns.field_border_overlay.yml
+  - field.field.paragraph.two_columns.field_color_picker.yml
+  - field.field.paragraph.two_columns.field_column_size.yml
+  - field.field.paragraph.two_columns.field_media_iframe.yml
+  - field.field.paragraph.two_columns.field_media_img.yml
+  - field.field.paragraph.two_columns.field_media_position.yml
+  - field.field.paragraph.two_columns.field_media_size.yml
+  - field.field.paragraph.two_columns.field_wysiwyg.yml
+  - paragraphs.paragraphs_type.two_columns.yml
+  - core.entity_form_display.paragraph.two_columns.default.yml
+  - core.entity_view_display.paragraph.two_columns.default.yml

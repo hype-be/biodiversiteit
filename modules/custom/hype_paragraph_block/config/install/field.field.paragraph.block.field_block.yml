@@ -1,0 +1,33 @@
+uuid: 9204d41e-aa71-4790-aa75-08e0623db6f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+id: paragraph.block.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: block
+label: Block
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      grid: grid
+      'views_block:books-block_1': 'views_block:books-block_1'
+      'views_block:brands-block_1': 'views_block:brands-block_1'
+      'views_block:case_study_slider-block_1': 'views_block:case_study_slider-block_1'
+      'views_block:how_to_steps-block_1': 'views_block:how_to_steps-block_1'
+      'views_block:random_recipes-block_1': 'views_block:random_recipes-block_1'
+      'views_block:recipes-block_1': 'views_block:recipes-block_1'
+      'views_block:testimonial_max_2_items-block_1': 'views_block:testimonial_max_2_items-block_1'
+      'views_block:testimonial_3-block_1': 'views_block:testimonial_3-block_1'
+field_type: block_field

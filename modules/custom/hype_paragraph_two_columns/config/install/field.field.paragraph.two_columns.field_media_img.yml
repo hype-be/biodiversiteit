@@ -1,0 +1,29 @@
+uuid: adb1eff8-85dc-4d2c-8fe3-457d162ba25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_img
+    - media.type.image
+    - paragraphs.paragraphs_type.two_columns
+id: paragraph.two_columns.field_media_img
+field_name: field_media_img
+entity_type: paragraph
+bundle: two_columns
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: status
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 6c4da1e6-cb56-4050-950f-0e0bb3bd71c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - options
+id: paragraph.two_columns.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: two_columns
+label: 'Media position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

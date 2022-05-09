@@ -1,0 +1,25 @@
+uuid: 2235062a-9fb5-48ce-86e3-59528b8c2ce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_picker
+    - paragraphs.paragraphs_type.block
+  module:
+    - color_field
+id: paragraph.block.field_color_picker
+field_name: field_color_picker
+entity_type: paragraph
+bundle: block
+label: 'Background color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    color: '#ffffff'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

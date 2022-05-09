@@ -1,0 +1,15 @@
+uuid: 15a7c763-6691-413d-9532-27fc5f34fe05
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: two_columns
+label: 'Two columns'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

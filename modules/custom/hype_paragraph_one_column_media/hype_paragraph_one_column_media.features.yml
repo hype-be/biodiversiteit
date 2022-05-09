@@ -1,0 +1,11 @@
+bundle: HYPE
+required:
+  - core.entity_form_display.paragraph.one_column_media.default.yml
+  - core.entity_view_display.paragraph.one_column_media.default.yml
+  - field.field.paragraph.one_column_media.field_border_overlay.yml
+  - field.field.paragraph.one_column_media.field_color_picker.yml
+  - field.field.paragraph.one_column_media.field_layout.yml
+  - field.field.paragraph.one_column_media.field_media_iframe.yml
+  - field.field.paragraph.one_column_media.field_media_img.yml
+  - field.field.paragraph.one_column_media.field_media_img_responsive.yml
+  - paragraphs.paragraphs_type.one_column_media.yml

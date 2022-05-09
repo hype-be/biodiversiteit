@@ -1,0 +1,29 @@
+uuid: 75346fd2-df31-4d8f-ab8e-3a0bfe9aebb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_img_responsive
+    - media.type.image
+    - paragraphs.paragraphs_type.one_column_media
+id: paragraph.one_column_media.field_media_img_responsive
+field_name: field_media_img_responsive
+entity_type: paragraph
+bundle: one_column_media
+label: 'Image responsive'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: status
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

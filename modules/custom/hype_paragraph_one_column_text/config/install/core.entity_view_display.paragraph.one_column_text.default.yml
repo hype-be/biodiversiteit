@@ -1,0 +1,42 @@
+uuid: 7a29b755-ae0f-4c9f-9d2c-58f95673a543
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.one_column_text.field_color_picker
+    - field.field.paragraph.one_column_text.field_layout
+    - field.field.paragraph.one_column_text.field_wysiwyg
+    - paragraphs.paragraphs_type.one_column_text
+  module:
+    - color_field
+    - options
+    - text
+id: paragraph.one_column_text.default
+targetEntityType: paragraph
+bundle: one_column_text
+mode: default
+content:
+  field_color_picker:
+    weight: 1
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_layout:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_wysiwyg:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

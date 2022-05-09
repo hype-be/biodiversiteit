@@ -1,0 +1,11 @@
+bundle: HYPE
+required:
+  - core.entity_form_display.paragraph.image_text_image.default.yml
+  - core.entity_view_display.paragraph.image_text_image.default.yml
+  - field.field.paragraph.image_text_image.field_color_picker.yml
+  - field.field.paragraph.image_text_image.field_media_img.yml
+  - field.field.paragraph.image_text_image.field_media_img_2.yml
+  - field.field.paragraph.image_text_image.field_media_size.yml
+  - field.field.paragraph.image_text_image.field_media_size_2.yml
+  - field.field.paragraph.image_text_image.field_wysiwyg.yml
+  - paragraphs.paragraphs_type.image_text_image.yml

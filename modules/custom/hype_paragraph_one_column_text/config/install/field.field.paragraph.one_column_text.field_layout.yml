@@ -1,0 +1,23 @@
+uuid: 55a01b8b-d12b-4d4e-ac87-05d9d3358dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.one_column_text
+  module:
+    - options
+id: paragraph.one_column_text.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: one_column_text
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

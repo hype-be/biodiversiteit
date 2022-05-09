@@ -1,0 +1,8 @@
+bundle: HYPE
+required:
+  - core.entity_form_display.paragraph.block.default.yml
+  - core.entity_view_display.paragraph.block.default.yml
+  - field.field.paragraph.block.field_block.yml
+  - field.field.paragraph.block.field_color_picker.yml
+  - field.field.paragraph.block.field_layout.yml
+  - paragraphs.paragraphs_type.block.yml

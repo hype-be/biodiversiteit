@@ -1,0 +1,33 @@
+uuid: b43975ab-aa91-4c27-ae74-8ae057c38816
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Culinary Solutions'
+    -
+      value: '2'
+      label: 'Pastry & Desserts'
+    -
+      value: '3'
+      label: 'Ready to eat'
+    -
+      value: '4'
+      label: 'Kids'' Meals'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

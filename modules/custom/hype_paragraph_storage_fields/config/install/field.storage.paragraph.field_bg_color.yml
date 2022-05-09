@@ -1,0 +1,33 @@
+uuid: 18f6c648-3b13-4589-83ea-408ebb47cdd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg_primary
+      label: Primary
+    -
+      value: bg_accent
+      label: Accent
+    -
+      value: bg_white
+      label: White
+    -
+      value: bg_grey
+      label: Grey
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

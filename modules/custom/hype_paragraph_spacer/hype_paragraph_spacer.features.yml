@@ -1,0 +1,8 @@
+bundle: HYPE
+required:
+  - core.entity_form_display.paragraph.spacer.default.yml
+  - core.entity_view_display.paragraph.spacer.default.yml
+  - field.field.paragraph.spacer.field_color_picker.yml
+  - field.field.paragraph.spacer.field_spacer_height.yml
+  - field.field.paragraph.spacer.field_spacer_height_mobile.yml
+  - paragraphs.paragraphs_type.spacer.yml

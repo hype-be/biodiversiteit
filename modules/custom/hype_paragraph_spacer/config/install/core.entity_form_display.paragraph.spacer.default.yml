@@ -1,0 +1,111 @@
+uuid: 9c30b73d-e1dc-41b0-9c88-1ec3d7acf766
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spacer.field_color_picker
+    - field.field.paragraph.spacer.field_spacer_height
+    - field.field.paragraph.spacer.field_spacer_height_mobile
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - color_field
+    - field_group
+third_party_settings:
+  field_group:
+    group_horizontal_tabs:
+      children:
+        - group_layout
+        - group_background
+        - group_published
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        direction: horizontal
+        width_breakpoint: 640
+      label: 'Horizontal tabs'
+    group_background:
+      children:
+        - field_color_picker
+      parent_name: group_horizontal_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Background
+    group_layout:
+      children:
+        - field_spacer_height
+        - field_spacer_height_mobile
+      parent_name: group_horizontal_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Layout
+    group_published:
+      children:
+        - status
+      parent_name: group_horizontal_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Published
+id: paragraph.spacer.default
+targetEntityType: paragraph
+bundle: spacer
+mode: default
+content:
+  field_color_picker:
+    weight: 23
+    settings:
+      default_colors: '#9dc53c,#06543c,#2b8c43,#01a3cc,#e73d2e,#0d68aa,#ffcd00,#bd4035,#69b66e,#ffffff,#000000,#eef2ed'
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_spacer_height:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_spacer_height_mobile:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

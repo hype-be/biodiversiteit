@@ -1,0 +1,27 @@
+uuid: cb1f3f43-7c4a-4d72-aa00-edaefecbdff6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_media_size_2
+field_name: field_media_size_2
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fluid
+      label: Fluid
+    -
+      value: contained
+      label: Contained
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

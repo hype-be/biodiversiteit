@@ -1,0 +1,20 @@
+uuid: 42b6ba1b-972c-4d05-8b53-5bdd07cc2e7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_spacer_height_mobile
+field_name: field_spacer_height_mobile
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

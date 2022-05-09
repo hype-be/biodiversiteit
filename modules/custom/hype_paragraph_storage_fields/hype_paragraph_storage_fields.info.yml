@@ -1,0 +1,14 @@
+name: 'HYPE paragraph storage fields.'
+description: 'Paragraph field storage'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - field
+  - field_group
+  - paragraphs
+  - block_field
+  - color_field
+  - colorbutton
+version: 8.x-1.0
+package: 'Hyp3 paragraph storage fields.'

@@ -1,0 +1,15 @@
+uuid: 1a64c12e-fcbd-4fde-86ce-63705c9800fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: spacer
+label: Spacer
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

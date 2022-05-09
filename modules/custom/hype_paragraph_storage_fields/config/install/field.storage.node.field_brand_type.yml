@@ -1,0 +1,27 @@
+uuid: 9e6551fe-0063-4322-bfc2-35378d9c57db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_brand_type
+field_name: field_brand_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Brand
+    -
+      value: '2'
+      label: Book
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
