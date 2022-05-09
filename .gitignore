@@ -20,7 +20,7 @@ sites/simpletest
 # Ignore .env files as they are personal
 /.env
 
-themes/custom/biodiversiteit/node_modules
+themes/custom/biodiv/node_modules
 
 
 composer.phar
