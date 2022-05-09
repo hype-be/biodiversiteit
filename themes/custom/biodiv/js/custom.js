@@ -7,7 +7,7 @@
 
   'use strict';
 
-  Drupal.behaviors.biodiversiteit = {
+  Drupal.behaviors.biodiv = {
     attach: function(context, settings) {
 
       // Custom code here

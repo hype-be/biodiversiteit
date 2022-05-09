@@ -1,4 +1,4 @@
-name: Biodiversiteit
+name: Biodiv
 type: theme
 description: 'SASS starter kit for a Bootstrap Barrio SubTheme.'
 # version: VERSION
@@ -7,7 +7,7 @@ core_version_requirement: ^8 || ^9
 base theme: bootstrap_barrio
 
 libraries:
-  - biodiversiteit/global-styling
+  - biodiv/global-styling
 libraries-override:
   bootstrap_barrio/global-styling: false
 regions:
@@ -36,5 +36,5 @@ regions:
 
 # Information added by Drupal.org packaging script on 2021-10-11
 version: '5.0.5'
-project: 'biodiversiteit'
+project: 'biodiv'
 datestamp: 1633918678
