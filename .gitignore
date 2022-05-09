@@ -20,7 +20,7 @@ sites/simpletest
 # Ignore .env files as they are personal
 /.env
 
-themes/custom/hype/node_modules
+themes/custom/biodiversiteit/node_modules
 
 
 composer.phar
@@ -48,3 +48,5 @@ robots.txt
 themes/contrib
 update.php
 web.config
+
+site/subsites/biodiversiteit.voorvertoning.be/themes/contrib
