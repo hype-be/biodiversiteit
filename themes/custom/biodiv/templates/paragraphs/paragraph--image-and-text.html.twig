@@ -38,6 +38,16 @@
  * @ingroup themeable
  */
 #}
+{% if content.field_layout[0]['#markup'] == 'full' %}
+    {% set col_layout_left = 'col-8' %}
+    {% set col_layout_right = 'col-4' %}
+{% elseif content.field_layout[0]['#markup'] == 'medium' %}
+    {% set col_layout_left = 'col' %}
+    {% set col_layout_right = 'col' %}
+{% elseif content.field_layout[0]['#markup'] == 'large' %}
+    {% set col_layout_left = 'col-4' %}
+    {% set col_layout_right = 'col-8' %}
+{% endif %}
 {%
     set classes = [
     'paragraph',
@@ -52,28 +62,27 @@
             <div class="container px-0">
                 <div class="row">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
-                        {% if content.field_layout[0]['#markup'] == 'full' %}
-                            <div class="col-left col-img col-8">{{ content.field_media_img }}</div>
-                            <div class="col-right col-wysiwyg col-4">{{ content.field_wysiwyg }}</div>
-                        {% elseif content.field_layout[0]['#markup'] == 'medium' %}
-                            <div class="col-left col-img col">{{ content.field_media_img }}</div>
-                            <div class="col-right col-wysiwyg col">{{ content.field_wysiwyg }}</div>
-                        {% elseif content.field_layout[0]['#markup'] == 'large' %}
-                            <div class="col-left col-img col-4">{{ content.field_media_img }}</div>
-                            <div class="col-right col-wysiwyg col-8">{{ content.field_wysiwyg }}</div>
-                        {% endif %}
+
+                            <div class="col-left col-img {{ col_layout_left }}">{{ content.field_media_img }}</div>
+                            <div class="col-right col-wysiwyg {{ col_layout_right }}">{{ content.field_wysiwyg }}</div>
+
+                            <div class="col-left col-img {{ col_layout_left }}">{{ content.field_media_img }}</div>
+                            <div class="col-right col-wysiwyg {{ col_layout_right }}">{{ content.field_wysiwyg }}</div>
+
+                            <div class="col-left col-img {{ col_layout_left }}">{{ content.field_media_img }}</div>
+                            <div class="col-right col-wysiwyg {{ col_layout_right }}">{{ content.field_wysiwyg }}</div>
+
                     {% else%}
                         {% if content.field_layout[0]['#markup'] == 'full' %}
-                            <div class="col-left col-wysiwyg col-8">{{ content.field_wysiwyg }}</div>
-                            <div class="col-right col-img col-4">{{ content.field_media_img }}</div>
+                            <div class="col-left col-wysiwyg {{ col_layout_left }}">{{ content.field_wysiwyg }}</div>
+                            <div class="col-right col-img {{ col_layout_right }}">{{ content.field_media_img }}</div>
                         {% elseif content.field_layout[0]['#markup'] == 'medium' %}
-                            <div class="col-left col-wysiwyg col">{{ content.field_wysiwyg }}</div>
-                            <div class="col-right col-img col">{{ content.field_media_img }}</div>
+                            <div class="col-left col-wysiwyg {{ col_layout_left }}">{{ content.field_wysiwyg }}</div>
+                            <div class="col-right col-img {{ col_layout_right }}">{{ content.field_media_img }}</div>
                         {% elseif content.field_layout[0]['#markup'] == 'large' %}
-                            <div class="col-left col-wysiwyg col-4">{{ content.field_wysiwyg }}</div>
-                            <div class="col-right col-img col-8">{{ content.field_media_img }}</div>
+                            <div class="col-left col-wysiwyg {{ col_layout_left }}">{{ content.field_wysiwyg }}</div>
+                            <div class="col-right col-img {{ col_layout_right }}">{{ content.field_media_img }}</div>
                         {% endif %}
-
                     {% endif %}
                 </div>
             </div>
