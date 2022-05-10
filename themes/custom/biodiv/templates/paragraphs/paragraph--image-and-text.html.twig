@@ -52,6 +52,7 @@
             <div class="container px-0">
                 <div class="row">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
+                        {{ content.field_layout[0]['#markup'] }}
                         {% if content.field_layout[0]['#markup'] == 'full' %}
                             <div class="col-left col-img col-8">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-4">{{ content.field_wysiwyg }}</div>
