@@ -51,7 +51,7 @@
         {% block content %}
             <div class="container px-0">
                 <div class="row">
-                    {{ content.field_image_position | var_dump }}
+                    {{ var_dump(content.field_image_position) }}
                     {% if content.field_media_position[0]['#markup'] == 'left' %}
                     {% else %}
                     {% endif %}
