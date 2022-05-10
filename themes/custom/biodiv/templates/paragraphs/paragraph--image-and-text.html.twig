@@ -48,6 +48,14 @@
     {% set col_layout_left = 'col-4' %}
     {% set col_layout_right = 'col-8' %}
 {% endif %}
+
+{% if content.	field_image_alignment[0]['#markup'] == 'top' %}
+    {% set col_alignment_left = 'align-items-start' %}
+{% elseif content.	field_image_alignment[0]['#markup'] == 'center' %}
+    {% set col_alignment_left = 'align-items-center' %}
+{% elseif content.	field_image_alignment[0]['#markup'] == 'bottom' %}
+    {% set col_alignment_left = 'align-items-end' %}
+{% endif %}
 {%
     set classes = [
     'paragraph',
@@ -62,11 +70,11 @@
             <div class="container px-0">
                 <div class="row">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
-                            <div class="col-left col-img {{ col_layout_left }}">{{ content.field_media_img }}</div>
-                            <div class="col-right col-wysiwyg {{ col_layout_right }}">{{ content.field_wysiwyg }}</div>
+                            <div class="col-left col-img {{ col_layout_left }} d-flex">{{ content.field_media_img }}</div>
+                            <div class="col-right col-wysiwyg {{ col_layout_right }} d-flex {{ col_alignment_left }}">{{ content.field_wysiwyg }}</div>
                     {% else%}
-                            <div class="col-left col-wysiwyg {{ col_layout_left }}">{{ content.field_wysiwyg }}</div>
-                            <div class="col-right col-img {{ col_layout_right }}">{{ content.field_media_img }}</div>
+                            <div class="col-left col-wysiwyg {{ col_layout_left }} d-flex {{ col_alignment_left }}">{{ content.field_wysiwyg }}</div>
+                            <div class="col-right col-img {{ col_layout_right }} d-flex">{{ content.field_media_img }}</div>
                     {% endif %}
                 </div>
             </div>
