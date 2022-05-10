@@ -61,6 +61,7 @@
                         {% elseif content.field_image_position[0]['#markup'] == 'large' %}
                             <div class="col-left col-img col-4">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-8">{{ content.field_wysiwyg }}</div>
+                        {% else %}
                         {% endif %}
                     {% else%}
                         <div class="col-left col-wysiwyg col">{{ content.field_wysiwyg }}</div>
