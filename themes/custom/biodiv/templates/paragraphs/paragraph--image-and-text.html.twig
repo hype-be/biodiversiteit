@@ -55,13 +55,14 @@
                         {% if content.field_image_position[0]['#markup'] == 'full' %}
                             <div class="col-left col-img col-8">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-4">{{ content.field_wysiwyg }}</div>
-                        {% elseif content.field_image_position[0]['#markup'] == 'medium' %}
+                        {% endif %}
+                        {% if content.field_image_position[0]['#markup'] == 'medium' %}
                             <div class="col-left col-img col">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col">{{ content.field_wysiwyg }}</div>
-                        {% elseif content.field_image_position[0]['#markup'] == 'large' %}
+                        {% endif %}
+                        {% if content.field_image_position[0]['#markup'] == 'large' %}
                             <div class="col-left col-img col-4">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-8">{{ content.field_wysiwyg }}</div>
-                        {% else %}
                         {% endif %}
                     {% else%}
                         <div class="col-left col-wysiwyg col">{{ content.field_wysiwyg }}</div>
