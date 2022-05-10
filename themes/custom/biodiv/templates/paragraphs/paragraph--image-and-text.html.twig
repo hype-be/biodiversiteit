@@ -49,11 +49,11 @@
     {% set col_layout_right = 'col-8' %}
 {% endif %}
 
-{% if content.	field_image_alignment[0]['#markup'] == 'top' %}
+{% if content.field_image_alignment[0]['#markup'] == 'top' %}
     {% set col_alignment_left = 'align-items-start' %}
-{% elseif content.	field_image_alignment[0]['#markup'] == 'center' %}
+{% elseif content.field_image_alignment[0]['#markup'] == 'center' %}
     {% set col_alignment_left = 'align-items-center' %}
-{% elseif content.	field_image_alignment[0]['#markup'] == 'bottom' %}
+{% elseif content.field_image_alignment[0]['#markup'] == 'bottom' %}
     {% set col_alignment_left = 'align-items-end' %}
 {% endif %}
 {%
