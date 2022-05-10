@@ -51,8 +51,7 @@
         {% block content %}
             <div class="container px-0">
                 <div class="row">
-                    {{ content.field_image_position }}
-                    {% if content.field_image_position == 'left' %}
+                    {% if content.field_image_position[0]['#markup'] == 'left' %}
                         <div class="col-left col-img">{{ content.field_media_img }}</div>
                         <div class="col-right col-wysiwyg">{{ content.field_wysiwyg }}</div>
                     {% else%}
