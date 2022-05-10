@@ -52,15 +52,13 @@
             <div class="container px-0">
                 <div class="row">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
-                        {% if content.field_image_position[0]['#markup'] == 'full' %}
+                        {% if content.field_layout[0]['#markup'] == 'full' %}
                             <div class="col-left col-img col-8">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-4">{{ content.field_wysiwyg }}</div>
-                        {% endif %}
-                        {% if content.field_image_position[0]['#markup'] == 'medium' %}
+                        {% elseif content.field_layout[0]['#markup'] == 'medium' %}
                             <div class="col-left col-img col">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col">{{ content.field_wysiwyg }}</div>
-                        {% endif %}
-                        {% if content.field_image_position[0]['#markup'] == 'large' %}
+                        {% elseif content.field_layout[0]['#markup'] == 'large' %}
                             <div class="col-left col-img col-4">{{ content.field_media_img }}</div>
                             <div class="col-right col-wysiwyg col-8">{{ content.field_wysiwyg }}</div>
                         {% endif %}
