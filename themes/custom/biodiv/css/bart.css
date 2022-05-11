@@ -3,7 +3,13 @@
     background-size: cover;
 }
 .paragraph--type--text-with-background-image .col-text {
-    max-width: 443px;
+    max-width: 470px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.paragraph--type--text-with-background-image .col-text h1, .paragraph--type--text-with-background-image .col-text h2,
+.paragraph--type--text-with-background-image .col-text h3, .paragraph--type--text-with-background-image .col-text h4, .paragraph--type--text-with-background-image .col-text h5,
+.paragraph--type--text-with-background-image .col-text h6 {
+    font-size: 52px;
+    line-height: 60px;
 }
