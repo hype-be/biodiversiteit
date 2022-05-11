@@ -30,3 +30,36 @@ function biodiv_form_system_theme_settings_alter(&$form, FormStateInterface $for
     'bg-transparent' => t('Transparent'),
   );
 }
+
+function imgBuild($imgStyle, $imgStyle_2, $variables) {
+    if(isset($imgStyle)) {
+        $media_field = $variables['elements']['field_media_img'];
+        if (isset($media_field[0])) {
+            $media_entity = $media_field[0]['#media'];
+            $field_media_img = $media_entity->field_media_image;
+            $uri = $field_media_img->entity->uri->value;
+
+            $variables['img_styled'] = ImageStyle::load($imgStyle)->buildUrl($uri);
+            $variables['img_alt'] = $field_media_img->alt;
+        }
+    }
+
+    if(isset($imgStyle_2)) {
+        $media_field_2 = $variables['elements']['field_media_img_2'];
+        if (isset($media_field_2[0])) {
+            $media_entity_2 = $media_field_2[0]['#media'];
+            $field_media_img_2 = $media_entity_2->field_media_image;
+            $uri_2 = $field_media_img_2->entity->uri->value;
+
+            $variables['img_styled_2'] = ImageStyle::load($imgStyle_2)->buildUrl($uri_2);
+            $variables['img_alt_2'] = $field_media_img_2->alt;
+        }
+    }
+    return $variables;
+}
+
+function biodiv_preprocess_paragraph__image_and_text(&$variables) {
+    if (isset($variables['elements']['field_media_img']['#items'])) {
+        $variables = imgBuild('large', null, $variables);
+    }
+}

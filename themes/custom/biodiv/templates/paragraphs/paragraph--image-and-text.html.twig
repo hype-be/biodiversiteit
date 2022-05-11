@@ -74,7 +74,7 @@
                             <div class="col-right col-wysiwyg {{ col_layout_right }} d-flex {{ col_alignment_left }}">{{ content.field_wysiwyg }}</div>
                     {% else%}
                             <div class="col-left col-wysiwyg {{ col_layout_left }} d-flex {{ col_alignment_left }}">{{ content.field_wysiwyg }}</div>
-                            <div class="col-right col-img {{ col_layout_right }} d-flex">{{ content.field_media_img }}</div>
+                            <div class="col-right col-img {{ col_layout_right }} d-flex"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}"></div>
                     {% endif %}
                 </div>
             </div>
