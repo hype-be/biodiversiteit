@@ -1,0 +1,9 @@
+/* Paragraphs */
+.paragraph--type--text-with-background-image {
+    background-size: cover;
+}
+.paragraph--type--text-with-background-image .col-text {
+    max-width: 443px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
