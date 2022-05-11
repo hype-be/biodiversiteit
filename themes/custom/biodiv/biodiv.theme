@@ -65,7 +65,7 @@ function biodiv_preprocess_paragraph__image_and_text(&$variables) {
     }
 }
 
-function biodiv_preprocess_paragraph__text_with_background-image(&$variables) {
+function biodiv_preprocess_paragraph__text_with_background_image(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
         $variables = imgBuild('1600x565', null, $variables);
     }
