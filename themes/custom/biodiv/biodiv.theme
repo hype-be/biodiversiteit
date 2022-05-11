@@ -61,6 +61,6 @@ function imgBuild($imgStyle, $imgStyle_2, $variables) {
 
 function biodiv_preprocess_paragraph__image_and_text(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('large', null, $variables);
+        $variables = imgBuild('700x626', null, $variables);
     }
 }
