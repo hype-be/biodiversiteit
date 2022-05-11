@@ -38,3 +38,6 @@ regions:
 version: '5.0.5'
 project: 'biodiv'
 datestamp: 1633918678
+
+ckeditor_stylesheets:
+  - css/style.css
