@@ -65,6 +65,15 @@ function biodiv_preprocess_paragraph__image_and_text(&$variables) {
     }
 }
 
+function biodiv_preprocess_paragraph__two_column_image(&$variables) {
+    if (isset($variables['elements']['field_media_img']['#items'])) {
+        $variables = imgBuild('large', null, $variables);
+    }
+    if (isset($variables['elements']['field_media_img_2']['#items'])) {
+        $variables = imgBuild('large', null, $variables);
+    }
+}
+
 function biodiv_preprocess_paragraph__text_with_background_image(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
         $variables = imgBuild('1600x565', null, $variables);
