@@ -39,11 +39,11 @@
  */
 #}
 {% if content.field_color_picker[0]['#markup'] == '' %}
-    {% set padding_x_img = '73px' %}
-    {% set padding_y_img = '64px' %}
-{% else %}
     {% set padding_x_img = '50px' %}
     {% set padding_y_img = '0px' %}
+{% else %}
+    {% set padding_x_img = '73px' %}
+    {% set padding_y_img = '64px' %}
 {% endif %}
 
 {% if content.field_layout[0]['#markup'] == 'full' %}
