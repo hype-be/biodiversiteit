@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{#{% if content.field_color_picker[0]['#markup'] == '' %}#}
+{#    {% set padding_x_img = '50px' %}#}
+{#    {% set padding_y_img = '0px' %}#}
+{#{% else %}#}
+{#    {% set padding_x_img = '73px' %}#}
+{#    {% set padding_y_img = '64px' %}#}
+{#{% endif %}#}
+
+{% if content.field_layout[0]['#markup'] == 'full' %}
+    {% set col_layout_left = 'col-8' %}
+    {% set col_layout_right = 'col-4' %}
+{% elseif content.field_layout[0]['#markup'] == 'medium' %}
+    {% set col_layout_left = 'col' %}
+    {% set col_layout_right = 'col' %}
+{% elseif content.field_layout[0]['#markup'] == 'large' %}
+    {% set col_layout_left = 'col-4' %}
+    {% set col_layout_right = 'col-8' %}
+{% endif %}
+
+{#{% if content.field_image_alignment[0]['#markup'] == 'top' %}#}
+{#    {% set col_alignment_left = 'align-items-start' %}#}
+{#{% elseif content.field_image_alignment[0]['#markup'] == 'center' %}#}
+{#    {% set col_alignment_left = 'align-items-center' %}#}
+{#{% elseif content.field_image_alignment[0]['#markup'] == 'bottom' %}#}
+{#    {% set col_alignment_left = 'align-items-end' %}#}
+{#{% endif %}#}
+{%
+    set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+{% block paragraph %}
+    <div{{ attributes.addClass(classes) }}>
+        {% block content %}
+            <div class="container px-0">
+                <div class="row" style="background-color: {{ content.field_color_picker[0]['#markup'] }}">
+                        <div class="col-left col-img {{ col_layout_left }} d-flex"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                        <div class="col-left col-img {{ col_layout_left }} d-flex"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock paragraph %}
