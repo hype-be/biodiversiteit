@@ -92,4 +92,10 @@ function biodiv_preprocess_paragraph__slider_video_card_item(&$variables) {
     }
 }
 
+function biodiv_preprocess_paragraph__video_and_text(&$variables) {
+    if (isset($variables['elements']['field_media_img']['#items'])) {
+        $variables = imgBuild('848x568', null, $variables);
+    }
+}
+
 
