@@ -1,6 +1,8 @@
 /* Paragraphs */
 .paragraph--type--text-with-background-image {
     background-size: cover;
+}
+.paragraph--type--text-with-background-image.show-parallax {
     background-attachment: fixed;
 }
 .paragraph--type--text-with-background-image .col-text {
