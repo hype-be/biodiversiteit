@@ -3,8 +3,26 @@
 }
 
 .paragraph--type--quote {
-  padding: 60px;
+  padding: 62px 96px;
   border-radius: 50px;
+  position: relative;
+  &:after {
+    content: '';
+    background-image: url(/themes/custom/biodiv/images/quotes.svg);
+    display: block;
+    width: 138px;
+    height: 111px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 24px;
+    left: 37px;
+  }
+  .col-md-2 {
+    img {
+      z-index: 1;
+      position: relative;
+    }
+  }
   q {
     &:before, &:after {
       content: none;
@@ -13,6 +31,8 @@
   .field--name-field-text {
     color: $sherpa-blue;
     font-size: 28px;
+    margin-bottom: 21px;
+    display: block;
   }
   .field--name-field-author {
     font-size: 19px;

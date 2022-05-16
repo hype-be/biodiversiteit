@@ -49,10 +49,9 @@
 ]
 %}
 {% block paragraph %}
-
     <div{{ attributes.addClass(classes) }} {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
         {% block content %}
-            <div class="container">
+            <div class="container px-0">
               <div class="row align-items-center">
                   <div class="col-md-2">
                       <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
@@ -65,5 +64,4 @@
             </div>
         {% endblock %}
     </div>
-
 {% endblock paragraph %}
