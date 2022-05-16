@@ -16,12 +16,12 @@
   };
 
   $(document).ready(function() {
-    $('.slider .field--name-field-video-card-slide').slick({
+    /*$('.slider .field--name-field-video-card-slide').slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
       accessibility: true
-    });
+    });*/
   });
 
   function isInViewport(node) {
