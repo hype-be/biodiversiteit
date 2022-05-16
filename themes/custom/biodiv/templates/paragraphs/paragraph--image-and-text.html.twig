@@ -78,11 +78,11 @@
             <div class="container px-0">
                 <div class="row" style="background-color: {{ content.field_color_picker[0]['#markup'] }}">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
-                            <div class="col-left col-img {{ col_layout_left }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                            <div class="col-left col-img {{ col_layout_left }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}"></div>
                             <div class="col-right col-wysiwyg {{ col_layout_right }} d-flex {{ col_alignment_left }}"><div style="padding: 48px 99px;">{{ content.field_wysiwyg }}</div></div>
                     {% else%}
                             <div class="col-left col-wysiwyg {{ col_layout_left }} d-flex {{ col_alignment_left }}"><div style="padding: 48px 99px;">{{ content.field_wysiwyg }}</div></div>
-                            <div class="col-right col-img {{ col_layout_right }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                            <div class="col-right col-img {{ col_layout_right }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}"></div>
                     {% endif %}
                 </div>
             </div>

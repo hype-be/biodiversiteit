@@ -1,18 +1,20 @@
 .paragraph {
-
+  margin-bottom: 50px;
 }
 
 .paragraph--type--quote {
   padding: 60px;
   border-radius: 50px;
-
-}
-
-.field--name-field-text {
-  color: $sherpa-blue;
-  font-size: 28px;
-}
-
-.field--name-field-author {
-  font-size: 19px;
+  q {
+    &:before, &:after {
+      content: none;
+    }
+  }
+  .field--name-field-text {
+    color: $sherpa-blue;
+    font-size: 28px;
+  }
+  .field--name-field-author {
+    font-size: 19px;
+  }
 }
