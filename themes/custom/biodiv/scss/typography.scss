@@ -4,6 +4,28 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
 
+@font-face {
+  font-family: 'Metropolis Regular';
+  src: url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.eot');
+  src: url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.woff2') format('woff2'),
+  url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.woff') format('woff'),
+  url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.ttf') format('truetype'),
+  url('../fonts/Metropolis/Metropolis-Regular/Metropolis-Regular.svg#Montserrat-Regular') format('svg');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Metropolis SemiBold';
+  src: url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.eot');
+  src: url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.woff2') format('woff2'),
+  url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.woff') format('woff'),
+  url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.ttf') format('truetype'),
+  url('../fonts/Metropolis/Metropolis-SemiBold/Metropolis-SemiBold.svg#Montserrat-Regular') format('svg');
+  font-weight: 600;
+}
+
 //@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
 // font families
