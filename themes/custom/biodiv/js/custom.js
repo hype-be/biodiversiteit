@@ -16,7 +16,7 @@
   };
 
   $(document).ready(function() {
-    $('.slider').slick({
+    $('.slider .field--name-field-video-card-slide').slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
