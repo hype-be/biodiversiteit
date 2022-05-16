@@ -3,11 +3,14 @@ global-styling:
   js: 
     js/bootstrap.min.js: {}
     js/barrio.js: {}
+    slick/slick.min.js: {}
     js/custom.js: {}
   css:
     component:
       css/style.css: {}
       css/bart.css: {}
+      slick/slick.css: { }
+      slick/slick-theme.css: { }
   dependencies:
     - core/jquery
     - core/drupal
