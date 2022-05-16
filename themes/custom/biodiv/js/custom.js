@@ -41,8 +41,8 @@
       var visible = isInViewport(this)
       if(visible) {
         var diff = scrolled - initY
-        var ratio = Math.round((diff / height) * 100)
-        $(this).css('background-position','center ' + parseInt(-(ratio * 1.1)) + 'px')
+        var ratio = Math.round((diff / height) * 50)
+        $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
       }
     })
   })
