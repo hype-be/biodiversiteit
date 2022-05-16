@@ -20,9 +20,7 @@
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      accessibility: true,
-      prevArrow: '<button type="button" aria-label="Previous" class="slick-prev slick-arrow">Previous</button>',
-      nextArrow: '<button type="button" aria-label="Next" class="slick-next slick-arrow">Next</button>'
+      accessibility: true
     });
   });
 
