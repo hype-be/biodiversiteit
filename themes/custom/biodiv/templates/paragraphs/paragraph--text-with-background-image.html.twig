@@ -50,9 +50,15 @@
 ]
 %}
 {% block paragraph %}
+<<<<<<< Updated upstream
     <div{{ attributes.addClass(classes) }} style="background-image: url('{{ img_styled }}'); {% if content.field_parallax[0]['#markup'] == "On" %} background-position: center;{% endif %}">
         {% block content %}
             <div class="container d-flex" style="justify-content: {{ content.field_text_position[0]['#markup'] }};">
+=======
+    <div{{ attributes.addClass(classes) }} style="background-image: url('{{ img_styled }}');">
+        {% block content %}
+            <div class="container">
+>>>>>>> Stashed changes
                 <div class="col-md-12 col-text">
                     {{ content.field_wysiwyg }}
                 </div>
