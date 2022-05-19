@@ -3,7 +3,6 @@
 /vendor/
 /core/
 modules/contrib
-themes/contrib/
 profiles/contrib/
 # Ignore sites folder
 sites/*
@@ -41,13 +40,9 @@ index.php
 modules.txt
 modules/README.txt
 modules/contrib
-themes/contrib
 themes/README.txt
 profiles/
 robots.txt
-themes/contrib
 update.php
 web.config
-
-site/subsites/biodiversiteit.voorvertoning.be/themes/contrib
 libraries
