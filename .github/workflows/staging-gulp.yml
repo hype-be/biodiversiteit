@@ -27,12 +27,24 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Get specific changed files
+          id: changed-files-specific
+          uses: tj-actions/changed-files@v20
+          with:
+            files: |
+              themes/custom/biodiv/scss/**/*.scss
+            files_ignore: |
+              *.yml
+
       - name: Use Node.js ${{ matrix.node-version }}
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: intalls node modules and runs styles and js
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
         run: |
           cd themes/custom/biodiv
           npm install
