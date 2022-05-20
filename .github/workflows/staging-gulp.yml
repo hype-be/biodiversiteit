@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Build
+      - name: intalls node modules and runs styles and js
         run: |
           cd themes/custom/biodiv
           npm install
@@ -41,7 +41,7 @@ jobs:
 
 
   remote_commands:
-    name: Build
+    name: execute remote commands
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands using password
