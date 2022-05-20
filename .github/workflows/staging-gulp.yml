@@ -7,7 +7,7 @@ on:
         required: true
         default: 'warning'
       tags:
-        description: 'Test scenario tags'
+        description: 'Log'
   push:
     branches: [ dev ]
 jobs:
@@ -43,7 +43,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: intalls node modules and runs styles and js
+      - name: installs node modules and runs styles and js
         if: steps.changed-files-specific.outputs.any_changed == 'true'
         run: |
           cd themes/custom/biodiv
