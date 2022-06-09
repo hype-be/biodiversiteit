@@ -29,6 +29,22 @@
     height: 125px;
 }
 
+.menu--main li a {
+    color: #004659;
+    font-size: 16px;
+}
+
+.menus-right {
+    display: flex;
+    background-color: #FFF4E9;
+}
+
+.menu--menu-top-right li a {
+    color: #004659;
+    font-size: 13px;
+    padding-right: 63px;
+}
+
 
 /*
     container
