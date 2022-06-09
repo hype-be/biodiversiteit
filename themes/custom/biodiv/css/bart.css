@@ -2,7 +2,7 @@
 .paragraph--type--text-with-background-image {
     background-size: cover;
 }
-<<<<<<< Updated upstream
+
 .paragraph--type--text-with-background-image.show-parallax {
     background-attachment: fixed;
 }
@@ -17,10 +17,25 @@
     font-size: 52px;
     line-height: 60px;
 }
-=======
+
 .paragraph--type--text-with-background-image .col-text {
     max-width: 443px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
->>>>>>> Stashed changes
+
+
+.navbar-brand img {
+    height: 125px;
+}
+
+
+/*
+    container
+*/
+
+/*@media (min-width: 1440px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+        max-width: 1440px;
+    }
+}*/
