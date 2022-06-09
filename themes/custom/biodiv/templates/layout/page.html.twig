@@ -111,6 +111,10 @@
                                     {% if navbar_offcanvas %}
                                 </div>
                                 {% endif %}
+                                <div class="menus-right">
+                                    {{ drupal_entity('block', 'menutopright') }}
+                                    {{ drupal_entity('block', 'languagedropdownswitcher') }}
+                                </div>
                             </div>
                         {% endif %}
                         {% if sidebar_collapse %}
