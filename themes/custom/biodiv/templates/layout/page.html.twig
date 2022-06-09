@@ -95,7 +95,7 @@
                         {{ page.header }}
                         {% if page.primary_menu or page.header_form %}
                             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="{{ navbar_collapse_btn_data }}" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                            <div class="{{ navbar_collapse_class }}" id="CollapsingNavbar">
+                            <div class="collapse navbar-collapse justify-content-start" id="CollapsingNavbar">
                                 {% if navbar_offcanvas %}
                                 <div class="offcanvas-header">
                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -111,16 +111,16 @@
                                     {% if navbar_offcanvas %}
                                 </div>
                                 {% endif %}
-                                <div class="menus-right">
-                                    {{ drupal_entity('block', 'menutopright') }}
-                                    {{ drupal_entity('block', 'languagedropdownswitcher') }}
-                                </div>
                             </div>
                         {% endif %}
                         {% if sidebar_collapse %}
                             <button class="navbar-toggler navbar-toggler-left collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
                         {% endif %}
                         {% if container_navbar %}
+                    </div>
+                    <div class="menus-right">
+                        {{ drupal_entity('block', 'menutopright') }}
+                        {{ drupal_entity('block', 'languagedropdownswitcher') }}
                     </div>
                     {% endif %}
                 </nav>

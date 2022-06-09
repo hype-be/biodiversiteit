@@ -29,6 +29,10 @@
     height: 125px;
 }
 
+.menu--main {
+    padding-left: 188px;
+}
+
 .menu--main li a {
     color: #004659;
     font-size: 16px;
@@ -37,6 +41,12 @@
 .menus-right {
     display: flex;
     background-color: #FFF4E9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 50%;
+    padding: 15px;
 }
 
 .menu--menu-top-right li a {
