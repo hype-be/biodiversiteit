@@ -51,11 +51,11 @@ jobs:
           gulp styles
           gulp js
 
-    - name: 'Upload css artifacts'
-      uses: actions/upload-artifact@v3
-      with:
-        name: css files
-        path: css
+      - name: 'Upload css artifacts'
+        uses: actions/upload-artifact@v3
+        with:
+          name: css files
+          path: css
 
 
   remote_commands:
