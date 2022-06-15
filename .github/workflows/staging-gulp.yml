@@ -51,6 +51,12 @@ jobs:
           gulp styles
           gulp js
 
+    - name: 'Upload css artifacts'
+      uses: actions/upload-artifact@v3
+      with:
+        name: css files
+        path: css
+
 
   remote_commands:
     name: execute remote commands
@@ -74,6 +80,10 @@ jobs:
     needs: remote_commands
     steps:
       - uses: actions/checkout@v1
+      - name: Download a css artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: css files
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:

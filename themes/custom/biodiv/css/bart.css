@@ -40,6 +40,7 @@
 
 .menus-right {
     display: flex;
+    align-items: center;
     background-color: #FFF4E9;
     position: absolute;
     top: 0;
@@ -54,6 +55,35 @@
     padding-right: 63px;
 }
 
+.js-form-item-lang-dropdown-select {
+    margin: 0!important;
+    display: block;
+}
+
+.lang-dropdown-select-element {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-image: -webkit-linear-gradient(45deg, transparent 50%, #f8f8f8 50%), -webkit-linear-gradient(315deg, white 50%, transparent 50%), -webkit-linear-gradient(left, transparent, transparent);
+    background-image: -o-linear-gradient(45deg, transparent 50%, #f8f8f8 50%), -o-linear-gradient(315deg, white 50%, transparent 50%), -o-linear-gradient(left, transparent, transparent);
+    background-image: linear-gradient(45deg, transparent 50%, #004659 50%), linear-gradient(135deg, #004659 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 20px) calc(10px + 2px), calc(100% - 15px) calc(10px + 2px), 100% 0;
+    -webkit-background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: black;
+    max-width: 65px;
+}
+
+.menu--main .navbar-nav .nav-link {
+    padding: 0;
+}
+
+.menu--main .navbar-nav .nav-item:not(:last-child) {
+    padding-right: 46px;
+}
 
 /*
     container
