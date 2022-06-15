@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: css files
-          path: css
+          path: themes/custom/biodiv/css
 
 
   remote_commands:
