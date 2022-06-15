@@ -84,6 +84,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: css files
+          path: themes/custom/biodiv/css
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
