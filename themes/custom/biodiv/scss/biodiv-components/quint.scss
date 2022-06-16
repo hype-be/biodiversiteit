@@ -6,3 +6,88 @@
   width: fit-content;
 }
 
+#block-biodiv-content a::after {
+  background: url("/themes/custom/biodiv/images/arrow.svg");
+  display: block;
+  width: 6px;
+  height: 9px;
+  margin-left: 5px;
+  margin-top: 4px;
+  content: "";
+}
+
+#block-biodiv-content a::before {
+  width: 100%;
+  height: 1px;
+  background: #00BFA8;
+  content: "";
+  position: absolute;
+  bottom: 1px;
+}
+
+.scribble-blue {
+  display: flex;
+  flex-direction: column;
+}
+
+.scribble-blue::after {
+  width: 100%;
+  height: 16px;
+  background: url("/themes/custom/biodiv/images/scribble-blue.png");
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.three-stripes-top {
+  position: relative;
+}
+
+.three-stripes-top::before {
+  width: 80px;
+  height: 80px;
+  background: url("/themes/custom/biodiv/images/three-stripes-top.png");
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -35px;
+  top: -30px;
+}
+
+.line-blue {
+  position: relative;
+}
+
+.line-blue::after {
+  width: 100%;
+  height: 16px;
+  background: url("/themes/custom/biodiv/images/line-blue.png");
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.paragraph--type--slider-video-cards .slider .slick-slide {
+  max-width: 374px;
+  margin: 0 10px;
+  background: #FCF4EB;
+  border-radius: 50px;
+  padding: 42px 42px 0px 42px;
+}
+
+.paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title {
+  font-size: 28px;
+  color: #004659;
+  font-weight: bold;
+}
+
+.paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title::after {
+  background: url("/themes/custom/biodiv/images/arrow.svg");
+  display: block;
+  width: 11px;
+  height: 18px;
+  margin-left: 5px;
+  margin-top: 3px;
+  content: "";
+}
