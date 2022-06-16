@@ -75,3 +75,19 @@
   border-radius: 50px;
   padding: 42px 42px 0px 42px;
 }
+
+.paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title {
+  font-size: 28px;
+  color: #004659;
+  font-weight: bold;
+}
+
+.paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title::after {
+  background: url("/themes/custom/biodiv/images/arrow.svg");
+  display: block;
+  width: 11px;
+  height: 18px;
+  margin-left: 5px;
+  margin-top: 4px;
+  content: "";
+}
