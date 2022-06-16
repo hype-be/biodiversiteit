@@ -37,3 +37,29 @@
   content: "";
   background-repeat: no-repeat;
 }
+
+.three-stripes-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.three-stripes-top::before {
+  width: 100%;
+  height: 16px;
+  background: url("/themes/custom/biodiv/images/three-stripes-top.png");
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.line-blue {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-blue::after {
+  width: 100%;
+  height: 16px;
+  background: url("/themes/custom/biodiv/images/line-blue.png");
+  content: "";
+  background-repeat: no-repeat;
+}
