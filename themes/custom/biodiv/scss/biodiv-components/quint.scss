@@ -26,15 +26,14 @@
 }
 
 .scribble-blue {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.scribble-blue::before {
+.scribble-blue::after {
   width: 100%;
   height: 16px;
   background: url("/themes/custom/biodiv/images/scribble-blue.png");
   content: "";
-  position: absolute;
-  bottom: 1px;
   background-repeat: no-repeat;
 }
