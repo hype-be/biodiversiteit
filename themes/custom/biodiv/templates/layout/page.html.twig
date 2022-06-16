@@ -124,6 +124,16 @@
                     </div>
                     {% endif %}
                 </nav>
+
+                {# BEGIN BANNER #}
+
+                    <div class="banner"  style="background-image: url('/themes/custom/biodiv/images/banner-final.svg');">
+                        {% if node.field_wysiwyg.value|render %}
+                            {{ node.field_wysiwyg.value|raw }}
+                        {% endif %}
+                    </div>
+
+                {# END BANNER #}
             {% endblock %}
         </header>
         {% if page.highlighted %}
