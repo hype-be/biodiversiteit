@@ -1,8 +1,32 @@
+.bottom-figures {
+  padding-left: 105px;
+  padding-right: 64px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 26px 24px rgb(0 23 30);
+  background-color: rgba(255,255,255, 1);
+  padding-bottom: 135px;
+  .d-md-flex {
+    position: relative;
+  }
+  .figure-left, .figure-right {
+    position: absolute;
+  }
+  .figure-left {
+    top: 0;
+    left: 0;
+  }
+  .figure-right {
+    top: 0;
+    right: 0;
+  }
+}
+
 footer {
   &.site-footer {
     background-color: $dark-blue!important;
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     color: white;
     img {
       border-radius: 8px;
@@ -16,3 +40,4 @@ footer {
     }
   }
 }
+
