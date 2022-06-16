@@ -77,7 +77,7 @@
         {% block content %}
             <div class="container px-0">
                 <div class="row" style="background-color: {{ content.field_color_picker[0]['#markup'] }}">
-                        <div class="col-left col-img {{ col_layout_left }} d-flex">
+                        <div class="col-left col-img {{ col_layout_left }} d-flex position-relative">
                             <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;">
                             {% if content.field_image_caption %}
                                 <div class="caption">
@@ -85,7 +85,14 @@
                                 </div>
                             {% endif %}
                         </div>
-                        <div class="col-left col-img {{ col_layout_left }} d-flex"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                        <div class="col-left col-img {{ col_layout_left }} d-flex position-relative">
+                            <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;">
+                            {% if content.field_image_caption %}
+                                <div class="caption">
+                                    {{ content.field_image_caption }}
+                                </div>
+                            {% endif %}
+                        </div>
                 </div>
             </div>
         {% endblock %}
