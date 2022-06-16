@@ -16,12 +16,12 @@
   content: "";
 }
 
-//#block-biodiv-content a::before {
-//  width: 100%;
-//  height: 1px;
-//  background: #00BFA8;
-//  content: "";
-//  position: absolute;
-//  left: 0;
-//  bottom: 0;
-//}
+#block-biodiv-content a::before {
+  width: 100%;
+  height: 1px;
+  background: #00BFA8;
+  content: "";
+  position: absolute;
+  //left: 0;
+  //bottom: 0;
+}
