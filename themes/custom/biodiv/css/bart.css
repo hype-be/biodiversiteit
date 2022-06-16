@@ -33,11 +33,6 @@
     padding-left: 188px;
 }
 
-.menu--main li a {
-    color: #004659;
-    font-size: 16px;
-}
-
 .menus-right {
     display: flex;
     align-items: center;
