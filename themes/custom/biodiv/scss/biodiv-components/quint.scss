@@ -25,6 +25,10 @@
   bottom: 1px;
 }
 
+.scribble-blue {
+  position: relative;
+}
+
 .scribble-blue::before {
   width: 100%;
   height: 16px;
@@ -32,4 +36,5 @@
   content: "";
   position: absolute;
   bottom: 1px;
+  background-repeat: no-repeat;
 }
