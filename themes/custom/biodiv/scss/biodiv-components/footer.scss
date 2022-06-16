@@ -10,5 +10,9 @@ footer {
     a {
       color: $tea-green;
     }
+    .col-right {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
