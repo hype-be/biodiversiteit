@@ -22,6 +22,14 @@
   background: #00BFA8;
   content: "";
   position: absolute;
-  //left: 0;
+  bottom: 1px;
+}
+
+.scribble-blue::before {
+  width: 100%;
+  height: 16px;
+  background: url("/themes/custom/biodiv/images/scribble-blue.png");
+  content: "";
+  position: absolute;
   bottom: 1px;
 }
