@@ -2,6 +2,7 @@
   color: #004659 !important;
   text-decoration: underline;
   text-decoration-color: #00BFA8;
+  position: relative;
 }
 
 #block-biodiv-content a::after {
@@ -9,4 +10,5 @@
   display: block;
   width: 6px;
   height: 9px;
+  position: absolute;
 }
