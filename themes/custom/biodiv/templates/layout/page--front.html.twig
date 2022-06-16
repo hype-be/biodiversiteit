@@ -192,31 +192,33 @@
         <footer class="site-footer">
             {% block footer %}
                 <div class="container">
-                    <div class="col-md-6 col-left">
-                        <div class="footer-left-top">
-                            {{ drupal_entity('block', 'eeninitiatiefvan') }}
-                        </div>
-                        <div class="footer-left-middle">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="col-left">
-                                        {{ drupal_entity('block', 'insamenwerkingmet') }}
+                    <div class="row">
+                        <div class="col-md-6 col-left">
+                            <div class="footer-left-top">
+                                {{ drupal_entity('block', 'eeninitiatiefvan') }}
+                            </div>
+                            <div class="footer-left-middle">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-left">
+                                            {{ drupal_entity('block', 'insamenwerkingmet') }}
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="col-right">
-                                        {{ drupal_entity('block', 'illustratiesdoorarctik') }}
+                                    <div class="col-md-6">
+                                        <div class="col-right">
+                                            {{ drupal_entity('block', 'illustratiesdoorarctik') }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="footer-left-bottom">
+                                {{ drupal_entity('block', 'eigendom') }}
+                            </div>
                         </div>
-                        <div class="footer-left-bottom">
-                            {{ drupal_entity('block', 'eigendom') }}
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-right">
-                        <div class="footer-menu">
-                            {{ drupal_entity('block', 'biodiv_footer') }}
+                        <div class="col-md-6 col-right">
+                            <div class="footer-menu">
+                                {{ drupal_entity('block', 'biodiv_footer') }}
+                            </div>
                         </div>
                     </div>
                 </div>
