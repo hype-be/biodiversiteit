@@ -1,4 +1,4 @@
-.btn-dark-green {
+.btn-green, .btn-dark-green {
   margin: 0 auto;
   width: 194px;
   height: 150px;
@@ -18,7 +18,20 @@
     position: absolute;
     left: 0;
     top: -10px;
-    background-image: url(/themes/custom/biodiv/images/btn-dark-green.svg);
     z-index: -1;
+  }
+}
+
+.btn-dark-green {
+  color: white;
+  &:after {
+    background-image: url(/themes/custom/biodiv/images/btn-dark-green.svg);
+  }
+}
+
+.btn-green {
+  color: $sherpa-blue;
+  &:after {
+    background-image: url(/themes/custom/biodiv/images/btn-green.svg);
   }
 }
