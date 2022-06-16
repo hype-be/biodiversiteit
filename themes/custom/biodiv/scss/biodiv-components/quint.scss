@@ -39,8 +39,7 @@
 }
 
 .three-stripes-top {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .three-stripes-top::before {
@@ -49,11 +48,11 @@
   background: url("/themes/custom/biodiv/images/three-stripes-top.png");
   content: "";
   background-repeat: no-repeat;
+  position: absolute;
 }
 
 .line-blue {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .line-blue::after {
@@ -62,4 +61,5 @@
   background: url("/themes/custom/biodiv/images/line-blue.png");
   content: "";
   background-repeat: no-repeat;
+  position: absolute;
 }
