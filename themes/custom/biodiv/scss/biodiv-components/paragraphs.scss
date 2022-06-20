@@ -53,20 +53,29 @@
     left: 40px;
     z-index: 1;
     color: white;
-    font-size: 26px;
-    line-height: 35px;
+    font-size: 1.625rem;
+    line-height: 2.1875rem;
     font-weight: 700;
-    max-width: 280px;
+    max-width: 426px;
+    width: 100%;
     a {
       color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .field--name-field-image-caption {
+        max-width: 280px;
+      }
       &:after {
         background: url(/themes/custom/biodiv/images/arrow.svg);
+        background-repeat: no-repeat;
         display: block;
-        width: 6px;
-        height: 9px;
-        margin-left: 0.3125rem;
-        margin-top: 0.25rem;
+        width: 10px;
+        height: 15px;
         content: "";
+        position: absolute;
+        right: 0;
+        z-index: 1;
       }
     }
   }
