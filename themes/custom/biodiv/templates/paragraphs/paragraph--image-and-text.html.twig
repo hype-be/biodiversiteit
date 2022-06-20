@@ -39,22 +39,20 @@
  */
 #}
 {% if content.field_color_picker[0]['#markup'] == '' %}
-    {% set padding_x_img = '50px' %}
-    {% set padding_y_img = '0px' %}
+    {% set col_padd = 'padding-50-0' %}
 {% else %}
-    {% set padding_x_img = '73px' %}
-    {% set padding_y_img = '64px' %}
+    {% set col_padd = 'padding-73-64' %}
 {% endif %}
 
 {% if content.field_layout[0]['#markup'] == 'full' %}
-    {% set col_layout_left = 'col-8' %}
-    {% set col_layout_right = 'col-4' %}
+    {% set col_layout_left = 'col-md-8' %}
+    {% set col_layout_right = 'col-md-4' %}
 {% elseif content.field_layout[0]['#markup'] == 'medium' %}
-    {% set col_layout_left = 'col' %}
-    {% set col_layout_right = 'col' %}
+    {% set col_layout_left = 'col-md-6' %}
+    {% set col_layout_right = 'col-md-6' %}
 {% elseif content.field_layout[0]['#markup'] == 'large' %}
-    {% set col_layout_left = 'col-4' %}
-    {% set col_layout_right = 'col-8' %}
+    {% set col_layout_left = 'col-md-4' %}
+    {% set col_layout_right = 'col-md-8' %}
 {% endif %}
 
 {% if content.field_image_alignment[0]['#markup'] == 'top' %}
@@ -78,11 +76,23 @@
             <div class="container px-0">
                 <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}{% endif %}">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
-                            <div class="col-left col-img {{ col_layout_left }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
-                            <div class="col-right col-wysiwyg {{ col_layout_right }} d-flex {{ col_alignment_left }}"><div style="padding: 48px 99px;">{{ content.field_wysiwyg }}</div></div>
+                            <div class="col-left col-img {{ col_layout_left }} {{ col_padd }}">
+                                <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
+                            <div class="col-right col-wysiwyg {{ col_layout_right }} {{ col_alignment_left }}">
+                                <div class="padding-lg">
+                                    {{ content.field_wysiwyg }}
+                                </div>
+                            </div>
                     {% else%}
-                            <div class="col-left col-wysiwyg {{ col_layout_left }} d-flex {{ col_alignment_left }}"><div style="padding: 48px 99px;">{{ content.field_wysiwyg }}</div></div>
-                            <div class="col-right col-img {{ col_layout_right }} d-flex" style="padding: {{ padding_x_img }} {{ padding_y_img }};"><img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}" style="border-radius: 50px;"></div>
+                            <div class="col-left col-wysiwyg {{ col_layout_left }} {{ col_alignment_left }}">
+                                <div class="padding-lg">
+                                    {{ content.field_wysiwyg }}
+                                </div>
+                            </div>
+                            <div class="col-right col-img {{ col_layout_right }} {{ col_padd }}">
+                                <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
                     {% endif %}
                 </div>
             </div>
