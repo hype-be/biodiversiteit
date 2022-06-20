@@ -7,9 +7,10 @@
 }
 #block-biodiv-content a.link_underline::after {
   background: url("/themes/custom/biodiv/images/arrow.svg");
+  background-repeat: no-repeat;
   display: block;
-  width: 6px;
-  height: 9px;
+  width: 10px;
+  height: 15px;
   margin-left: 5px;
   margin-top: 4px;
   content: "";
@@ -71,12 +72,3 @@
   color: #004659;
   font-weight: bold;
 }
-/*.paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title::after {
-  background: url("/themes/custom/biodiv/images/arrow.svg");
-  display: block;
-  width: 11px;
-  height: 18px;
-  margin-left: 5px;
-  margin-top: 3px;
-  content: "";
-}*/
