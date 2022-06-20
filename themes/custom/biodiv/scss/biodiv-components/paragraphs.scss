@@ -40,6 +40,12 @@
   }
 }
 
+.paragraph--type--image-and-text {
+  img {
+    border-radius: 50px;
+  }
+}
+
 .paragraph--type--video-and-text {
   .col-img {
     border-radius: 50px;

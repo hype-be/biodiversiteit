@@ -77,7 +77,7 @@
                 <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}{% endif %}">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
                             <div class="col-left col-img {{ col_layout_left }} {{ col_padd }}">
-                                <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             </div>
                             <div class="col-right col-wysiwyg {{ col_layout_right }} {{ col_alignment_left }}">
                                 <div class="padding-lg">
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="col-right col-img {{ col_layout_right }} {{ col_padd }}">
-                                <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             </div>
                     {% endif %}
                 </div>
