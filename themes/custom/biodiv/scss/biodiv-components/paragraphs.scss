@@ -46,6 +46,12 @@
   }
 }
 
-.paragraph--type--banner {
-
+.paragraph--type--two-column-image {
+  .img-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 1;
+    color: white;
+  }
 }
