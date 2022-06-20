@@ -3,14 +3,15 @@
 }
 
 .stripes-top-left:before, .stripes-bottom-right:after {
+  content: "";
   width: 57px;
   height: 57px;
   position: absolute;
+  background-size: cover;
 }
 
 .stripes-top-left {
   &:before {
-    content: "";
     background-image: url(/themes/custom/biodiv/images/icons/3-stripes-top-left.svg);
     top: -37px;
     left: -37px;
@@ -19,7 +20,6 @@
 
 .stripes-bottom-right {
   &:after {
-    content: "";
     background-image: url(/themes/custom/biodiv/images/icons/3-stripes-bottom-right.svg);
     position: absolute;
     bottom: -37;
