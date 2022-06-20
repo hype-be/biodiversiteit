@@ -47,14 +47,14 @@
 {#{% endif %}#}
 
 {% if content.field_layout[0]['#markup'] == 'full' %}
-    {% set col_layout_left = 'col-8' %}
-    {% set col_layout_right = 'col-4' %}
+    {% set col_layout_left = 'col-md-8' %}
+    {% set col_layout_right = 'col-md-4' %}
 {% elseif content.field_layout[0]['#markup'] == 'medium' %}
-    {% set col_layout_left = 'col' %}
-    {% set col_layout_right = 'col' %}
+    {% set col_layout_left = 'col-md-6' %}
+    {% set col_layout_right = 'col-md-6' %}
 {% elseif content.field_layout[0]['#markup'] == 'large' %}
-    {% set col_layout_left = 'col-4' %}
-    {% set col_layout_right = 'col-8' %}
+    {% set col_layout_left = 'col-md-4' %}
+    {% set col_layout_right = 'col-md-8' %}
 {% endif %}
 
 {#{% if content.field_image_alignment[0]['#markup'] == 'top' %}#}
