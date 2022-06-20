@@ -1,3 +1,28 @@
 .padding-lg {
   padding: 48px 99px;
 }
+
+.stripes-top-left:before, .stripes-bottom-right:after {
+  width: 57px;
+  height: 57px;
+  position: absolute;
+}
+
+.stripes-top-left {
+  &:before {
+    content: "";
+    background-image: url(/themes/custom/biodiv/images/icons/3-stripes-top-left.svg);
+    top: 0;
+    left: 0;
+  }
+}
+
+.stripes-bottom-right {
+  &:after {
+    content: "";
+    background-image: url(/themes/custom/biodiv/images/icons/3-stripes-bottom-right.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
