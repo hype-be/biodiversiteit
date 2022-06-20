@@ -10,7 +10,7 @@
   padding: 50px 0;
 }
 
-.stripes-top-left:before, .stripes-bottom-right:after {
+.stripes-top-left:before, .stripes-bottom-right:after, .stripes-top-right:after, .stripes-bottom-left:before {
   content: "";
   width: 57px;
   height: 57px;
