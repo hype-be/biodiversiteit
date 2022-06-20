@@ -56,11 +56,11 @@
 {% endif %}
 
 {% if content.field_image_alignment[0]['#markup'] == 'top' %}
-    {% set col_alignment_left = 'align-items-start' %}
+    {% set col_alignment = 'align-items-start' %}
 {% elseif content.field_image_alignment[0]['#markup'] == 'center' %}
-    {% set col_alignment_left = 'align-items-center' %}
+    {% set col_alignment = 'align-items-center' %}
 {% elseif content.field_image_alignment[0]['#markup'] == 'bottom' %}
-    {% set col_alignment_left = 'align-items-end' %}
+    {% set col_alignment = 'align-items-end' %}
 {% endif %}
 {%
     set classes = [
@@ -74,18 +74,18 @@
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
             <div class="container px-0">
-                <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}{% endif %}">
+                <div class="row {{ col_alignment }}" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}{% endif %}">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
                             <div class="col-left col-img {{ col_layout_left }} {{ col_padd }}">
                                 <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             </div>
-                            <div class="col-right col-wysiwyg {{ col_layout_right }} {{ col_alignment_left }}">
+                            <div class="col-right col-wysiwyg {{ col_layout_right }}">
                                 <div class="padding-lg">
                                     {{ content.field_wysiwyg }}
                                 </div>
                             </div>
                     {% else%}
-                            <div class="col-left col-wysiwyg {{ col_layout_left }} {{ col_alignment_left }}">
+                            <div class="col-left col-wysiwyg {{ col_layout_left }}">
                                 <div class="padding-lg">
                                     {{ content.field_wysiwyg }}
                                 </div>
