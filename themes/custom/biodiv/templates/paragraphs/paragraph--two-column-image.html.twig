@@ -87,9 +87,7 @@
                                             <img class="img-fluid img-bottom-right" src="/themes/custom/biodiv/images/icons/3-stripes-bottom-right.svg" alt="Three stripes bottom right">
                                     {% endif %}
                                     {% if content.field_link[0]['#url']|render or content.field_link['#items'].title|render  %}
-                                        <div class="text-center">
-                                            <a href="{{ content.field_link[0]['#url']|render}}">{{ content.field_image_caption }}</a>
-                                        </div>
+                                        <a href="{{ content.field_link[0]['#url']|render}}">{{ content.field_image_caption }}</a>
                                         {% else %}
                                             <div>{{ content.field_image_caption }}</div>
                                         <p></p>
@@ -102,9 +100,7 @@
                             {% if content.field_image_caption_2 %}
                                 <div class="img-caption">
                                     {% if content.field_link2[0]['#url']|render or content.field_link2['#items'].title|render  %}
-                                        <div class="text-center">
-                                            <a href="{{ content.field_link2[0]['#url']|render}}">{{ content.field_image_caption_2 }}</a>
-                                        </div>
+                                        <a href="{{ content.field_link2[0]['#url']|render}}">{{ content.field_image_caption_2 }}</a>
                                     {% else %}
                                         <div>{{ content.field_image_caption_2 }}</div>
                                         <p></p>
