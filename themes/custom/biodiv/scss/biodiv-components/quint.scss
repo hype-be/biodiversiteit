@@ -72,3 +72,18 @@
   color: #004659;
   font-weight: bold;
 }
+
+.paragraph ul{
+  list-style: none;
+}
+
+span.list-green::before {
+  content: "";
+  background: url("/themes/custom/biodiv/images/list.png");
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -32px;
+  bottom: 6px;
+}
+
