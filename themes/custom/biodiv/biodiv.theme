@@ -67,10 +67,10 @@ function biodiv_preprocess_paragraph__image_and_text(&$variables) {
 
 function biodiv_preprocess_paragraph__two_column_image(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('large', null, $variables);
+        $variables = imgBuild('517x517', null, $variables);
     }
     if (isset($variables['elements']['field_media_img_2']['#items'])) {
-        $variables = imgBuild('large', null, $variables);
+        $variables = imgBuild(null, '517x517', $variables);
     }
 }
 

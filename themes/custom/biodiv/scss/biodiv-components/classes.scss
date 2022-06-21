@@ -1,0 +1,36 @@
+.padding-lg {
+  padding: 48px 99px;
+}
+
+.padding-73-64 {
+  padding: 73px 64px;
+}
+
+.padding-50-0 {
+  padding: 50px 0;
+}
+
+.stripes-top-left:before, .stripes-bottom-right:after, .stripes-top-right:after, .stripes-bottom-left:before {
+  content: "";
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  background-size: cover;
+}
+
+.stripes-top-left {
+  &:before {
+    background-image: url(/themes/custom/biodiv/images/icons/3-stripes-top-left.svg);
+    top: -37px;
+    left: -37px;
+  }
+}
+
+.stripes-bottom-right {
+  &:after {
+    background-image: url(/themes/custom/biodiv/images/icons/3-stripes-bottom-right.svg);
+    position: absolute;
+    bottom: -37px;
+    right: -37px;
+  }
+}

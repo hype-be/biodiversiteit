@@ -40,12 +40,64 @@
   }
 }
 
+.paragraph--type--image-and-text {
+  img {
+    border-radius: 50px;
+  }
+}
+
 .paragraph--type--video-and-text {
   .col-img {
     border-radius: 50px;
   }
 }
 
-.paragraph--type--banner {
+.paragraph--type--two-column-image {
+  .col-img {
+    max-width: 517px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container > .row {
+    width: 1227px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 1;
+    color: white;
+    font-size: 1.625rem;
+    line-height: 2.1875rem;
+    font-weight: 700;
+    max-width: 426px;
+    width: 100%;
+    a {
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .field--name-field-image-caption {
+        max-width: 285px;
+      }
+      &:after {
+        background: url(/themes/custom/biodiv/images/arrow.svg);
+        background-repeat: no-repeat;
+        display: block;
+        width: 10px;
+        height: 15px;
+        content: "";
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+
+.test {
 
 }

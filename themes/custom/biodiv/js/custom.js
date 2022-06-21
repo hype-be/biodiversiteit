@@ -16,7 +16,7 @@
   };
 
   $(document).ready(function() {
-    $('.slider .field--name-field-video-card-slide .field__items').slick({
+    $('.slider .field--name-field-video-card-slide.field__items').slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
