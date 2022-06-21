@@ -52,10 +52,12 @@
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }} style="background-image: url('{{ img_styled }}'); {% if content.field_parallax[0]['#markup'] == "On" %} background-position: center;{% endif %}">
         {% block content %}
+            <div class="container">
             <div class="row d-flex" style="justify-content: {{ content.field_text_position[0]['#markup'] }};">
                 <div class="col-md-12 col-text">
                     {{ content.field_wysiwyg }}
                 </div>
+            </div>
             </div>
         {% endblock %}
     </div>
