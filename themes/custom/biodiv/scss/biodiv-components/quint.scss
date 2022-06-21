@@ -4,6 +4,10 @@
   align-items: center;
   position: relative;
   width: fit-content;
+  font-weight: bold;
+}
+#block-biodiv-content a.link_underline:hover {
+  text-decoration: none;
 }
 #block-biodiv-content a.link_underline::after {
   background: url("/themes/custom/biodiv/images/arrow.svg");
@@ -89,5 +93,6 @@ span.list-green::before {
 
 .list-green {
   position: relative;
+  margin-left: 20px;
 }
 
