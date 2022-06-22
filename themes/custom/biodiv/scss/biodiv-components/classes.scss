@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.stripes-top-left:before, .stripes-bottom-right:after, .stripes-top-right:after, .stripes-bottom-left:before {
+.stripes-top-left:before, .stripes-bottom-right:after, .stripes-top-right:before, .stripes-bottom-left:after {
   content: "";
   width: 57px;
   height: 57px;
@@ -35,7 +35,7 @@
 }
 
 .stripes-top-right {
-  &:after {
+  &:before {
     background-image: url(/themes/custom/biodiv/images/icons/3-stripes-top-right.svg);
     top: -37px;
     right: -37px;
@@ -43,11 +43,11 @@
 }
 
 .stripes-bottom-left {
-  &:before {
+  &:after {
     background-image: url(/themes/custom/biodiv/images/icons/3-stripes-bottom-left.svg);
     position: absolute;
     bottom: -37px;
-    right: -37px;
+    left: -37px;
   }
 }
 
