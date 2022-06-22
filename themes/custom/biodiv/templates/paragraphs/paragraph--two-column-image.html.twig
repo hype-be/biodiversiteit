@@ -73,7 +73,7 @@
     {% set stripes2 = 'stripes-top-right' %}
 {% elseif content.field_stripes2[0]['#markup'] == 'stripes-bottom-left' %}
     {% set stripes2 = 'stripes-bottom-left' %}
-{% else %}
+{% elseif content.field_stripes2[0]['#markup'] == 'stripes-bottom-right' %}
     {% set stripes2 = 'stripes-bottom-right' %}
 {% endif %}
 
