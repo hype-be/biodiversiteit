@@ -59,3 +59,10 @@
     right: -37px;
   }
 }
+
+.pull-img-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100px;
+}
