@@ -57,11 +57,11 @@
     {% set col_layout_right = 'col-md-8' %}
 {% endif %}
 
-{% if content.field_stripes[0]['#markup'] == 'stripes-top-left' %}
+{% if content.field_stripes[0]['#markup'] or content.field_stripes2[0]['#markup'] == 'stripes-top-left' %}
     {% set stripes = 'stripes-top-left' %}
-    {% elseif content.field_stripes[0]['#markup'] == 'stripes-top-right' %}
+    {% elseif content.field_stripes[0]['#markup'] or content.field_stripes2[0]['#markup'] == 'stripes-top-right' %}
         {% set stripes = 'stripes-top-right' %}
-    {% elseif content.field_stripes[0]['#markup'] == 'stripes-bottom-left' %}
+    {% elseif content.field_stripes[0]['#markup'] or content.field_stripes2[0]['#markup'] == 'stripes-bottom-left' %}
         {% set stripes = 'stripes-bottom-left' %}
     {% else %}
         {% set stripes = 'stripes-bottom-right' %}
