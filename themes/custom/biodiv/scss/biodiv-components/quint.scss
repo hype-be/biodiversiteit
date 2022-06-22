@@ -38,19 +38,19 @@
   content: "";
   background-repeat: no-repeat;
 }
-.three-stripes-top {
-  position: relative;
-}
-.three-stripes-top::before {
-  width: 80px;
-  height: 80px;
-  background: url("/themes/custom/biodiv/images/three-stripes-top.png");
-  content: "";
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -35px;
-  top: -30px;
-}
+//.three-stripes-top {
+//  position: relative;
+//}
+//.three-stripes-top::before {
+//  width: 80px;
+//  height: 80px;
+//  background: url("/themes/custom/biodiv/images/three-stripes-top.png");
+//  content: "";
+//  background-repeat: no-repeat;
+//  position: absolute;
+//  left: -35px;
+//  top: -30px;
+//}
 .line-blue {
   position: relative;
 }
