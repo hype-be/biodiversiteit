@@ -1,5 +1,9 @@
 .paragraph {
   margin-bottom: 50px;
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 52px;
+    line-height: 60px;
+  }
 }
 
 .paragraph--type--quote {
@@ -99,5 +103,5 @@
 
 
 .test {
-  background-color: blue;
+  background-color: red;
 }
