@@ -81,7 +81,7 @@
   list-style: none;
 }
 
-span.list-green::before {
+.list-green li::before {
   content: "";
   background: url("/themes/custom/biodiv/images/list.png");
   height: 20px;
@@ -91,7 +91,7 @@ span.list-green::before {
   bottom: 0px;
 }
 
-.list-green {
+.list-green li {
   position: relative;
   margin-left: 20px;
 }
