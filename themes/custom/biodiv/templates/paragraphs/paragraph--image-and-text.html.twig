@@ -102,8 +102,8 @@
                                     {{ content.field_wysiwyg }}
                                 </div>
                             </div>
-                            <div class="{{ stripes }} col-right col-img {{ col_layout_right }} {% if content.field_pull_image_right[0]['#markup'] == "On" %}pull-img-right{% endif %}">
-                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            <div class="{{ stripes }} col-right col-img {{ col_layout_right }}">
+                                <img class="img-fluid {% if content.field_pull_image_right[0]['#markup'] == "On" %}pull-img-right{% endif %}" src="{{ img_styled }}" alt="{{ img_alt }}">
                             </div>
                     {% endif %}
                 </div>
