@@ -1,5 +1,4 @@
 .btn-green, .btn-dark-green {
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +6,7 @@
   position: relative;
   z-index: 1;
   font-weight: bold;
-  &:after {
+  &:before {
     content: "";
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -19,15 +18,28 @@
     top: -10px;
     z-index: -1;
   }
+  &:after {
+    background-repeat: no-repeat;
+    display: block;
+    width: 10px;
+    height: 15px;
+    margin-left: 15px;
+    margin-top: 4px;
+    content: "";
+  }
 }
 
 .btn-dark-green {
+  margin: 0 auto;
   color: white;
   width: 194px;
   height: 150px;
   font-size: 19px;
-  &:after {
+  &:before {
     background-image: url(/themes/custom/biodiv/images/btn-dark-green.svg);
+  }
+  &:after {
+    background: url(/themes/custom/biodiv/images/arrow-white.svg);
   }
 }
 
@@ -37,16 +49,10 @@
   height: 110px;
   font-size: 17px;
   &:before {
+    top: 0;
     background-image: url(/themes/custom/biodiv/images/btn-green.svg);
   }
   &:after {
     background: url(/themes/custom/biodiv/images/arrow.svg);
-    background-repeat: no-repeat;
-    display: block;
-    width: 10px;
-    height: 15px;
-    margin-left: 0.3125rem;
-    margin-top: 0.25rem;
-    content: "";
   }
 }
