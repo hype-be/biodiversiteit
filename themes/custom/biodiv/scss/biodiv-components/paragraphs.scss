@@ -45,6 +45,11 @@
 }
 
 .paragraph--type--image-and-text {
+  .col-right {
+    &.col-img {
+      padding-right: 65px;
+    }
+  }
   .image-decoration {
     background-color: #9ad592;
     /*width: max-content;
@@ -57,6 +62,9 @@
     margin-left: 2px;
     position: relative;
     z-index: 1;
+    img {
+      width: 100%;
+    }
     &.pull-img-right {
       max-width: 100%;
     }
