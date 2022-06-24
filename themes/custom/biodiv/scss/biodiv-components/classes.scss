@@ -66,3 +66,17 @@
   transform: translateY(-50%);
   right: -100px;
 }
+
+.field--name-field-badge {
+  color: $sherpa-blue;
+  font-size: 12px;
+  line-height: 27px;
+  letter-spacing: 0.48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: white;
+  border-radius: 20px;
+  padding: 6px 25px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
