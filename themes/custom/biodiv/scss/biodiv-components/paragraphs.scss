@@ -57,7 +57,7 @@
     z-index: 1;
   }
   .col-img {
-    img:not(.pull-img-right) {
+    img {
       z-index: 1;
       transform: rotate(4deg);
     }
