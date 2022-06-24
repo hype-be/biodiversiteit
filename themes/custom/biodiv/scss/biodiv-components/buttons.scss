@@ -37,9 +37,11 @@
   font-size: 19px;
   &:before {
     background-image: url(/themes/custom/biodiv/images/btn-dark-green.svg);
+    background-repeat: no-repeat;
   }
   &:after {
     background: url(/themes/custom/biodiv/images/arrow-white.svg);
+    background-repeat: no-repeat;
   }
 }
 
@@ -51,8 +53,10 @@
   &:before {
     top: 0;
     background-image: url(/themes/custom/biodiv/images/btn-green.svg);
+    background-repeat: no-repeat;
   }
   &:after {
     background: url(/themes/custom/biodiv/images/arrow.svg);
+    background-repeat: no-repeat;
   }
 }
