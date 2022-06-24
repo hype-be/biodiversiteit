@@ -89,10 +89,12 @@
                 <div class="row rounded-card {{ col_alignment }}" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}{% endif %}">
                     {% if content.field_image_position[0]['#markup'] == 'left' %}
                         <div class="{{ stripes }} col-left col-img {{ col_layout_left }}">
-                            <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% if content.field_color_picker_2[0]['#markup'] %}
                                 <div class="image-decoration" style="background-color: {{ content.field_color_picker_2[0]['#markup'] }}">
+                                    <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                                 </div>
+                                {% else %}
+                                    <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% endif %}
                         </div>
                         <div class="col-right col-wysiwyg {{ col_layout_right }}">
@@ -113,10 +115,12 @@
                             </div>
                         </div>
                         <div class="{{ stripes }} col-right col-img {{ col_layout_right }}">
-                            <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% if content.field_color_picker_2[0]['#markup'] %}
                                 <div class="image-decoration {% if content.field_pull_image_right[0]['#markup'] == "On" %}pull-img-right{% endif %}" style="background-color: {{ content.field_color_picker_2[0]['#markup'] }}">
+                                    <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                                 </div>
+                                {% else %}
+                                    <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% endif %}
                         </div>
                     {% endif %}
