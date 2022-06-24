@@ -1,13 +1,12 @@
 .btn-green, .btn-dark-green {
   margin: 0 auto;
-  width: 194px;
-  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   position: relative;
   z-index: 1;
+  font-weight: bold;
   &:after {
     content: "";
     background-repeat: no-repeat;
@@ -24,6 +23,9 @@
 
 .btn-dark-green {
   color: white;
+  width: 194px;
+  height: 150px;
+  font-size: 19px;
   &:after {
     background-image: url(/themes/custom/biodiv/images/btn-dark-green.svg);
   }
@@ -31,7 +33,20 @@
 
 .btn-green {
   color: $sherpa-blue;
-  &:after {
+  width: 312px;
+  height: 110px;
+  font-size: 17px;
+  &:before {
     background-image: url(/themes/custom/biodiv/images/btn-green.svg);
+  }
+  &:after {
+    background: url(/themes/custom/biodiv/images/arrow.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 10px;
+    height: 15px;
+    margin-left: 0.3125rem;
+    margin-top: 0.25rem;
+    content: "";
   }
 }
