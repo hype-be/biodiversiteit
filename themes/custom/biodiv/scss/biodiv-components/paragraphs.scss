@@ -60,9 +60,11 @@
     }
   }
   .col-img {
-    img {
-      z-index: 1;
-      transform: rotate(4deg);
+    &.col-pull-right {
+      img {
+        z-index: 1;
+        transform: rotate(4deg);
+      }
     }
   }
   img {
