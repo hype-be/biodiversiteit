@@ -34,6 +34,12 @@
           letter-spacing: 0.4px;
           text-align: left;
           line-height: 33px;
+          &.nav-link.active {
+            font-weight: 700;
+          }
+          a:hover {
+            color: $caribbean-green;
+          }
         }
       }
     }

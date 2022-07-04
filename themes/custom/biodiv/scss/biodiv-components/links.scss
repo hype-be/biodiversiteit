@@ -1,0 +1,61 @@
+a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  &:before {
+    width: 100%;
+    height: 1px;
+    background: $caribbean-green;
+    content: "";
+    position: absolute;
+    bottom: 1px;
+  }
+  &:after {
+    background: url(/themes/custom/biodiv/images/arrow.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 10px;
+    height: 15px;
+    margin-left: 0.3125rem;
+    margin-top: 0.25rem;
+    content: "";
+  }
+}
+
+form button, form button.btn-primary {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: bold;
+  color: $link-color;
+  background: transparent;
+  border: none;
+  width: fit-content;
+  padding: 0;
+  line-height: 33px;
+  &:before {
+    width: 100%;
+    height: 1px;
+    background: $caribbean-green;
+    content: "";
+    position: absolute;
+    bottom: 1px;
+  }
+  &:after {
+    background: url(/themes/custom/biodiv/images/arrow.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 10px;
+    height: 15px;
+    margin-left: 0.3125rem;
+    margin-top: 0.25rem;
+    content: "";
+  }
+  &:hover {
+    background: transparent;
+    color: $link-color;
+  }
+}

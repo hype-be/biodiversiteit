@@ -43,9 +43,9 @@ $inverse-color: $white;
 // Links
 //
 // Style anchor elements.
-$link-color: $accent-shade;
+$link-color: #004659;
 $link-decoration: none;
-$link-hover-color: $accent-dark;
+$link-hover-color: darken(#004659, 10%);
 $link-hover-decoration: underline;
 // Comments
 $comment-spacer-x: 1.25em;
