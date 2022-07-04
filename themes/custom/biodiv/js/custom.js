@@ -20,7 +20,9 @@
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      accessibility: true
+      accessibility: true,
+      prevArrow: $('.video-cards-prev'),
+      nextArrow: $('.video-cards-next'),
     });
   });
 
