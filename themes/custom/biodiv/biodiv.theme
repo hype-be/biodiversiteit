@@ -88,7 +88,7 @@ function biodiv_preprocess_paragraph__quote(&$variables) {
 
 function biodiv_preprocess_paragraph__slider_video_card_item(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('159x159', null, $variables);
+        $variables = imgBuild('317x292', null, $variables);
     }
 }
 
