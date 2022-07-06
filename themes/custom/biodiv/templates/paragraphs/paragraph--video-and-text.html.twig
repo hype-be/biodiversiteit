@@ -52,8 +52,11 @@
             <div class="container px-0">
                 <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
                     <div class="col-md-6 col-l col-img">
-                        <button type="button" class="border-0 bg-transparent d-block mx-auto" aria-label="Show video" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
+                        <button type="button" class="border-0 bg-transparent d-block mx-auto" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
                             <img class="img-fluid b-rad-50" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            <div class="icon-play center-top-left">
+                                <img class="img-fluid" src="/themes/custom/biodiv/images/play-btn.svg" alt="{% trans %}Play video{% endtrans %}">
+                            </div>
                         </button>
                     </div>
                     <div class="col-md-6 col-right col-wysiwyg">
