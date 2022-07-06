@@ -166,6 +166,18 @@
   }
 }
 
+.accordion {
+  .field.field--name-field-paragraph-faq-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.accordion .field.field--name-field-paragraph-faq-item .field__item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 .test {
-  background-color: red;
+  background-color: blue
 }

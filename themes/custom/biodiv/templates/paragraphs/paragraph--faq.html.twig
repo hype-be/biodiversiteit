@@ -43,14 +43,19 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'container-fluid'
 ]
 %}
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="accordion" id="accordion-faq">
-                {{ content.field_paragraph_faq_item }}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="accordion" id="accordion-faq">
+                        {{ content.field_paragraph_faq_item }}
+                    </div>
+                </div>
             </div>
         {% endblock %}
     </div>
