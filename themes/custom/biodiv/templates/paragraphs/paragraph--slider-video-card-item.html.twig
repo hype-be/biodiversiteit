@@ -57,11 +57,11 @@
                     {{ content.field_title }}
                     {{ content.field_wysiwyg }}
                     {% if content.field_media_iframe|render and content.field_media_img|render %}
-                        <button type="button" class="btn-no-style d-block mx-auto" aria-label="Show video" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
+                        <button type="button" class="bg-transparent border-0 d-block mx-auto" aria-label="Show video" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
                             <div class="position-relative">
                                 {# img style = 288x265 #}
-                                <img class="img-fluid d-block mx-auto cursor-pointer" src="{{ img_styled }}" alt="{{ img_alt }}">
-                                <div class="icon-play">
+                                <img class="img-fluid d-block mx-auto c-pointer b-rad-25" src="{{ img_styled }}" alt="{{ img_alt }}">
+                                <div class="icon-play center-top-left">
                                     <img class="img-fluid" src="/themes/custom/biodiv/images/play-btn.svg" alt="Play video">
                                 </div>
                             </div>
