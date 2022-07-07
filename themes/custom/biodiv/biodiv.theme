@@ -98,6 +98,12 @@ function biodiv_preprocess_paragraph__video_and_text(&$variables) {
     }
 }
 
+function biodiv_preprocess_paragraph__slider_quotes_item(&$variables) {
+    if (isset($variables['elements']['field_media_img']['#items'])) {
+        $variables = imgBuild('159x159', null, $variables);
+    }
+}
+
 function biodiv_preprocess_paragraph__slider_gallery(&$variables) {
 
     if (isset($variables['elements']['field_media_image_unlim']['#items'])) {
