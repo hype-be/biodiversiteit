@@ -24,6 +24,15 @@
       prevArrow: $('.video-cards-prev'),
       nextArrow: $('.video-cards-next'),
     });
+
+    $('.gallery').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      accessibility: true,
+      prevArrow: $('.gallery-prev'),
+      nextArrow: $('.gallery-next'),
+    });
   });
 
   function isInViewport(node) {

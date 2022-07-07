@@ -51,11 +51,13 @@
         {% block content %}
             {% if content.field_media_image_unlim|render %}
                 <div class="gallery">
-                    <div class="slider-nav">
-                        {% for key, slider in gallery.image_content %}
-                            <img src="{{slider.thumbnail}}" alt="{{slider.alt}}-thumbnail">
-                        {% endfor %}
+                    <div class="slick-btn-wrapper text-align-right">
+                        <button type="button" aria-label="{% trans %}previous{% endtrans %}" class="gallery-prev"><img src="/themes/custom/biodiv/images/arrow-left.svg" alt=""></button>
+                        <button type="button" aria-label="{% trans %}Next{% endtrans %}" class="gallery-next"><img src="/themes/custom/biodiv/images/arrow-right.svg" alt=""></button>
                     </div>
+                    {% for key, slider in gallery.image_content %}
+                        <img class="img-fluid" src="{{slider.thumbnail}}" alt="{{slider.alt}}-thumbnail">
+                    {% endfor %}
                 </div>
             {% endif %}
         {% endblock %}
