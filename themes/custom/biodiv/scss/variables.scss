@@ -13,7 +13,7 @@ $dark-blue: #00222B;
 $periwinkle: #C7D3E5;
 
 // colors
-$primary-shade: rgb(255, 78, 46);
+$primary-shade: $sherpa-blue;
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
 $accent-shade: #0079C0;
