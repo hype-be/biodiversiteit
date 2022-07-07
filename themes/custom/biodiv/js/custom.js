@@ -25,7 +25,7 @@
       nextArrow: $('.video-cards-next'),
     });
 
-    $('.gallery').slick({
+    $('.gallery-items').slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,

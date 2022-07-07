@@ -55,9 +55,11 @@
                         <button type="button" aria-label="{% trans %}previous{% endtrans %}" class="gallery-prev"><img src="/themes/custom/biodiv/images/arrow-left.svg" alt=""></button>
                         <button type="button" aria-label="{% trans %}Next{% endtrans %}" class="gallery-next"><img src="/themes/custom/biodiv/images/arrow-right.svg" alt=""></button>
                     </div>
-                    {% for key, slider in gallery.image_content %}
-                        <img class="img-fluid" src="{{slider.thumbnail}}" alt="{{slider.alt}}-thumbnail">
-                    {% endfor %}
+                    <div class="gallery-items">
+                        {% for key, slider in gallery.image_content %}
+                            <img class="img-fluid" src="{{slider.thumbnail}}" alt="{{slider.alt}}-thumbnail">
+                        {% endfor %}
+                    </div>
                 </div>
             {% endif %}
         {% endblock %}
