@@ -49,7 +49,9 @@
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            {{ content.field_quote_slide }}
+            <div class="slider-quotes">
+                {{ content.field_quote_slide }}
+            </div>
         {% endblock %}
     </div>
 {% endblock paragraph %}
