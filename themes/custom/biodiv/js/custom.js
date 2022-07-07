@@ -34,7 +34,7 @@
       nextArrow: $('.gallery-next'),
     });
 
-    $('.slider-quotes').slick({
+    $('.slider-quotes .field--name-field-quote-slide').slick({
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
