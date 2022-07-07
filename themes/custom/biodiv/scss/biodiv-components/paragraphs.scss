@@ -257,6 +257,12 @@
   }
   .card-yellow {
     position: relative;
+    img {
+      position: absolute;
+      left: -59px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   .text-wrapper {
     padding-left: 90px;
