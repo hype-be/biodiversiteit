@@ -237,6 +237,20 @@
   }
 }
 
+.paragraph--type--slider-video-cards, .paragraph--type--slider-gallery {
+  .slick-slide {
+    margin-left: 40px;
+  }
+}
+
+.paragraph--type--slider-gallery {
+  .slick-slide {
+    img {
+      border-radius: 25px;
+    }
+  }
+}
+
 .test {
   background-color: steelblue;
 }
