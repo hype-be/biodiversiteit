@@ -28,8 +28,9 @@
   bottom: 1px;
 }
 .scribble-blue {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
+  display: inline-block;
 }
 .scribble-blue::after {
   width: 100%;
@@ -37,6 +38,8 @@
   background: url("/themes/custom/biodiv/images/scribble-blue.png");
   content: "";
   background-repeat: no-repeat;
+  display: block;
+  margin-bottom: 40px;
 }
 //.three-stripes-top {
 //  position: relative;
