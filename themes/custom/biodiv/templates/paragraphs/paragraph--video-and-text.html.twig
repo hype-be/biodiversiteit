@@ -52,7 +52,7 @@
             <div class="container px-0">
                 <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
                     <div class="col-md-6 col-l col-img">
-                        <button type="button" class="border-0 bg-transparent d-block mx-auto" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#video_and_text_modal-{{ paragraph.id() }}-iframe">
+                        <button type="button" class="border-0 bg-transparent d-block mx-auto" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
                            <div class="position-relative">
                                <img class="img-fluid b-rad-50" src="{{ img_styled }}" alt="{{ img_alt }}">
                                <div class="icon-play center-top-left">
@@ -67,23 +67,18 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="#video_and_text_modal-{{ paragraph.id() }}-iframe" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#video_and_text_modal-{{ paragraph.id() }}-iframe" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="video_and_text_modal_title">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Understood</button>
+            <div class="modal fade" id="modal-{{ paragraph.id() }}-iframe" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{% trans%}Close{% endtrans%} X</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>test</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>}
         {% endblock %}
     </div>
 {% endblock paragraph %}
