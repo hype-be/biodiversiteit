@@ -159,7 +159,7 @@
 .paragraph--type--slider-video-card-item {
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 0px;
+  /*margin-bottom: 0px;*/
   .icon-play {
     position: absolute;
     top: 50%;
@@ -169,7 +169,7 @@
   button {
     .position-relative {
       > img {
-        margin-bottom: -36px;
+        /*margin-bottom: -36px;*/
       }
     }
   }
@@ -186,7 +186,7 @@
 }
 
 .accordion .field.field--name-field-paragraph-faq-item {
-  .field__item {
+  > .field__item {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -206,6 +206,9 @@
   &:not(.collapsed) {
     color: $primary-shade;
     background-color: transparent;
+    &:after {
+      background-image: url("/themes/custom/biodiv/images/accordion-chevron.svg");
+    }
   }
   &:focus {
     box-shadow: 0 0 0 1px rgba(0, 70, 89, .45);
@@ -235,5 +238,5 @@
 }
 
 .test {
-  background-color: red;
+  background-color: gold;
 }
