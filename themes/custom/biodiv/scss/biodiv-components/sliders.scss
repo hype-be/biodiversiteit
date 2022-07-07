@@ -6,21 +6,19 @@
   .field--name-field-wysiwyg {
     margin-bottom: 40px;
   }
-  .slick-btn-wrapper {
-    padding-right: 160px;
-    padding-bottom: 28px;
-    button {
-      border: none;
-      background: transparent;
-      &:first-child {
-        img {
-          margin-right: 25px;
-        }
-      }
+}
+
+.slick-btn-wrapper {
+  padding-right: 160px;
+  padding-bottom: 28px;
+  button {
+    &:first-child {
       img {
-        width: 64px;
+        margin-right: 25px;
       }
+    }
+    img {
+      width: 64px;
     }
   }
 }
-
