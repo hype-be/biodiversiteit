@@ -98,4 +98,22 @@ function biodiv_preprocess_paragraph__video_and_text(&$variables) {
     }
 }
 
+function biodiv_preprocess_paragraph__slider_gallery(&$variables) {
 
+    if (isset($variables['elements']['field_media_image_unlim']['#items'])) {
+
+        $media_field = $variables['elements']['field_media_image_unlim'];
+
+        foreach ($variables['elements']['field_media_image_unlim']['#items'] as $key => $item) {
+
+            $media_entity = $media_field[$key]['#media'];
+            $field_media_img = $media_entity->field_media_image;
+            $uri = $field_media_img->entity->uri->value;
+
+            $variables['gallery']['image_content'][$key] = array(
+                'thumbnail' => ImageStyle::load('400x442')->buildUrl($uri),
+                'alt' => $field_media_img->alt,
+            );
+        }
+    }
+}
