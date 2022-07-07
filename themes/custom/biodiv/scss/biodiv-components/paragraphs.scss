@@ -251,6 +251,28 @@
   }
 }
 
+.paragraph--type--slider-quotes {
+  .slick-slide {
+    margin-left: 90px;
+  }
+  .card-yellow {
+    position: relative;
+  }
+  .text-wrapper {
+    padding-left: 90px;
+  }
+  .field--name-field-text {
+    font-size: 28px;
+    line-height: 39px;
+    font-weight: 500;
+  }
+  .field--name-field-title {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 33px;
+  }
+}
+
 .test {
   background-color: red;
 }
