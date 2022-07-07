@@ -1,20 +1,20 @@
 .slick-dots {
   li {
     button {
-      color: transparent;
-      border: 1px solid #979797;
-      border-radius: 50%;
+      color: transparent!important;
+      border: 1px solid #979797!important;
+      border-radius: 50%!important;
       &:before {
-        color: transparent;
-        opacity: 1;
+        color: transparent!important;
+        opacity: 1!important;
       }
     }
     &.slick-active {
       button {
-        border-color: $primary-shade;
-        background-color: $primary-shade;
+        border-color: $primary-shade!important;
+        background-color: $primary-shade!important;
         &:before {
-          opacity: 1;
+          opacity: 1!important;
         }
       }
     }
