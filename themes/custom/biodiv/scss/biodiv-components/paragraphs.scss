@@ -1,9 +1,13 @@
 .paragraph {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   h1, h2, h3, h4, h5, h6 {
     font-size: 52px;
     line-height: 60px;
   }
+}
+
+.paragraph--type--text-with-background-image, .paragraph--type--quote {
+  margin-bottom: 50px;
 }
 
 .paragraph--type--quote {
