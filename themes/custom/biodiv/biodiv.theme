@@ -163,7 +163,7 @@ function biodiv_preprocess_paragraph__two_column_gallery(&$variables) {
     }
 }
 
-function biodiv_preprocess_two_column_theme(&$variables) {
+function biodiv_preprocess_paragraph__two_column_theme(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
         $variables = imgBuild('210xauto', null, null, null, null, $variables);
     }
