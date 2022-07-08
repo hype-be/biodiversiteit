@@ -50,7 +50,6 @@
 ]
 %}
 {% block paragraph %}
-
     <div{{ attributes.addClass(classes) }} {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
         {% block content %}
             <div class="container">
@@ -62,5 +61,4 @@
             </div>
         {% endblock %}
     </div>
-
 {% endblock paragraph %}
