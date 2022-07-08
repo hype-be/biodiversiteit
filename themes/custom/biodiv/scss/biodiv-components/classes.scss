@@ -99,3 +99,8 @@
   border-radius: 25px;
   padding: 54px;
 }
+
+.box-yellow {
+  @extend .card-yellow;
+  padding: 30px;
+}

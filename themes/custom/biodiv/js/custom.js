@@ -39,7 +39,7 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,
-      centerPadding: '50px',
+      centerPadding: 0,
       accessibility: true,
       arrows: false,
       dots: true
