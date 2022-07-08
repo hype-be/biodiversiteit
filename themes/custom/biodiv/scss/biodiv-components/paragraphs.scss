@@ -327,6 +327,28 @@
   }
 }
 
+.paragraph--type--two-column-theme {
+  img {
+    &.figure-right {
+      position: absolute;
+    }
+  }
+  .wysiwyg-wrapper {
+    padding: 48px 46px;
+    .field--name-field-wysiwyg-2 {
+      max-width: 420px;
+      a.btn {
+        margin-top: 30px;
+      }
+    }
+  }
+  img {
+    &.figure-right {
+      position: absolute;
+    }
+  }
+}
+
 .test {
   background-color: red;
 }
