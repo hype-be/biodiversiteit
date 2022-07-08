@@ -159,6 +159,6 @@ function biodiv_preprocess_paragraph__slider_gallery(&$variables) {
 
 function biodiv_preprocess_paragraph__two_column_gallery(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('210x201', '623x443', null, null, null, $variables);
+        $variables = imgBuild('210x201', '210x201', '210x201', '210x201', '623x443', $variables);
     }
 }
