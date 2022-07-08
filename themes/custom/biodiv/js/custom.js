@@ -35,11 +35,11 @@
     });
 
     $('.slider-quotes .field--name-field-quote-slide').slick({
-      infinite: true,
+     /* infinite: true,*/
       slidesToShow: 2,
       slidesToScroll: 1,
       centerMode: true,
-      centerPadding:'90px',
+      centerPadding:'200px',
       accessibility: true,
       arrows: false,
       dots: true

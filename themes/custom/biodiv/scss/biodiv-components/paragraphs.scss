@@ -6,6 +6,10 @@
   }
 }
 
+.paragraph--type--spacer {
+  padding-bottom: 0;
+}
+
 .paragraph--type--text-with-background-image, .paragraph--type--quote {
   margin-bottom: 50px;
 }
@@ -322,5 +326,5 @@
 }
 
 .test {
-  background-color: gold;
+  background-color: red;
 }
