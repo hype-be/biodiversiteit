@@ -198,6 +198,7 @@
 
 .paragraph--type--faq-item {
   margin-bottom: 29px;
+  padding-bottom: 0;
 }
 
 .accordion-button {
@@ -261,6 +262,10 @@
   }
   .slick-slide {
     margin-left: 90px;
+    opacity: .5;
+    &.slick-current {
+      opacity: 1;
+    }
     height: auto;
     > div, .field__item, .paragraph--type--slider-quotes-item, .card-yellow {
       height: 100%;
@@ -270,6 +275,17 @@
     position: relative;
     display: flex;
     align-items: center;
+    &:before {
+      content: '';
+      background-image: url(/themes/custom/biodiv/images/quotes.svg);
+      display: block;
+      width: 138px;
+      height: 111px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 23px;
+    }
     img {
       position: absolute;
       left: -59px;
@@ -279,6 +295,7 @@
   }
   .text-wrapper {
     padding-left: 90px;
+    z-index: 1;
   }
   .field--name-field-text {
     font-size: 28px;
@@ -289,6 +306,7 @@
     font-weight: 400;
     font-size: 19px;
     line-height: 33px;
+    margin-top: 10px;
   }
 }
 

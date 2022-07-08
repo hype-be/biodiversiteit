@@ -46,10 +46,12 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'container-fluid',
-    content.field_parallax[0]['#markup'] == "On" ? 'show-parallax'
+    content.field_parallax[0]['#markup'] == "On" ? 'show-parallax',
+    content.field_padding_bottom[0]['#markup'] == 'On' ? 'mb-0'
 ]
 %}
 {% block paragraph %}
+    {# image style 1600x565 #}
     <div{{ attributes.addClass(classes) }} style="background-image: url('{{ img_styled }}'); {% if content.field_parallax[0]['#markup'] == "On" %} background-position: center;{% endif %}">
         {% block content %}
             <div class="container">

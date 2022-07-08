@@ -91,9 +91,11 @@
                         <div class="{% if not content.field_color_picker_2[0]['#markup'] %}{{ stripes }}{% endif %} col-left col-img col-lg-6 {% if content.field_color_picker_2[0]['#markup'] %}col-img-decoration{% endif %}">
                             {% if content.field_color_picker_2[0]['#markup'] %}
                                 <div class="image-decoration {{ stripes }}" style="background-color: {{ content.field_color_picker_2[0]['#markup'] }}">
+                                    {# image style 700x626 #}
                                     <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                                 </div>
                                 {% else %}
+                                    {# image style 700x626 #}
                                     <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% endif %}
                         </div>
@@ -117,9 +119,11 @@
                         <div class="{% if not content.field_color_picker_2[0]['#markup'] %}{{ stripes }}{% endif %} col-right col-img col-lg-6 {% if content.field_color_picker_2[0]['#markup'] %}col-img-decoration{% endif %}">
                             {% if content.field_color_picker_2[0]['#markup'] %}
                                 <div class="image-decoration {{ stripes }} {% if content.field_pull_image_right[0]['#markup'] == "On" %}pull-img-right{% endif %}" style="background-color: {{ content.field_color_picker_2[0]['#markup'] }}">
+                                    {# image style 700x626 #}
                                     <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                                 </div>
                                 {% else %}
+                                    {# image style 700x626 #}
                                     <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                             {% endif %}
                         </div>

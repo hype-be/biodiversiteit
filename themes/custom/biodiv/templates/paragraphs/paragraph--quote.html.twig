@@ -45,7 +45,8 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'container-fluid'
+    'container-fluid',
+    content.field_padding_bottom[0]['#markup'] == 'On' ? 'mb-0'
 ]
 %}
 {% block paragraph %}
@@ -54,6 +55,7 @@
             <div class="container px-0">
               <div class="row align-items-center">
                   <div class="col-md-2">
+                      {# image style 159x159 #}
                       <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
                   </div>
                   <div class="col-md-10">

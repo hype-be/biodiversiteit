@@ -43,7 +43,8 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    content.field_padding_bottom[0]['#markup'] == 'On' ? 'pb-0'
 ]
 %}
 {% block paragraph %}
@@ -57,6 +58,7 @@
                     </div>
                     <div class="gallery-items">
                         {% for key, slider in gallery.image_content %}
+                            {# image style 400x442 #}
                             <img class="img-fluid" src="{{slider.thumbnail}}" alt="{{slider.alt}}-thumbnail">
                         {% endfor %}
                     </div>

@@ -49,14 +49,37 @@
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="card-yellow">
-                {# image style 159x159 #}
-                <img class="img-fluid rounded-circle" src="{{ img_styled }}" alt="{{ img_alt }}">
-                <div class="text-wrapper">
-                    {{ content.field_text }}
-                    {{ content.field_title }}
+            <div class="container px-0">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {# image style 210x201 #}
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
+                            <div class="col-md-6">
+                                {# image style 210x201 #}
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                {# image style 210x201 #}
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
+                            <div class="col-md-6">
+                                {# image style 210x201 #}
+                                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        {# image style 623x443 #}
+                        <img class="img-fluid" src="{{ img_styled_2 }}" alt="{{ img_alt }}">
+                    </div>
                 </div>
             </div>
+            {{ content }}
         {% endblock %}
     </div>
 {% endblock paragraph %}
