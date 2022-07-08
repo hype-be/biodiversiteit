@@ -1,14 +1,16 @@
 .paragraph {
-  padding-bottom: 50px;
+  &:not(.paragraph--type--spacer):not(.paragraph--type--two-column-theme):not(.paragraph--type--text-with-background-image) {
+    padding-bottom: 50px;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-size: 52px;
     line-height: 60px;
   }
 }
 
-.paragraph--type--spacer {
+/*.paragraph--type--spacer, .paragraph--type--two-column-theme, .paragraph--type--text-with-background-image {
   padding-bottom: 0;
-}
+}*/
 
 .paragraph--type--text-with-background-image, .paragraph--type--quote {
   margin-bottom: 50px;
