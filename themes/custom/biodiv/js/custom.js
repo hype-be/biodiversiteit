@@ -36,7 +36,7 @@
 
     $('.slider-quotes .field--name-field-quote-slide').slick({
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       centerMode: true,
       accessibility: true,

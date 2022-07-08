@@ -32,7 +32,7 @@ function biodiv_form_system_theme_settings_alter(&$form, FormStateInterface $for
   );
 }
 
-function imgBuild($imgStyle, $imgStyle_2, $variables) {
+function imgBuild($imgStyle, $imgStyle_2, $imgStyle_3, $imgStyle_4, $imgStyle_5, $variables) {
     if(isset($imgStyle)) {
         $media_field = $variables['elements']['field_media_img'];
         if (isset($media_field[0])) {
@@ -56,62 +56,95 @@ function imgBuild($imgStyle, $imgStyle_2, $variables) {
             $variables['img_alt_2'] = $field_media_img_2->alt;
         }
     }
+
+    if(isset($imgStyle_3)) {
+        $media_field_3 = $variables['elements']['field_media_img_3'];
+        if (isset($media_field_3[0])) {
+            $media_entity_2 = $media_field_3[0]['#media'];
+            $field_media_img_3 = $media_entity_2->field_media_image;
+            $uri_3 = $field_media_img_3->entity->uri->value;
+
+            $variables['img_styled_3'] = ImageStyle::load($imgStyle_3)->buildUrl($uri_3);
+            $variables['img_alt_3'] = $field_media_img_3->alt;
+        }
+    }
+
+    if(isset($imgStyle_4)) {
+        $media_field_4 = $variables['elements']['field_media_img_4'];
+        if (isset($media_field_4[0])) {
+            $media_entity_4 = $media_field_4[0]['#media'];
+            $field_media_img_4 = $media_entity_4->field_media_image;
+            $uri_4 = $field_media_img_4->entity->uri->value;
+
+            $variables['img_styled_4'] = ImageStyle::load($imgStyle_4)->buildUrl($uri_4);
+            $variables['img_alt_4'] = $field_media_img_4->alt;
+        }
+    }
+
+    if(isset($imgStyle_5)) {
+        $media_field_5 = $variables['elements']['field_media_img_5'];
+        if (isset($media_field_5[0])) {
+            $media_entity_5 = $media_field_5[0]['#media'];
+            $field_media_img_5 = $media_entity_5->field_media_image;
+            $uri_5 = $field_media_img_5->entity->uri->value;
+
+            $variables['img_styled_5'] = ImageStyle::load($imgStyle_5)->buildUrl($uri_5);
+            $variables['img_alt_5'] = $field_media_img_5->alt;
+        }
+    }
+
     return $variables;
 }
 
 function biodiv_preprocess_paragraph__image_and_text(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('700x626', null, $variables);
+        $variables = imgBuild('700x626', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__two_column_image(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('517x517', null, $variables);
+        $variables = imgBuild('517x517', null, null, null, null, $variables);
     }
     if (isset($variables['elements']['field_media_img_2']['#items'])) {
-        $variables = imgBuild(null, '517x517', $variables);
+        $variables = imgBuild(null, '517x517', null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__text_with_background_image(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('1600x565', null, $variables);
+        $variables = imgBuild('1600x565', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__quote(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('159x159', null, $variables);
+        $variables = imgBuild('159x159', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__slider_video_card_item(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('317x292', null, $variables);
+        $variables = imgBuild('317x292', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__video_and_text(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('848x568', null, $variables);
+        $variables = imgBuild('848x568', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__slider_quotes_item(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('159x159', null, $variables);
+        $variables = imgBuild('159x159', null, null, null, null, $variables);
     }
 }
 
 function biodiv_preprocess_paragraph__slider_gallery(&$variables) {
-
     if (isset($variables['elements']['field_media_image_unlim']['#items'])) {
-
         $media_field = $variables['elements']['field_media_image_unlim'];
-
         foreach ($variables['elements']['field_media_image_unlim']['#items'] as $key => $item) {
-
             $media_entity = $media_field[$key]['#media'];
             $field_media_img = $media_entity->field_media_image;
             $uri = $field_media_img->entity->uri->value;
@@ -126,6 +159,6 @@ function biodiv_preprocess_paragraph__slider_gallery(&$variables) {
 
 function biodiv_preprocess_paragraph__two_column_gallery(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
-        $variables = imgBuild('210x201', '623x443', $variables);
+        $variables = imgBuild('210x201', '623x443', null, null, null, $variables);
     }
 }
