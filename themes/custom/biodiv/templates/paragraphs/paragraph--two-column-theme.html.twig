@@ -61,6 +61,8 @@
                     <div class="col-md-6 ">
                         <div class="padding-lg b-rad-50" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
                             {{ content.field_wysiwyg_2 }}
+                            {# image style 210xauto #}
+                            <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
                         </div>
                     </div>
                 </div>
