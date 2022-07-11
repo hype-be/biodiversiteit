@@ -1,6 +1,10 @@
 .subject-item {
+  margin-bottom: 24px;
   .card-wrap {
     position: relative;
+    height: 100%;
+    background-color: $linen;
+    border-radius: 50px;
     img {
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
@@ -32,8 +36,5 @@
   }
   .text-wrapper {
     padding: 40px;
-    background-color: $linen;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
   }
 }
