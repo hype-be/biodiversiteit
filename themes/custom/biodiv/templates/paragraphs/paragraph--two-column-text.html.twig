@@ -65,7 +65,7 @@
     <div{{ attributes.addClass(classes) }} {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
         {% block content %}
             <div class="container">
-                <div class="row {{ content.field_text_position[0]['#markup'] }}">
+                <div class="row align-items-start">
                     <div class="{{ col_layout_left }}">
                         {{ content.field_wysiwyg }}
                     </div>
