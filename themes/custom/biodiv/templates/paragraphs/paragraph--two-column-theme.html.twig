@@ -50,7 +50,6 @@
 ]
 %}
 {% block paragraph %}
-
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
             <div class="container">
@@ -65,7 +64,7 @@
                             </div>
                             {# image style 210xauto #}
                             {% if content.field_media_img|render %}
-                                <img class="img-fluid figure-right" src="{{ img_styled }}" alt="{{ img_alt }}" {% if content.field_figure_right or content.field_figure_top %}style="{% if content.field_figure_top %}top: 50px;{% endif %}{% if content.field_figure_right %}right: 50px;{% endif %}"{% endif %}>
+                                <img class="img-fluid figure-right" src="{{ img_styled }}" alt="{{ img_alt }}" {% if content.field_figure_right or content.field_figure_top %}style="{% if content.field_figure_top %}top: {{ content.field_figure_top[0]['#markup'] }}px;{% endif %}{% if content.field_figure_right %}right: {{ content.field_figure_right[0]['#markup'] }}px;{% endif %}"{% endif %}>
                             {% endif %}
                         </div>
                     </div>

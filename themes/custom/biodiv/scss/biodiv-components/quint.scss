@@ -1,4 +1,4 @@
-#block-biodiv-content a.link_underline {
+a.link_underline {
   color: #004659 !important;
   display: flex;
   align-items: center;
@@ -6,10 +6,10 @@
   width: fit-content;
   font-weight: bold;
 }
-#block-biodiv-content a.link_underline:hover {
+a.link_underline:hover {
   text-decoration: none;
 }
-#block-biodiv-content a.link_underline::after {
+a.link_underline::after {
   background: url("/themes/custom/biodiv/images/arrow.svg");
   background-repeat: no-repeat;
   display: block;
@@ -19,7 +19,7 @@
   margin-top: 4px;
   content: "";
 }
-#block-biodiv-content a.link_underline::before {
+a.link_underline::before {
   width: 100%;
   height: 1px;
   background: #00BFA8;
