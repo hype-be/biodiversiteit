@@ -46,6 +46,11 @@
     line-height: 22px;
   }
   &.item-featured {
+    .bottom-section {
+      .text-wrapper {
+        padding-top: 0;
+      }
+    }
     img {
       border-radius: 0 0 50px 50px;
     }
