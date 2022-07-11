@@ -42,4 +42,9 @@
     font-size: 16px;
     line-height: 22px;
   }
+  &.item-featured {
+    img {
+      border-radius: 0 0 50px 50px;
+    }
+  }
 }

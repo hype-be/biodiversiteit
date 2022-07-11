@@ -32,22 +32,15 @@
  */
 #}
 
-<div class="subject-item col-md-4">
+<div class="subject-item item-featured col-md-4">
     <div class="card-wrap">
-        {{ fields.field_media_image.content }}
         <div class="text-wrapper">
             <h3>{{ fields.title.content }}</h3>
             {{ fields.body.content }}
             <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
             <hr>
-            <div class="d-md-flex align-items-center">
-                <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
-                <div class="subject-info">
-                    <span><strong>2.456 mensen</strong></span>
-                    <span>{{ fields.field_subject_info.content }}</span>
-                </div>
-            </div>
         </div>
+        {{ fields.field_media_image.content }}
     </div>
 </div>
 
