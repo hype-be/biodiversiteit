@@ -46,6 +46,26 @@
   }
 }
 
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  &.active {
+    color: $caribbean-green;
+  }
+  + .breadcrumb-item {
+    padding-left: 5px;
+    &:before {
+      background: url(/themes/custom/biodiv/images/arrow.svg);
+      background-repeat: no-repeat;
+      display: block;
+      width: 4px;
+      height: 6px;
+      content: "";
+      background-size: contain;
+    }
+  }
+}
+
 .block-system-breadcrumb-block {
   font-size: 16px;
   line-height: 24px;

@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Template\Attribute;
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
@@ -14,22 +15,22 @@ use Drupal\image\Entity\ImageStyle;
  * Replace Barrio setting options with subtheme ones.
  */
 function biodiv_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-    'bg-primary' => t('Primary'),
-    'bg-secondary' => t('Secondary'),
-    'bg-light' => t('Light'),
-    'bg-dark' => t('Dark'),
-    'bg-white' => t('White'),
-    'bg-transparent' => t('Transparent'),
-  );
+    $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+        'bg-primary' => t('Primary'),
+        'bg-secondary' => t('Secondary'),
+        'bg-light' => t('Light'),
+        'bg-dark' => t('Dark'),
+        'bg-white' => t('White'),
+        'bg-transparent' => t('Transparent'),
+    );
+    $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+        'bg-primary' => t('Primary'),
+        'bg-secondary' => t('Secondary'),
+        'bg-light' => t('Light'),
+        'bg-dark' => t('Dark'),
+        'bg-white' => t('White'),
+        'bg-transparent' => t('Transparent'),
+    );
 }
 
 function imgBuild($imgStyle, $imgStyle_2, $imgStyle_3, $imgStyle_4, $imgStyle_5, $variables) {
@@ -166,5 +167,29 @@ function biodiv_preprocess_paragraph__two_column_gallery(&$variables) {
 function biodiv_preprocess_paragraph__two_column_theme(&$variables) {
     if (isset($variables['elements']['field_media_img']['#items'])) {
         $variables = imgBuild('210xauto', null, null, null, null, $variables);
+    }
+}
+
+function biodiv_preprocess_breadcrumb(&$variables) {
+    if ($variables['breadcrumb']) {
+        $request = \Drupal::request();
+        $route_match = \Drupal::routeMatch();
+        $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+        // current raw path (the un-aliased Drupal path)
+        $current_path = \Drupal::service('path.current')->getPath();
+
+        // url alias
+        $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+        $current_path_alias = substr($current_path_alias, 1);
+        $current_path_alias_pretty = ucfirst(str_replace('-', ' ', $current_path_alias));
+        /*dump($current_path_alias_pretty);*/
+
+        if (!empty($current_path_alias)) {
+            $variables['breadcrumb'][] = [
+                'text' => $current_path_alias_pretty,
+                'attributes' => new Attribute(['class' => ['active']])
+            ];
+        }
     }
 }
