@@ -47,28 +47,29 @@ $font-family-serif: Georgia,
 Times,
 serif !default;
 $font-family-base: "Plus Jakarta Sans", $font-family-sans-serif;
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25;
-$font-size-sm: $font-size-base * .875;
-$font-size-xs: $font-size-base * .75;
-$font-weight-normal: normal;
+$font-size-base: 1.05rem; // 19px
+$font-size-lg: $font-size-base * 4.42;
+$font-size-sm: $font-size-base * 0.84;
+$font-size-xs: $font-size-base * 0.68;
+$font-weight-normal: 300;
 $font-weight-bold: bold;
 $font-weight-base: $font-weight-normal;
-$line-height-base: 1.5;
-$h1-font-size: $font-size-base * 2.5;
-$h2-font-size: $font-size-base * 2;
-$h3-font-size: $font-size-base * 1.75;
-$h4-font-size: $font-size-base * 1.5;
-$h5-font-size: $font-size-base * 1.25;
-$h6-font-size: $font-size-base;
+$line-height-base: 1.74;
+$h1-font-size: $font-size-base * 4.42;
+$h2-font-size: $font-size-base * 3.68;
+$h3-font-size: $font-size-base * 2.74;
+$h4-font-size: $font-size-base * 2;
+$h5-font-size: $font-size-base * 1.37;
+$h6-font-size: $font-size-base * 1.11;
 
 body {
   font-family: 'Calibri';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 33px !important;
   color: $sherpa-blue !important;
+  p {
+    font-weight: 300;
+    font-size: $font-size-base;
+    line-height: 33px;
+  }
   h1 {
     font-size: 84px;
     line-height: 92px;
