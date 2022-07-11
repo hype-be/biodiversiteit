@@ -182,7 +182,7 @@ function biodiv_preprocess_breadcrumb(&$variables) {
         // url alias
         $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
         $current_path_alias = substr($current_path_alias, 1);
-        $current_path_alias = str_replace('/', '>', $current_path_alias);
+        $current_path_alias = str_replace('/', ' > ', $current_path_alias);
         $current_path_alias_pretty = ucfirst(str_replace('-', ' ', $current_path_alias));
         /*dump($current_path_alias_pretty);*/
 

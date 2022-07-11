@@ -74,15 +74,6 @@
 %}
 <article{{ attributes.addClass(classes) }}>
     <header>
-        {#<img class="img-fluid" src="/themes/custom/hype/logo.svg" alt="Logo">#}
-        {% if content.field_intro|render and content.field_body|render  %}
-            {{ content.field_intro }}
-            {{ content.field_body }}
-        {% elseif content.field_intro|render %}
-            {{ content.field_intro }}
-        {% elseif content.field_body|render %}
-            {{ content.field_body }}
-        {% endif %}
         {{ title_prefix }}
         {% if label and not page %}
             <h2{{ title_attributes.addClass('node__title') }}>
