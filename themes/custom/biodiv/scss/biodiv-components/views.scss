@@ -49,6 +49,11 @@
     line-height: 22px;
   }
   &.item-featured {
+    .top-section {
+      &.text-wrapper {
+        padding: 40px;
+      }
+    }
     .bottom-section {
       .text-wrapper {
         padding-top: 0;
