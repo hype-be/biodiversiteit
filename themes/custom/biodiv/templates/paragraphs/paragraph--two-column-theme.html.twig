@@ -54,10 +54,12 @@
         {% block content %}
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        {{ content.field_wysiwyg }}
+                    <div class="col-md-6 col-left">
+                        <div class="wysiwyg-wrapper">
+                            wysiwyg-wrapper
+                        </div>
                     </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 col-right">
                         <div class="position-relative">
                             <div class="wysiwyg-wrapper b-rad-50" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
                                 {{ content.field_wysiwyg_2 }}
