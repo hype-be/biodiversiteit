@@ -193,3 +193,10 @@ function biodiv_preprocess_breadcrumb(&$variables) {
         }
     }
 }
+
+function biodiv_preprocess_views_view_fields(&$variables) {
+    $view = $variables['view'];
+    if ($view->id() == 'subjects') {
+        $variables['link_to_node'] = $variables['row']->_entity->toUrl()->toString();
+    }
+}
