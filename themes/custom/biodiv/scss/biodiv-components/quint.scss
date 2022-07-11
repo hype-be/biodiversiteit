@@ -1,4 +1,4 @@
-a.link_underline {
+a.link_underline, .link_underline {
   color: #004659 !important;
   display: flex;
   align-items: center;
@@ -6,10 +6,10 @@ a.link_underline {
   width: fit-content;
   font-weight: bold;
 }
-a.link_underline:hover {
+a.link_underline:hover, .link_underline:hover {
   text-decoration: none;
 }
-a.link_underline::after {
+a.link_underline::after, .link_underline::after {
   background: url("/themes/custom/biodiv/images/arrow.svg");
   background-repeat: no-repeat;
   display: block;
@@ -19,7 +19,7 @@ a.link_underline::after {
   margin-top: 4px;
   content: "";
 }
-a.link_underline::before {
+a.link_underline::before, .link_underline::after {
   width: 100%;
   height: 1px;
   background: #00BFA8;
