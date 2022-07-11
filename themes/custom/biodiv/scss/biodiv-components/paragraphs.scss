@@ -350,12 +350,17 @@
 }
 
 .paragraph--type--featured-subjects {
-  padding-top: 50px;
+  .bg-wrapper {
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
   .field--name-field-wysiwyg {
     max-width: 910px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+  }
+  .featured-subjects {
+    margin-top: -160px;
   }
 }
 
