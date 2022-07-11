@@ -31,6 +31,7 @@ a.link_underline::before {
   /*display: flex;
   flex-direction: column;*/
   display: inline-block;
+  position: relative;
 }
 .scribble-blue::after {
   width: 100%;
@@ -40,6 +41,7 @@ a.link_underline::before {
   background-repeat: no-repeat;
   display: block;
   background-size: contain;
+  position: absolute;
 }
 //.three-stripes-top {
 //  position: relative;
