@@ -5,6 +5,9 @@
     height: 100%;
     background-color: $linen;
     border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     img {
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
