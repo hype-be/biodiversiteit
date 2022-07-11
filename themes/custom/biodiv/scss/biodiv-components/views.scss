@@ -1,6 +1,37 @@
 .subject-item {
-  @extend .b-rad-50;
+  .card-wrap {
+    position: relative;
+    img {
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    h3 {
+      font-size: 26px;
+      line-height: 35px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      a {
+        color: $primary-shade;
+        &:after {
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 400;
+    }
+  }
   .text-wrapper {
     padding: 40px;
+    background-color: $linen;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 }
