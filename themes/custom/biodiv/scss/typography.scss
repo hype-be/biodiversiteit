@@ -103,28 +103,59 @@ body {
 }
 
 p {
-  &.text-heading-1 {
-    font-size: 84px;
-    line-height: 92px;
+  &.font-12px,
+  &.font-13px,
+  &.font-16px,
+  &.font-17px,
+  &.font-19px,
+  &.font-24px,
+  &.font-26px,
+  &.font-28px,
+  &.font-32px,
+  &.font-38px,
+  &.font-52px,
+  &.font-70px,
+  &.font-84px {
+    line-height: 1;
+    font-weight: 400;
   }
-  &.text-heading-2 {
-    font-size: 70px;
-    line-height: 78px;
+  &.font-12px {
+    font-size: 12px;
   }
-  &.text-heading-3 {
-    font-size: 52px;
-    line-height: 60px;
+  &.font-13px {
+    font-size: 13px;
   }
-  &.text-heading-4 {
-    font-size: 38px;
-    line-height: 46px;
+  &.font-16px {
+    font-size: 16px;
   }
-  &.text-heading-5 {
+  &.font-17px {
+    font-size: 17px;
+  }
+  &.font-19px {
+    font-size: 19px;
+  }
+  &.font-24px {
+    font-size: 24px;
+  }
+  &.font-26px {
     font-size: 26px;
-    line-height: 35px;
   }
-  &.text-heading-6 {
-    font-size: 21px;
-    line-height: 46px;
+  &.font-28px {
+    font-size: 28px;
+  }
+  &.font-32px {
+    font-size: 32px;
+  }
+  &.font-38px {
+    font-size: 38px;
+  }
+  &.font-52px {
+    font-size: 52px;
+  }
+  &.font-70px {
+    font-size: 70px;
+  }
+  &.font-84px {
+    font-size: 84px;
   }
 }
