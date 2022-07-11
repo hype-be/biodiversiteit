@@ -34,10 +34,14 @@
 
 <div class="subject-item col-md-4">
    <div class="card-wrap">
-       {{ fields.field_media_image.content }}
-       <div class="text-wrapper">
-           <h3>{{ fields.title.content }}</h3>
-           {{ fields.body.content }}
+       <div class="top-section">
+           {{ fields.field_media_image.content }}
+           <div class="text-wrapper-top">
+               <h3>{{ fields.title.content }}</h3>
+               {{ fields.body.content }}
+           </div>
+       </div>
+       <div class="bottom-section text-wrapper">
            <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
            <hr>
            <div class="d-md-flex align-items-center">
