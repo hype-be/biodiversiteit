@@ -50,17 +50,30 @@
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="position-relative px-0">
-                {% if content.field_link[0]['#url']|render  %}
-                    <a href="{{ content.field_link[0]['#url']|render}}">{{ content.field_title }}</a>
-                    {% else %}
-                    <div>{{ content.field_title }}</div>
-                {% endif %}
-                {% if content.field_wysiwyg|render %}
-                    {{ content.field_wysiwyg }}
-                {% endif %}
-                {# image style 700x626 #}
-                <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+            <div class="slide-card">
+                <div class="card-wrap">
+                    <div class="top-section text-wrapper">
+                        {% if content.field_link[0]['#url']|render  %}
+                            <h3 class="card-title">
+                                <a href="{{ content.field_link[0]['#url']|render}}">{{ content.field_title }}</a>
+                            </h3>
+                        {% else %}
+                            <h3 class="card-title">{{ content.field_title }}</h3>
+                        {% endif %}
+                        {% if content.field_wysiwyg|render %}
+                            {{ content.field_wysiwyg }}
+                        {% endif %}
+                        {% if content.field_link[0]['#url']|render  %}
+                            <div class="link_underline">{% trans %}Lees meer{% endtrans %}</div>
+                        {% endif %}
+                    </div>
+                    <div class="bottom-section">
+                        <div class="overflow-hidden">
+                            {# image style 700x626 #}
+                            <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">
+                        </div>
+                    </div>
+                </div>
             </div>
         {% endblock %}
     </div>

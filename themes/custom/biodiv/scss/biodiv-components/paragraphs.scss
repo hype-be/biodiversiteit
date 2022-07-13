@@ -364,6 +364,52 @@
   }
 }
 
+.paragraph--type--slider-cards {
+  .slider-cards {
+    .slick-slide {
+      padding-left: 17px;
+      padding-right: 17px;
+      .card-wrap {
+        position: relative;
+        height: 100%;
+        background-color: $linen;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        .top-section {
+          &.text-wrapper {
+           padding: 40px;
+            .card-title {
+              font-size: 26px;
+              line-height: 35px;
+              font-weight: bold;
+              margin-bottom: 16px;
+              a {
+                &:after {
+                  bottom: 0;
+                  content: '';
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+        .bottom-section {
+          img {
+            border-radius: 0 0 50px 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .test {
   background-color: beige;
 }
