@@ -32,28 +32,34 @@
  */
 #}
 
-<div class="subject-item col-md-4">
-   <div class="card-wrap">
-       <div class="top-section">
-           <div class="overflow-hidden">
-               {{ fields.field_media_image.content }}
-           </div>
-           <div class="text-wrapper-top">
-               <h3>{{ fields.title.content }}</h3>
-               {{ fields.body.content }}
-           </div>
-       </div>
-       <div class="bottom-section text-wrapper">
-           <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
-           <hr>
-           <div class="d-md-flex align-items-center">
-               <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
-               <div class="subject-info">
-                   <span><strong>2.456 mensen</strong></span>
-                   <span>{{ fields.field_subject_info.content }}</span>
-               </div>
-           </div>
-       </div>
-   </div>
+<div class="subject-item col-md-4 {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}card-decoration{% endif %}">
+    {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}
+        <div class="bg-decoration">
+    {% endif %}
+        <div class="card-wrap">
+            <div class="top-section">
+                <div class="overflow-hidden">
+                    {{ fields.field_media_image.content }}
+                </div>
+                <div class="text-wrapper-top">
+                    <h3>{{ fields.title.content }}</h3>
+                    {{ fields.body.content }}
+                </div>
+            </div>
+            <div class="bottom-section text-wrapper">
+                <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
+                <hr>
+                <div class="d-md-flex align-items-center">
+                    <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
+                    <div class="subject-info">
+                        <span><strong>2.456 mensen</strong></span>
+                        <span>{{ fields.field_subject_info.content }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}
+        </div>
+    {% endif %}
 </div>
 

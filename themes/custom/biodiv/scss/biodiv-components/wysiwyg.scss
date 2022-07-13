@@ -1,23 +1,25 @@
-.field--name-field-wysiwyg, .field--name-field-wysiwyg-2 {
-  ol {
-    list-style: none;
-    counter-reset: my-awesome-counter;
-    li {
-      counter-increment: my-awesome-counter;
-      &:before {
-        content: counter(my-awesome-counter);
-        background: $primary-shade;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: inline-block;
-        line-height: 2rem;
-        color: white;
-        text-align: center;
-        float: left;
-      }
-      p {
-        margin-left: 64px;
+.paragraph--type--two-column-text {
+  .field--name-field-wysiwyg, .field--name-field-wysiwyg-2 {
+    ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      li {
+        counter-increment: my-awesome-counter;
+        &:before {
+          content: counter(my-awesome-counter);
+          background: $primary-shade;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: inline-block;
+          line-height: 2rem;
+          color: white;
+          text-align: center;
+          float: left;
+        }
+        p {
+          margin-left: 64px;
+        }
       }
     }
   }

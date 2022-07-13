@@ -46,7 +46,7 @@
 {#    {% set padding_y_img = '64px' %}#}
 {#{% endif %}#}
 
-{% if content.field_layout[0]['#markup'] == 'full' %}
+    {% if content.field_layout[0]['#markup'] == 'full' %}
     {% set col_layout_left = 'col-md-8' %}
     {% set col_layout_right = 'col-md-4' %}
 {% elseif content.field_layout[0]['#markup'] == 'medium' %}

@@ -15,7 +15,7 @@
           color: $caribbean-green;
         }
       }
-      img {
+      img:not(.icon-eco) {
         transform: scale(1.125);
       }
     }
@@ -76,6 +76,42 @@
     }
     img {
       border-radius: 0 0 50px 50px;
+    }
+  }
+}
+
+.view-display-id-block_1 {
+  .row {
+    .subject-item {
+      &.card-decoration {
+        .bg-decoration {
+          position: relative;
+          &:after {
+            width: calc(100% + 8px);
+            height: calc(100% - 30px);
+            border-radius: 50px;
+            transform: rotate(3deg);
+            margin: 0 auto;
+            position: absolute;
+            top: 20px;
+            right: -5px;
+            content: '';
+            display: block;
+            background: #BEE3D5;
+            z-index: -1;
+          }
+        }
+        .card-wrap {
+          background: $white-ice;
+          h3 {
+            a {
+              &:after {
+                z-index: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
