@@ -378,6 +378,16 @@
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.125);
+          }
+          h3 {
+            a {
+              color: $caribbean-green;
+            }
+          }
+        }
         .top-section {
           &.text-wrapper {
            padding: 40px;
@@ -387,6 +397,9 @@
               font-weight: bold;
               margin-bottom: 16px;
               a {
+                transition: .25s all ease;
+                color: $primary-shade;
+                text-decoration: none;
                 &:after {
                   bottom: 0;
                   content: '';
@@ -402,6 +415,7 @@
         }
         .bottom-section {
           img {
+            transition: .25s all ease;
             border-radius: 0 0 50px 50px;
           }
         }
