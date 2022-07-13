@@ -47,15 +47,22 @@
                 </div>
             </div>
             <div class="bottom-section text-wrapper">
-                <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
-                <hr>
-                <div class="d-md-flex align-items-center">
-                    <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
-                    <div class="subject-info">
-                        <span><strong>2.456 mensen</strong></span>
-                        <span>{{ fields.field_subject_info.content }}</span>
+                {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}
+                    <div class="link_underline">{% trans %}Doe de test{% endtrans %}</div>
+                    {% else %}
+                        <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
+                {% endif %}
+
+                {% if not fields.field_layout_take_test.content|striptags|trim == 'On' %}
+                    <hr>
+                    <div class="d-md-flex align-items-center">
+                        <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
+                        <div class="subject-info">
+                            <span><strong>2.456 mensen</strong></span>
+                            <span>{{ fields.field_subject_info.content }}</span>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             </div>
         </div>
     {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}
