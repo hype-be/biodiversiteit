@@ -42,7 +42,11 @@
                     {{ fields.field_media_image.content }}
                 </div>
                 <div class="text-wrapper-top">
-                    <h3>{{ fields.title.content }}</h3>
+                    {% if fields.field_layout_take_test.content|striptags|trim == 'On' %}
+                        <h3><a href="/doe-de-test">{{ field.title_1.content }}</a></h3>
+                        {% else %}
+                            <h3>{{ fields.title.content }}</h3>
+                    {% endif %}
                     {{ fields.body.content }}
                 </div>
             </div>
