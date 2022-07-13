@@ -35,7 +35,9 @@
 <div class="subject-item col-md-4">
    <div class="card-wrap">
        <div class="top-section">
-           {{ fields.field_media_image.content }}
+           <div class="overflow-hidden">
+               {{ fields.field_media_image.content }}
+           </div>
            <div class="text-wrapper-top">
                <h3>{{ fields.title.content }}</h3>
                {{ fields.body.content }}

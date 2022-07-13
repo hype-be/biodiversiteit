@@ -8,7 +8,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    &:hover {
+      h3 {
+        a {
+          color: $caribbean-green;
+        }
+      }
+      img {
+        transform: scale(1.125);
+      }
+    }
     img {
+      transition: .25s all ease;
       border-top-left-radius: 50px;
       border-top-right-radius: 50px;
       max-width: 100%;
@@ -21,6 +33,8 @@
       margin-bottom: 16px;
       a {
         color: $primary-shade;
+        transition: .25s all ease;
+        text-decoration: none;
         &:after {
           bottom: 0;
           content: '';
@@ -28,6 +42,7 @@
           position: absolute;
           right: 0;
           top: 0;
+          z-index: 1;
         }
       }
     }
