@@ -263,16 +263,12 @@
 }
 
 .paragraph--type--slider-quotes {
-  .slick-track {
-    display: flex!important;
-  }
   .slick-slide {
     /*margin-left: 90px;*/
     opacity: .5;
     &.slick-current {
       opacity: 1;
     }
-    height: auto;
     > div, .field__item, .paragraph--type--slider-quotes-item, .card-yellow {
       height: 100%;
     }
@@ -365,6 +361,9 @@
 }
 
 .paragraph--type--slider-cards {
+  .paragraph--type--slider-card-item {
+    height: 100%;
+  }
   .slider-cards {
     .slick-slide {
       padding-left: 17px;

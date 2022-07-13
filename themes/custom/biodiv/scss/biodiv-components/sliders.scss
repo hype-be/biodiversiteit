@@ -48,3 +48,15 @@
     }
   }
 }
+
+.paragraph--type--slider-quotes, .slider-cards {
+  .slick-track {
+    display: flex!important;
+  }
+  .slick-slide {
+    height: auto;
+  }
+  .slick-slide > div, .slick-slide > div > .field__item, .slick-slide .paragraph, .slide-card {
+    height: 100%;
+  }
+}
