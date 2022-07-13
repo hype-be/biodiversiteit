@@ -63,11 +63,11 @@
                         {% if content.field_wysiwyg|render %}
                             {{ content.field_wysiwyg }}
                         {% endif %}
+                    </div>
+                    <div class="bottom-section">
                         {% if content.field_link[0]['#url']|render  %}
                             <div class="link_underline">{% trans %}Lees meer{% endtrans %}</div>
                         {% endif %}
-                    </div>
-                    <div class="bottom-section">
                         <div class="overflow-hidden">
                             {# image style 700x626 #}
                             <img class="img-fluid" src="{{ img_styled }}" alt="{{ img_alt }}">

@@ -381,15 +381,19 @@
           img {
             transform: scale(1.125);
           }
-          h3.card-title {
-            a {
-              color: $caribbean-green;
+          .top-section {
+            &.text-wrapper {
+              h3.card-title {
+                a {
+                  color: $caribbean-green;
+                }
+              }
             }
           }
         }
         .top-section {
           &.text-wrapper {
-           padding: 40px;
+            padding: 40px 40px 0 40px;
             .card-title {
               font-size: 26px;
               line-height: 35px;
@@ -413,6 +417,9 @@
           }
         }
         .bottom-section {
+          .text-wrapper {
+            padding: 40px;
+          }
           img {
             transition: .25s all ease;
             border-radius: 0 0 50px 50px;
