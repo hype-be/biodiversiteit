@@ -25,6 +25,15 @@
       nextArrow: $('.video-cards-next'),
     });
 
+    $('.slider-cards .field--name-field-card-slide.field__items').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      accessibility: true,
+      prevArrow: $('.slider-cards-prev'),
+      nextArrow: $('.slider-cards-next'),
+    });
+
     $('.gallery-items').slick({
       infinite: true,
       slidesToShow: 4,

@@ -170,6 +170,12 @@ function biodiv_preprocess_paragraph__two_column_theme(&$variables) {
     }
 }
 
+function biodiv_preprocess_paragraph__slider_card_item(&$variables) {
+    if (isset($variables['elements']['field_media_img']['#items'])) {
+        $variables = imgBuild('750x464', null, null, null, null, $variables);
+    }
+}
+
 function biodiv_preprocess_breadcrumb(&$variables) {
     if ($variables['breadcrumb']) {
         $request = \Drupal::request();

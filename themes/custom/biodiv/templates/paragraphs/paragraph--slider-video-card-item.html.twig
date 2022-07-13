@@ -44,45 +44,40 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-    'container-fluid'
+    not paragraph.isPublished() ? 'paragraph--unpublished'
 ]
 %}
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-media position-relative px-0">
-                    {{ content.field_title }}
-                    {{ content.field_wysiwyg }}
-                    {% if content.field_media_iframe|render and content.field_media_img|render %}
-                        <button type="button" class="bg-transparent border-0 d-block mx-auto" aria-label="Show video" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
-                            <div class="position-relative">
-                                {# img style = 288x265 #}
-                                <img class="img-fluid d-block mx-auto c-pointer b-rad-50" src="{{ img_styled }}" alt="{{ img_alt }}">
-                                <div class="icon-play center-top-left">
-                                    <img class="img-fluid" src="/themes/custom/biodiv/images/play-btn.svg" alt="Play video">
-                                </div>
-                            </div>
-                        </button>
-                    {% endif %}
-                </div>
-
-                {#<div class="modal fade" id="modal-{{ paragraph.id() }}-iframe" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{% trans%}Close{% endtrans%} X</button>
-                            </div>
-                            <div class="modal-body">
-                                {{ content.field_media_iframe }}
+            <div class="col-media position-relative px-0">
+                {{ content.field_title }}
+                {{ content.field_wysiwyg }}
+                {% if content.field_media_iframe|render and content.field_media_img|render %}
+                    <button type="button" class="bg-transparent border-0 d-block mx-auto" aria-label="Show video" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
+                        <div class="position-relative">
+                            {# img style = 288x265 #}
+                            <img class="img-fluid d-block mx-auto c-pointer b-rad-50" src="{{ img_styled }}" alt="{{ img_alt }}">
+                            <div class="icon-play center-top-left">
+                                <img class="img-fluid" src="/themes/custom/biodiv/images/play-btn.svg" alt="Play video">
                             </div>
                         </div>
+                    </button>
+                {% endif %}
+            </div>
+
+            {#<div class="modal fade" id="modal-{{ paragraph.id() }}-iframe" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{% trans%}Close{% endtrans%} X</button>
+                        </div>
+                        <div class="modal-body">
+                            {{ content.field_media_iframe }}
+                        </div>
                     </div>
-                </div>#}
-            </div>
-            </div>
+                </div>
+            </div>#}
         {% endblock %}
     </div>
 {% endblock paragraph %}

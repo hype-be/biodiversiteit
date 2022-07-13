@@ -1,5 +1,5 @@
 .paragraph {
-  &:not(.paragraph--type--spacer):not(.paragraph--type--text-with-background-image):not(.paragraph--type--featured-subjects) {
+  &:not(.paragraph--type--spacer):not(.paragraph--type--text-with-background-image):not(.paragraph--type--featured-subjects):not(.paragraph--type--faq-item) {
     padding-bottom: 50px;
   }
   h1, h2, h3, h4, h5, h6 {
