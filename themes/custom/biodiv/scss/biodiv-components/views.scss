@@ -1,5 +1,16 @@
+.view-id-subjects {
+  .row {
+    margin-left: -17px;
+    margin-right: -17px;
+    .subject-item {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+  }
+}
+
 .subject-item {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
   .card-wrap {
     position: relative;
     height: 100%;
@@ -86,6 +97,7 @@
       &.card-decoration {
         .bg-decoration {
           position: relative;
+          height: 100%;
           &:after {
             width: calc(100% + 8px);
             height: calc(100% - 30px);
