@@ -58,7 +58,7 @@
                         <div class="link_underline">{% trans %}Ontdek wat jij kan doen{% endtrans %}</div>
                 {% endif %}
 
-                {% if not fields.field_layout_take_test.content|striptags|trim == 'On' %}
+                {% if fields.field_layout_take_test.content|striptags|trim == 'Off' or fields.field_layout_take_test.content|striptags|trim == '' %}
                     <hr>
                     <div class="d-md-flex align-items-center">
                         <img class="icon-eco" src="/themes/custom/biodiv/images/icons/icon-eco.svg" alt="">
