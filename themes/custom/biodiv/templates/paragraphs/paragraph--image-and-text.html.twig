@@ -100,7 +100,7 @@
                             {% endif %}
                         </div>
                         <div class="col-right col-wysiwyg col-lg-6">
-                            <div class="padding-lg">
+                            <div class="{% if content.field_color_picker[0]['#markup'] %}padding-lg{% else %}padding-lg-lr{% endif %}">
                                 {% if content.field_badge|render %}
                                     {{ content.field_badge }}
                                 {% endif %}
@@ -109,7 +109,7 @@
                         </div>
                     {% else%}
                         <div class="col-left col-wysiwyg col-lg-6">
-                            <div class="padding-lg">
+                            <div class="{% if content.field_color_picker[0]['#markup'] %}padding-lg{% else %}padding-lg-lr{% endif %}">
                                 {% if content.field_badge %}
                                     {{ content.field_badge }}
                                 {% endif %}
