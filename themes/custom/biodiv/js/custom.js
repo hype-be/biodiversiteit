@@ -83,4 +83,35 @@
     })
   })
 
+  // Iframe reformat youtube link to embed link
+  $('.c-iframe').each(function(){
+    var ytUrl = $(this).attr('src',);
+    var ytEmbedUrl = ytUrl.replace('/watch?v=', '/embed/');
+    $(this).attr('src', ytEmbedUrl);
+  });
+
+  var iframeSrc = '';
+  var vidUrl = '';
+  var vidoEmbedUrl = '';
+
+  if( $('.paragraph--type--slider-video-cards').length ) {
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<iframe src=''></iframe>");
+  }
+
+  $('.paragraph--type--slider-video-card-item button').click(function() {
+    iframeSrc = $(this).find('.iframe-src').attr('data-iframe');
+
+    vidUrl = iframeSrc;
+    vidoEmbedUrl = vidUrl.replace('/watch?v=', '/embed/');
+
+    //console.log(vidoEmbedUrl);
+    $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', vidoEmbedUrl);
+  });
+
+
+  $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
+    //console.log('Modal closed');
+    $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
+  })
+
 })(jQuery, Drupal);
