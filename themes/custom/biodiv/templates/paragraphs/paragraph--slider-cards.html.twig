@@ -44,24 +44,26 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-    'container-fluid'
+    not paragraph.isPublished() ? 'paragraph--unpublished'
 ]
 %}
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="slider-cards">
-                        <div class="slick-btn-wrapper text-align-right">
-                            <button type="button" aria-label="{% trans %}previous{% endtrans %}" class="slider-cards-prev border-0 bg-transparent"><img src="/themes/custom/biodiv/images/arrow-left.svg" alt=""></button>
-                            <button type="button" aria-label="{% trans %}Next{% endtrans %}" class="slider-cards-next border-0 bg-transparent"><img src="/themes/custom/biodiv/images/arrow-right.svg" alt=""></button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slider-cards">
+                            <div class="slick-btn-wrapper text-align-right">
+                                <button type="button" aria-label="{% trans %}previous{% endtrans %}" class="slider-cards-prev border-0 bg-transparent"><img src="/themes/custom/biodiv/images/arrow-left.svg" alt=""></button>
+                                <button type="button" aria-label="{% trans %}Next{% endtrans %}" class="slider-cards-next border-0 bg-transparent"><img src="/themes/custom/biodiv/images/arrow-right.svg" alt=""></button>
+                            </div>
+                            {{ content.field_card_slide }}
                         </div>
-                        {{ content.field_card_slide }}
                     </div>
                 </div>
             </div>
+        <div class="container-fluid px-0 bg-wrapper" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}></div>
         {% endblock %}
     </div>
 {% endblock paragraph %}
