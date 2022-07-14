@@ -361,6 +361,11 @@
 }
 
 .paragraph--type--slider-cards {
+  .bg-wrapper {
+    height: 375px;
+    margin-top: -325px;
+    border-radius: 25px;
+  }
   .paragraph--type--slider-card-item {
     height: 100%;
   }

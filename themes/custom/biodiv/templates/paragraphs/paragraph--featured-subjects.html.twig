@@ -49,11 +49,13 @@
 {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
-            <div class="container-fluid bg-wrapper" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-12">
-                            {{ content.field_wysiwyg }}
+            <div class="container-fluid">
+                <div class="bg-wrapper b-rad-25" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                {{ content.field_wysiwyg }}
+                            </div>
                         </div>
                     </div>
                 </div>
