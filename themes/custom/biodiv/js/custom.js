@@ -83,7 +83,7 @@
     })
   })
 
-  // Iframe reformat youtube link to embed link
+  // Iframe reformat youtube url
   $('.c-iframe').each(function(){
     var ytUrl = $(this).attr('src',);
     var ytEmbedUrl = ytUrl.replace('/watch?v=', '/embed/');
@@ -95,22 +95,20 @@
   var vidoEmbedUrl = '';
 
   if( $('.paragraph--type--slider-video-cards').length ) {
-    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<iframe src=''></iframe>");
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe src=''></iframe></div>");
   }
 
+  // Get iframe src from clicked card
   $('.paragraph--type--slider-video-card-item button').click(function() {
     iframeSrc = $(this).find('.iframe-src').attr('data-iframe');
-
+    // reformat youtube url
     vidUrl = iframeSrc;
     vidoEmbedUrl = vidUrl.replace('/watch?v=', '/embed/');
-
-    //console.log(vidoEmbedUrl);
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', vidoEmbedUrl);
   });
 
-
+  // On modal close make iframe src empty so you don't see iframe src switching
   $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
-    //console.log('Modal closed');
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
 
