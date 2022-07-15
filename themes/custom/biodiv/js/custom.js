@@ -114,7 +114,7 @@
   var vidoEmbedUrl = '';
 
   if( $('.paragraph--type--slider-video-cards').length ) {
-    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe class='c-iframe' width='200' height='113' src=''></iframe></div>");
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe class='c-iframe' width='1200' height='665' allowfullscreen='allowfullscreen' src=''></iframe></div>");
   }
 
   // Get iframe src from clicked card
