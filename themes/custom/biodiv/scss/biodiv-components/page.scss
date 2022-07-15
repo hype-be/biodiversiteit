@@ -77,6 +77,16 @@ body.page-user-login {
     height: 100%;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    .toggle-dashboard-menu {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background: $dark-blue;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      width: 15px;
+      display: block;
+    }
     input {
       border-color: #F9DAB7;
       background-color: $linen;
