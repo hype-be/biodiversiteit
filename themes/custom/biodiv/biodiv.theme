@@ -33,6 +33,39 @@ function biodiv_form_system_theme_settings_alter(&$form, FormStateInterface $for
     );
 }
 
+/*function biodiv_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+    if($variables['element']['#id'] == 'user-login-form') {
+        $suggestions[] = 'user-login-form';
+    }
+}*/
+
+/**
+ * Implements hook_form_alter().
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function biodiv_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+    if ($form_id == 'user_login_form') {
+        // $form['langcode'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        // Add placeholders.
+        $form['name']['#attributes']['placeholder'] = t('Je e-mailaddres');
+        $form['pass']['#attributes']['placeholder'] = t('Je wachtwoord');
+    }
+}
+
+/**
+ * adds theme suggestions to enable twigs for specific forms
+ */
+function biodiv_theme_suggestions_alter(array &$suggestions, array $variables, $hook)
+{
+    if ($hook == 'form' & !empty($variables['element']['#id'])) {
+        $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+    }
+}
+
+
 function imgBuild($imgStyle, $imgStyle_2, $imgStyle_3, $imgStyle_4, $imgStyle_5, $variables) {
     if(isset($imgStyle)) {
         $media_field = $variables['elements']['field_media_img'];

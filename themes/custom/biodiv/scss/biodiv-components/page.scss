@@ -64,6 +64,8 @@ body.page-user-login {
 }
 
 .page-user-login {
+  background-image: url('/themes/custom/biodiv/images/dashboard-leaves.svg');
+  background-size: cover;
   form#user-login-form {
     padding: 200px;
     width: 70%;
@@ -73,6 +75,8 @@ body.page-user-login {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     input {
       border-color: #F9DAB7;
       background-color: $linen;
