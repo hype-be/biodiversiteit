@@ -95,7 +95,7 @@
   var vidoEmbedUrl = '';
 
   if( $('.paragraph--type--slider-video-cards').length ) {
-    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe src=''></iframe></div>");
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe width='200' height='113' src=''></iframe></div>");
   }
 
   // Get iframe src from clicked card
