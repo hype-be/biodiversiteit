@@ -46,3 +46,37 @@ body.path-frontpage {
     padding-top: 50px;
   }
 }
+
+
+html.user_login, body.page-user-login, .page-user-login .dialog-off-canvas-main-canvas, .page-user-login #page-wrapper,
+.page-user-login #page, .page-user-login .main-wrapper, .page-user-login #main, .page-user-login .row-offcanvas,
+.page-user-login main#content, .page-user-login section.section, .page-user-login .block-system-main-block,
+.page-user-login .content {
+  height: 100%;
+}
+
+body.page-user-login {
+  background: $dark-blue;
+  .block-system-main-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-user-login {
+  form#user-login-form {
+    padding: 200px;
+    width: 70%;
+    margin-left: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    input {
+      border-color: #F9DAB7;
+      background-color: $linen;
+    }
+  }
+
+}
