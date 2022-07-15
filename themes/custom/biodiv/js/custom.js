@@ -106,7 +106,7 @@
   var vidoEmbedUrl = '';
 
   if( $('.paragraph--type--slider-video-cards').length ) {
-    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe width='200' height='113' src=''></iframe></div>");
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe width='1200' height='665' src=''></iframe></div>");
   }
 
   // Get iframe src from clicked card
@@ -122,5 +122,12 @@
   $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
+
+  $(document).on('keyup', function(e) {
+    if (e.key == "Escape") {
+      $('.modal .modal-body iframe').attr('src', '');
+      console.log('Escape key pressed');
+    }
+  });
 
 })(jQuery, Drupal);
