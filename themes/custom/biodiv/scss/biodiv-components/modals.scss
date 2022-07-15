@@ -1,0 +1,38 @@
+.modal {
+  .modal-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: flex-end;
+    .btn-close {
+      background-image: none;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      opacity: 1;
+      img {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 50%;
+        padding: 4px;
+      }
+    }
+  }
+}
+
+.modal .modal-header, .modal .modal-content, .modal .modal-footer {
+  border: 0;
+  border-radius: 0;
+}
+
+@media (min-width: 992px) {
+  .modal-lg, .modal-xl {
+    max-width: 1200px;
+  }
+}
+
