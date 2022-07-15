@@ -87,26 +87,32 @@
   var ytUrl = '';
   var ytEmbedUrl = '';
 
-  $('.c-iframe').each(function(){
-    ytUrl = $(this).attr('src',);
+  $('.iframe-container').each(function(){
+    ytUrl = $(this).find('.iframe-src').attr('data-iframe');
     ytEmbedUrl = ytUrl.replace('/watch?v=', '/embed/');
-    $(this).attr('src', ytEmbedUrl);
+    $(this).find('.iframe-src').attr('data-iframe', ytEmbedUrl);
+    $(this).find('.c-iframe').attr('src', ytEmbedUrl);
   });
 
+  // Modal paragraph video and text
   $('.paragraph--type--video-and-text button.toggle-modal').click(function() {
-    $('.paragraph--type--video-and-text .modal .modal-body iframe') .attr('src', ytEmbedUrl);
+    var currentYtUrl = $(this).parent().parent().parent().parent().find('.modal-video-text .iframe-src').attr('data-iframe');
+    console.log(currentYtUrl);
+    $('.paragraph--type--video-and-text .modal .modal-body iframe').attr('src', currentYtUrl);
   });
 
   $('.modal-video-text').on('hidden.bs.modal', function (e) {
     $('.modal-video-text .modal-body iframe').attr('src', '');
   })
 
+
+  // Modal paragraph slider video cards
   var iframeSrc = '';
   var vidUrl = '';
   var vidoEmbedUrl = '';
 
   if( $('.paragraph--type--slider-video-cards').length ) {
-    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe width='1200' height='665' src=''></iframe></div>");
+    $('.paragraph--type--slider-video-cards .modal .modal-body').append("<div class='iframe-container'><iframe class='c-iframe' width='200' height='113' src=''></iframe></div>");
   }
 
   // Get iframe src from clicked card
@@ -122,12 +128,5 @@
   $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
-
-  $(document).on('keyup', function(e) {
-    if (e.key == "Escape") {
-      $('.modal .modal-body iframe').attr('src', '');
-      console.log('Escape key pressed');
-    }
-  });
 
 })(jQuery, Drupal);
