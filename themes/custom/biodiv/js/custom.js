@@ -108,7 +108,7 @@
   });
 
   // On modal close make iframe src empty so you don't see iframe src switching
-  $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
+  $('.modal').on('hidden.bs.modal', function (e) {
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
 
