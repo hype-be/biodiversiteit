@@ -167,19 +167,40 @@
 }
 
 .paragraph--type--slider-video-cards {
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    height: auto;
+  }
   .slider {
     .slick-slide {
-      transition: .25s all ease;
-      &:hover {
-        background: $white-ice;
+      > div {
+        transition: .25s all ease;
+        &:hover {
+          background: $white-ice;
+        }
+        > .field__item {
+          height: 100%;
+        }
       }
     }
   }
 }
 
+.paragraph--type--slider-video-card-item, .paragraph--type--slider-video-card-item button,
+.paragraph--type--slider-video-card-item .col-media, .paragraph--type--slider-video-card-item .slider-text {
+  height: 100%;
+}
+
 .paragraph--type--slider-video-card-item {
   padding-left: 0;
   padding-right: 0;
+  .col-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .video-thumb {
     margin-bottom: -37px;
   }

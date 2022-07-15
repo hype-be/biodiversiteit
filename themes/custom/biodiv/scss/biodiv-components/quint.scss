@@ -69,12 +69,11 @@ a.link_underline::before, .link_underline::before {
   bottom: 0;
   left: 0;
 }
-.paragraph--type--slider-video-cards .slider .slick-slide {
-  /*max-width: 374px;*/
-  /*margin: 0 10px;*/
+.paragraph--type--slider-video-cards .slider .slick-slide > div {
   background: #FCF4EB;
   border-radius: 50px;
   padding: 36px 36px 0 36px;
+  height: calc(100% - 37px);
 }
 .paragraph--type--slider-video-cards .slider .slick-slide .field--name-field-title {
   font-size: 28px;

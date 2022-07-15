@@ -52,8 +52,10 @@
         {% block content %}
             <button type="button" class="border-0 bg-transparent d-block" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#modal-slider-iframe">
                 <div class="col-media position-relative px-0">
-                    {{ content.field_title }}
-                    {{ content.field_wysiwyg }}
+                    <div class="slider-text">
+                        {{ content.field_title }}
+                        {{ content.field_wysiwyg }}
+                    </div>
                     {% if content.field_media_iframe|render and content.field_media_img|render %}
                         <div class="video-thumb position-relative">
                             {# img style = 288x265 #}

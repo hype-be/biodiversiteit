@@ -120,7 +120,7 @@
   // Get iframe src from clicked card
   $('.paragraph--type--slider-video-card-item button').click(function() {
     // Add active class to current slick slide
-    $(this).parent().parent().parent().parent().addClass('bg-white-ice');
+    $(this).parent().parent().parent().parent().find('> div').addClass('bg-white-ice');
     iframeSrc = $(this).find('.iframe-src').attr('data-iframe');
     // reformat youtube url
     vidUrl = iframeSrc;
@@ -130,7 +130,7 @@
 
   // On modal close make iframe src empty so you don't see iframe src switching
   $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
-    $('.paragraph--type--slider-video-cards .slick-slide.bg-white-ice').removeClass('bg-white-ice');
+    $('.paragraph--type--slider-video-cards .slick-slide > div.bg-white-ice').removeClass('bg-white-ice');
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
 
