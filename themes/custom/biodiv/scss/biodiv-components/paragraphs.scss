@@ -1,5 +1,5 @@
 .paragraph {
-  &:not(.paragraph--type--spacer):not(.paragraph--type--text-with-background-image):not(.paragraph--type--featured-subjects):not(.paragraph--type--faq-item):not(.paragraph--type--slider-card-item) {
+  &:not(.paragraph--type--spacer):not(.paragraph--type--text-with-background-image):not(.paragraph--type--featured-subjects):not(.paragraph--type--faq-item):not(.paragraph--type--slider-card-item):not(.paragraph--type--slider-video-card-item) {
     padding-bottom: 50px;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -166,22 +166,28 @@
   }
 }
 
+.paragraph--type--slider-video-cards {
+  .slider {
+    .slick-slide {
+      transition: .25s all ease;
+      &:hover {
+        background: $white-ice;
+      }
+    }
+  }
+}
+
 .paragraph--type--slider-video-card-item {
   padding-left: 0;
   padding-right: 0;
-  /*margin-bottom: 0px;*/
+  .video-thumb {
+    margin-bottom: -37px;
+  }
   .icon-play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-  }
-  button {
-    .position-relative {
-      > img {
-        /*margin-bottom: -36px;*/
-      }
-    }
   }
 }
 

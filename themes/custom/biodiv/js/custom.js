@@ -96,12 +96,14 @@
 
   // Modal paragraph video and text
   $('.paragraph--type--video-and-text button.toggle-modal').click(function() {
+    $(this).parent().parent().parent().parent().addClass('active');
     var currentYtUrl = $(this).parent().parent().parent().parent().find('.modal-video-text .iframe-src').attr('data-iframe');
     console.log(currentYtUrl);
     $('.paragraph--type--video-and-text .modal .modal-body iframe').attr('src', currentYtUrl);
   });
 
   $('.modal-video-text').on('hidden.bs.modal', function (e) {
+    $('.paragraph--type--slider-video-cards .slick-slide.bg-white-ice').removeClass('bg-white-ice');
     $('.modal-video-text .modal-body iframe').attr('src', '');
   })
 
@@ -117,6 +119,8 @@
 
   // Get iframe src from clicked card
   $('.paragraph--type--slider-video-card-item button').click(function() {
+    // Add active class to current slick slide
+    $(this).parent().parent().parent().parent().addClass('bg-white-ice');
     iframeSrc = $(this).find('.iframe-src').attr('data-iframe');
     // reformat youtube url
     vidUrl = iframeSrc;
