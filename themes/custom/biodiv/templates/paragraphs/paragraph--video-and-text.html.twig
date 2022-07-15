@@ -52,7 +52,7 @@
             <div class="container px-0">
                 <div class="row" {% if content.field_color_picker[0]['#markup'] %}style="background-color: {{ content.field_color_picker[0]['#markup'] }}"{% endif %}>
                     <div class="col-md-6 col-l col-img">
-                        <button type="button" class="border-0 bg-transparent d-block mx-auto" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
+                        <button type="button" class="toggle-modal border-0 bg-transparent d-block mx-auto" aria-label="{% trans %}Show video{% endtrans %}" data-bs-toggle="modal" data-bs-target="#modal-{{ paragraph.id() }}-iframe">
                            <div class="position-relative">
                                <img class="img-fluid b-rad-50" src="{{ img_styled }}" alt="{{ img_alt }}">
                                <div class="icon-play center-top-left">
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="modal-{{ paragraph.id() }}-iframe" tabindex="-1" aria-hidden="true">
+            <div class="modal-video-text modal fade" id="modal-{{ paragraph.id() }}-iframe" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">

@@ -84,11 +84,22 @@
   })
 
   // Iframe reformat youtube url
+  var ytUrl = '';
+  var ytEmbedUrl = '';
+
   $('.c-iframe').each(function(){
-    var ytUrl = $(this).attr('src',);
-    var ytEmbedUrl = ytUrl.replace('/watch?v=', '/embed/');
+    ytUrl = $(this).attr('src',);
+    ytEmbedUrl = ytUrl.replace('/watch?v=', '/embed/');
     $(this).attr('src', ytEmbedUrl);
   });
+
+  $('.paragraph--type--video-and-text button.toggle-modal').click(function() {
+    $('.paragraph--type--video-and-text .modal .modal-body iframe') .attr('src', ytEmbedUrl);
+  });
+
+  $('.modal-video-text').on('hidden.bs.modal', function (e) {
+    $('.modal-video-text .modal-body iframe').attr('src', '');
+  })
 
   var iframeSrc = '';
   var vidUrl = '';
@@ -108,8 +119,8 @@
   });
 
   // On modal close make iframe src empty so you don't see iframe src switching
-  $('.modal').on('hidden.bs.modal', function (e) {
-    $('.modal .modal-body iframe').attr('src', '');
+  $('#modal-slider-iframe').on('hidden.bs.modal', function (e) {
+    $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
 
 })(jQuery, Drupal);
