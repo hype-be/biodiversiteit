@@ -71,8 +71,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
-#            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/modules/custom
-#            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/themes/custom
             rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/themes/custom/biodiv
 
   deploy:
