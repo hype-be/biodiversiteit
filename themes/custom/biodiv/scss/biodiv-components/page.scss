@@ -92,6 +92,7 @@ body.page-user-login {
     button.btn-primary {
       background-color: $primary-shade;
       border-color: $primary-shade;
+      border-radius: 15px;
       padding: 12px 50px;
       font-weight: 700;
       font-size: 16px;
@@ -118,5 +119,4 @@ body.page-user-login {
       background-color: $linen;
     }
   }
-
 }
