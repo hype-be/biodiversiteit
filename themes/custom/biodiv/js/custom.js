@@ -134,9 +134,10 @@
     $('.paragraph--type--slider-video-cards .modal .modal-body iframe').attr('src', '');
   })
 
-  // Toggle width login form
- /* $('.toggle-dashboard-menu').click( function() {
-    $('form.user-login-form').toggleClass('w-100');
+  // Toggle width login offcanvas
+  /*$('.toggle-dashboard-menu').click( function() {
+
   });*/
+
 
 })(jQuery, Drupal);

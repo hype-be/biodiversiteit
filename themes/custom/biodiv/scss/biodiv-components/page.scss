@@ -101,24 +101,6 @@ body.page-user-login {
     label, small {
       display: none;
     }
-    .toggle-dashboard-menu {
-      position: absolute;
-      top: 50px;
-      /*left: 0;*/
-      right: -29px;
-      background: $dark-blue;
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
-      width: 30px;
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 1;
-      &:hover {
-        opacity: 1;
-      }
-    }
     input {
       border-color: #F9DAB7;
       background-color: $linen;
