@@ -60,6 +60,7 @@ body.page-user-login {
   .block-system-main-block {
     padding-left: 0;
     padding-right: 0;
+    width: 70%;
   }
 }
 
@@ -68,7 +69,7 @@ body.page-user-login {
   background-size: cover;
   form#user-login-form {
     padding: 200px;
-    width: 70%;
+    /*width: 70%;*/
     margin-left: auto;
     background: white;
     display: flex;
@@ -78,6 +79,27 @@ body.page-user-login {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     position: relative;
+    .heading-small {
+      margin-bottom: 24px;
+      &.heading-bottom {
+        margin-top: 60px;
+      }
+    }
+    input {
+      border-radius: 15px;
+      padding: 15px;
+    }
+    button.btn-primary {
+      background-color: $primary-shade;
+      border-color: $primary-shade;
+      padding: 12px 50px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 31px;
+    }
+    label, small {
+      display: none;
+    }
     .toggle-dashboard-menu {
       position: absolute;
       top: 50px;
