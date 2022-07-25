@@ -1,0 +1,127 @@
+.padding-lg {
+  padding: 48px 46px;
+}
+
+.padding-lg-lr {
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+.rounded-card {
+  border-radius: 50px;
+}
+
+.padding-73-64 {
+  padding: 73px 64px;
+}
+
+.padding-50-0 {
+  padding: 50px 0;
+}
+
+.stripes-top-left, .stripes-bottom-right, .stripes-top-right, .stripes-bottom-left {
+  position: relative;
+}
+
+.stripes-top-left:before, .stripes-bottom-right:after, .stripes-top-right:before, .stripes-bottom-left:after {
+  content: "";
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  background-size: cover;
+}
+
+.stripes-top-left {
+  &:before {
+    background-image: url(/themes/custom/biodivPlatform/images/icons/3-stripes-top-left.svg);
+    top: -37px;
+    left: -37px;
+  }
+}
+
+.stripes-top-right {
+  &:before {
+    background-image: url(/themes/custom/biodivPlatform/images/icons/3-stripes-top-right.svg);
+    top: -37px;
+    right: -37px;
+  }
+}
+
+.stripes-bottom-left {
+  &:after {
+    background-image: url(/themes/custom/biodivPlatform/images/icons/3-stripes-bottom-left.svg);
+    position: absolute;
+    bottom: -37px;
+    left: -37px;
+  }
+}
+
+.stripes-bottom-right {
+  &:after {
+    background-image: url(/themes/custom/biodivPlatform/images/icons/3-stripes-bottom-right.svg);
+    position: absolute;
+    bottom: -37px;
+    right: -37px;
+  }
+}
+
+.pull-img-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100px;
+}
+
+.field--name-field-badge {
+  color: $sherpa-blue;
+  font-size: 12px;
+  line-height: 27px;
+  letter-spacing: 0.48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: white;
+  border-radius: 20px;
+  padding: 6px 25px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.b-rad-25 {
+  border-radius: 25px;
+}
+
+.b-rad-50 {
+  border-radius: 50px;
+}
+
+
+.card-yellow {
+  background-color: $corn_silk;
+  border-radius: 25px;
+  padding: 54px;
+}
+
+.box-yellow {
+  @extend .card-yellow;
+  padding: 30px;
+}
+
+hr {
+  color: $periwinkle;
+  margin: 25px 0;
+}
+
+.bg-white-ice {
+  background-color: $white-ice!important;
+}
+
+.heading-small {
+  font-size: 20px;
+  line-height: 44px;
+  font-weight: 700;
+  color: $primary-shade;
+}

@@ -1,0 +1,454 @@
+.paragraph {
+  &:not(.paragraph--type--spacer):not(.paragraph--type--text-with-background-image):not(.paragraph--type--featured-subjects):not(.paragraph--type--faq-item):not(.paragraph--type--slider-card-item):not(.paragraph--type--slider-video-card-item) {
+    padding-bottom: 50px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+.paragraph--type--text-with-background-image, .paragraph--type--quote {
+  margin-bottom: 50px;
+}
+
+.paragraph--type--quote {
+  padding: 62px 96px;
+  border-radius: 50px;
+  position: relative;
+  max-width: 1067px;
+  &:after {
+    content: '';
+    background-image: url(/themes/custom/biodivPlatform/images/quotes.svg);
+    display: block;
+    width: 138px;
+    height: 111px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 24px;
+    left: 37px;
+  }
+  .col-md-2 {
+    img {
+      z-index: 1;
+      position: relative;
+    }
+  }
+  q {
+    &:before, &:after {
+      content: none;
+    }
+  }
+  .field--name-field-text {
+    color: $sherpa-blue;
+    font-size: 28px;
+    margin-bottom: 21px;
+    display: block;
+  }
+  .field--name-field-author {
+    font-size: 19px;
+  }
+}
+
+.paragraph--type--image-and-text {
+  .col-right {
+    &.col-img {
+      padding-right: 65px;
+    }
+  }
+  .image-decoration {
+    background-color: #9ad592;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transform: rotate(-4deg);
+    margin-top: 3px;
+    margin-left: 2px;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+    &.pull-img-right {
+      max-width: 100%;
+    }
+  }
+  .col-img {
+    &.col-img-decoration {
+      img {
+        z-index: 1;
+        transform: rotate(4deg);
+      }
+    }
+  }
+  img {
+    border-radius: 50px;
+  }
+}
+
+.paragraph--type--video-and-text {
+  .col-img {
+    border-radius: 50px;
+  }
+}
+
+.paragraph--type--two-column-image {
+  .image-decoration {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    max-width: 517px;
+    transform: rotate(-4deg);
+    margin-top: 3px;
+    margin-left: 2px;
+    position: absolute;
+  }
+  .col-img {
+    /*max-width: 517px;*/
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      z-index: 1;
+    }
+  }
+  .container > .row {
+    max-width: 1227px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 1;
+    color: white;
+    font-size: 1.625rem;
+    line-height: 2.1875rem;
+    font-weight: 700;
+    max-width: 426px;
+    width: 100%;
+    a {
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .field--name-field-image-caption {
+        max-width: 285px;
+      }
+      &:after {
+        background: url(/themes/custom/biodivPlatform/images/arrow.svg);
+        background-repeat: no-repeat;
+        display: block;
+        width: 10px;
+        height: 15px;
+        content: "";
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.paragraph--type--video-and-text {
+  .icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.paragraph--type--slider-video-cards {
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    height: auto;
+  }
+  .slider {
+    .slick-slide {
+      > div {
+        transition: .25s all ease;
+        &:hover {
+          background: $white-ice;
+        }
+        > .field__item {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--slider-video-card-item, .paragraph--type--slider-video-card-item button,
+.paragraph--type--slider-video-card-item .col-media, .paragraph--type--slider-video-card-item .slider-text {
+  height: 100%;
+}
+
+.paragraph--type--slider-video-card-item {
+  padding-left: 0;
+  padding-right: 0;
+  .col-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.accordion {
+  .field.field--name-field-paragraph-faq-item {
+    display: flex;
+    flex-wrap: wrap;
+    .field__item:nth-child(odd) {
+      padding-right: 29px;
+    }
+  }
+}
+
+.accordion .field.field--name-field-paragraph-faq-item {
+  > .field__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.paragraph--type--faq-item {
+  margin-bottom: 29px;
+  padding-bottom: 0;
+}
+
+.accordion-button {
+  font-size: 20px;
+  line-height: 33px;
+  font-weight: 700;
+  color: $primary-shade;
+  border: 1px solid $periwinkle!important;
+  padding: 28px;
+  &:not(.collapsed) {
+    color: $primary-shade;
+    background-color: transparent;
+    &:after {
+      background-image: url("/themes/custom/biodivPlatform/images/accordion-chevron.svg");
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 1px rgba(0, 70, 89, .45);
+  }
+  &:after {
+    background-image: url("/themes/custom/biodivPlatform/images/accordion-chevron.svg");
+  }
+}
+
+.accordion-item {
+  &:first-of-type {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    .accordion-button {
+      border-top-left-radius: calc(25px - 1px);
+      border-top-right-radius: calc(25px - 1px);
+    }
+  }
+  &:last-of-type {
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    .accordion-button.collapsed {
+      border-bottom-right-radius: calc(25px - 1px);
+      border-bottom-left-radius: calc(25px - 1px);
+    }
+  }
+}
+
+.paragraph--type--slider-video-cards, .paragraph--type--slider-gallery {
+  .slick-slide {
+    margin-left: 40px;
+  }
+}
+
+.paragraph--type--slider-gallery {
+  .slick-slide {
+    img {
+      border-radius: 25px;
+    }
+  }
+}
+
+.paragraph--type--slider-quotes {
+  .slick-slide {
+    /*margin-left: 90px;*/
+    opacity: .5;
+    &.slick-current {
+      opacity: 1;
+    }
+    > div, .field__item, .paragraph--type--slider-quotes-item, .card-yellow {
+      height: 100%;
+    }
+  }
+  .card-yellow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: '';
+      background-image: url(/themes/custom/biodivPlatform/images/quotes.svg);
+      display: block;
+      width: 138px;
+      height: 111px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 23px;
+    }
+    img {
+      /* position: absolute;
+       left: -59px;
+       top: 50%;
+       transform: translateY(-50%);*/
+    }
+  }
+  .text-wrapper {
+    padding-left: 90px;
+    z-index: 1;
+  }
+  .field--name-field-text {
+    font-size: 28px;
+    line-height: 39px;
+    font-weight: 500;
+  }
+  .field--name-field-title {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 33px;
+    margin-top: 10px;
+  }
+}
+
+.paragraph--type--two-column-gallery {
+  .row-top {
+    margin-bottom: 40px;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.paragraph--type--two-column-theme {
+  img {
+    &.figure-right {
+      position: absolute;
+    }
+  }
+  .wysiwyg-wrapper {
+    padding: 53px 40px 37px 40px;
+    .field--name-field-wysiwyg-2 {
+      max-width: 430px;
+      a.btn {
+        margin-top: 30px;
+      }
+    }
+  }
+  img {
+    &.figure-right {
+      position: absolute;
+    }
+  }
+}
+
+.paragraph--type--featured-subjects {
+  .bg-wrapper {
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
+  .field--name-field-wysiwyg {
+    max-width: 910px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .featured-subjects {
+    margin-top: -160px;
+  }
+}
+
+.paragraph--type--slider-cards {
+  .bg-wrapper {
+    height: 375px;
+    margin-top: -325px;
+    border-radius: 25px;
+  }
+  .paragraph--type--slider-card-item {
+    height: 100%;
+  }
+  .slider-cards {
+    .slick-slide {
+      padding-left: 17px;
+      padding-right: 17px;
+      .card-wrap {
+        position: relative;
+        height: 100%;
+        background-color: $linen;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.125);
+          }
+          .top-section {
+            &.text-wrapper {
+              h3.card-title {
+                a {
+                  color: $caribbean-green;
+                }
+              }
+            }
+          }
+        }
+        .top-section {
+          &.text-wrapper {
+            padding: 40px 40px 0 40px;
+            .card-title {
+              font-size: 26px;
+              line-height: 35px;
+              font-weight: bold;
+              margin-bottom: 16px;
+              a {
+                transition: .25s all ease;
+                color: $primary-shade;
+                text-decoration: none;
+                &:after {
+                  bottom: 0;
+                  content: '';
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+        .bottom-section {
+          .text-wrapper {
+            padding: 40px;
+          }
+          img {
+            transition: .25s all ease;
+            border-radius: 0 0 50px 50px;
+          }
+        }
+      }
+    }
+  }
+}
