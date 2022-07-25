@@ -104,7 +104,8 @@ body.page-user-login {
     .toggle-dashboard-menu {
       position: absolute;
       top: 50px;
-      left: 0;
+      /*left: 0;*/
+      right: -29px;
       background: $dark-blue;
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
@@ -113,6 +114,10 @@ body.page-user-login {
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
     input {
       border-color: #F9DAB7;
