@@ -32,7 +32,7 @@ jobs:
         uses: tj-actions/changed-files@v20
         with:
           files: |
-            themes/custom/biodiv/scss/**/*.scss
+            themes/custom/**/scss/**/*.scss
           files_ignore: |
             *.yml
 
