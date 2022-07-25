@@ -37,5 +37,8 @@
     "merge-stream": "^1.0.1",
     "postcss-inline-svg": "^4.1.0",
     "postcss-pxtorem": "^5.1.1"
+  },
+  "volta": {
+    "node": "12.22.12"
   }
 }

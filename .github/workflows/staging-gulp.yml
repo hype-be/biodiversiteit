@@ -32,7 +32,7 @@ jobs:
         uses: tj-actions/changed-files@v20
         with:
           files: |
-            themes/custom/**/scss/**/*.scss
+            themes/custom/biodiv/scss/**/*.scss
           files_ignore: |
             *.yml
 
@@ -71,8 +71,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
-            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/modules/custom
-            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/themes/custom
+#            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/modules/custom
+#            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/themes/custom
+            rm -rf /data/sites/web/voorvertoningbe/subsites/biodiversiteit.voorvertoning.be/themes/custom/biodiv
 
   deploy:
     name: Deploy files

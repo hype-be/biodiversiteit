@@ -20,7 +20,7 @@ sites/simpletest
 /.env
 
 themes/custom/biodiv/node_modules
-
+themes/custom/biodivPlatform/node_modules
 
 composer.phar
 
