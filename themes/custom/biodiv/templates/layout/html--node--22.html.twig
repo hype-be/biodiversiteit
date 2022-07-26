@@ -29,7 +29,8 @@
     logged_in ? 'user-logged-in',
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
     node_type ? 'node--type-' ~ node_type|clean_class,
-    db_offline ? 'db-offline'
+    db_offline ? 'db-offline',
+    'page-user-registration'
 ]
 %}
 <!DOCTYPE html>

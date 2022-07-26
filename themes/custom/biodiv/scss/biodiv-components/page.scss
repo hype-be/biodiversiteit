@@ -55,8 +55,8 @@ html.user_login, body.page-user-login, .page-user-login .dialog-off-canvas-main-
   height: 100%;
 }
 
-body.page-user-login {
-  background: $dark-blue;
+body.page-user-login, body.page-user-registration {
+  background-color: #00394a;
   .block-system-main-block {
     padding-left: 0;
     padding-right: 0;
@@ -64,9 +64,9 @@ body.page-user-login {
   }
 }
 
-.page-user-login {
-  background-image: url('/themes/custom/biodiv/images/dashboard-leaves.svg');
-  background-size: cover;
+.page-user-login, .body.page-user-registration {
+  background: url(/themes/custom/biodiv/images/dashboard-leaves.svg), linear-gradient(45deg, #00394a, #00394a) no-repeat;
+  background-size: contain;
   form#user-login-form {
     padding: 200px;
     /*width: 70%;*/
