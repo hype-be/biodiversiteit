@@ -185,3 +185,18 @@ body.page-user-login, body.page-user-registration, body.page-user-password, body
     }*/
 }
 
+.page-user-details {
+  .user-content {
+    padding: 200px;
+    /*width: 70%;*/
+    margin-left: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+  }
+}
