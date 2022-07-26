@@ -48,12 +48,12 @@ body.path-frontpage {
 }
 
 
-html.user_login, html.user_registration, body.page-user-login, body.page-user-registration {
+html.user_login, html.user_registration, html.user_password, body.page-user-login, body.page-user-registration, body.page-user-password {
   height: 100%;
 }
 
 
-.page-user-login, .page-user-registration {
+.page-user-login, .page-user-registration, .page-user-password {
   .dialog-off-canvas-main-canvas, #page-wrapper,
   #page, #main-wrapper, #main, .row-offcanvas,
   main#content, section.section, .block-system-main-block,
@@ -114,14 +114,7 @@ html.user_login, html.user_registration, body.page-user-login, body.page-user-re
   }
 }
 
-.page-user-registration .dialog-off-canvas-main-canvas, .page-user-registration #page-wrapper,
-.page-user-registration #page, .page-user-registration #main-wrapper, .page-user-registration #main, .page-user-registration .row-offcanvas,
-.page-user-registration main#content, .page-user-registration section.section, .page-user-registration .block-system-main-block,
-.page-user-registration .content {
-  height: 100%;
-}
-
-body.page-user-login, body.page-user-registration {
+body.page-user-login, body.page-user-registration, body.page-user-password {
   background-color: #00394a;
   .block-system-main-block {
     padding-left: 0;
@@ -130,12 +123,12 @@ body.page-user-login, body.page-user-registration {
   }
 }
 
-.page-user-login, .page-user-registration {
+.page-user-login, .page-user-registration, .page-user-password {
   background: url(/themes/custom/biodiv/images/dashboard-leaves.svg), linear-gradient(45deg, #00394a, #00394a) no-repeat;
   background-size: contain;
 }
 
-.page-user-login form#user-login-form, .page-user-registration form {
+.page-user-login form#user-login-form, .page-user-registration form, .page-user-password form {
     padding: 200px;
     /*width: 70%;*/
     margin-left: auto;
