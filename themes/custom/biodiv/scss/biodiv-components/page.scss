@@ -53,12 +53,13 @@ body.path-frontpage {
 }
 
 
-html.user_login, html.user_registration, html.user_password, body.page-user-login, body.page-user-registration, body.page-user-password {
+html.user_login, html.user_registration, html.user_password, html.user_details,
+body.page-user-login, body.page-user-registration, body.page-user-password, body.page-user-details {
   height: 100%;
 }
 
 
-.page-user-login, .page-user-registration, .page-user-password {
+.page-user-login, .page-user-registration, .page-user-password, .page-user-details {
   .dialog-off-canvas-main-canvas, #page-wrapper,
   #page, #main-wrapper, #main, .row-offcanvas,
   main#content, section.section, .block-system-main-block,
@@ -119,7 +120,7 @@ html.user_login, html.user_registration, html.user_password, body.page-user-logi
   }
 }
 
-body.page-user-login, body.page-user-registration, body.page-user-password {
+body.page-user-login, body.page-user-registration, body.page-user-password, body.page-user-details {
   background-color: #00394a;
   .block-system-main-block {
     padding-left: 0;
@@ -131,9 +132,16 @@ body.page-user-login, body.page-user-registration, body.page-user-password {
   }
 }
 
-.page-user-login, .page-user-registration, .page-user-password {
+.page-user-login, .page-user-registration, .page-user-password, .page-user-details {
   background: url(/themes/custom/biodiv/images/dashboard-leaves.svg), linear-gradient(45deg, #00394a, #00394a) no-repeat;
   background-size: contain;
+}
+
+.page-user-login form#user-login-form, .page-user-registration form, .page-user-password form {
+  input {
+    border-color: #F9DAB7;
+    background-color: $linen;
+  }
 }
 
 .page-user-login form#user-login-form, .page-user-registration form, .page-user-password form {
@@ -172,12 +180,8 @@ body.page-user-login, body.page-user-registration, body.page-user-password {
         display: none;
       }
     }
-    small {
+    /*small {
       display: none;
-    }
-    input {
-      border-color: #F9DAB7;
-      background-color: $linen;
-    }
+    }*/
 }
 
