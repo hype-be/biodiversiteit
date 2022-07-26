@@ -146,7 +146,7 @@ body.page-user-login, body.page-user-registration, body.page-user-password {
         margin-top: 60px;
       }
     }
-    input {
+    input[type="text"] {
       border-radius: 15px;
       padding: 15px;
     }
@@ -159,7 +159,12 @@ body.page-user-login, body.page-user-registration, body.page-user-password {
       font-size: 16px;
       line-height: 31px;
     }
-    label, small {
+    .js-form-item-name, .js-form-type-password {
+      label {
+        display: none;
+      }
+    }
+    small {
       display: none;
     }
     input {
