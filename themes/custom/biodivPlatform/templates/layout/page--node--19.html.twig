@@ -67,7 +67,7 @@
  * @see html.html.twig
  */
 #}
-{# Dashboard page #}
+{# Instellingen page #}
 <div id="page-wrapper">
     <div id="page">
         <div id="main-wrapper" class="layout-main-wrapper clearfix">
@@ -78,11 +78,11 @@
                             <a id="main-content" tabindex="-1"></a>
                             <div class="d-md-flex h-100">
                                 {% include '@biodivPlatform/includes/menu/menu-dashboard.html.twig' with {} %}
-                               <div class="dashboard-content">
-                                   {#{{ page.content }}#}
-                                   {{ drupal_entity('block', 'recentclassesblock') }}
-                                   {{ drupal_entity('block', 'latestmodulesblock') }}
-                               </div>
+                                <div class="dashboard-content">
+                                    {#{{ page.content }}#}
+                                    {{ drupal_entity('block', 'featuredmoduleblock') }}
+                                    {{ drupal_entity('block', 'viewedmodulesblock') }}
+                                </div>
                             </div>
                         </section>
                     </main>
