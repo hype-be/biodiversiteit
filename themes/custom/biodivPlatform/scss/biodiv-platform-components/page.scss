@@ -101,6 +101,8 @@ body.page-platform {
     /*  position: relative;*/
   }
   &.menu-active {
-    margin-left: 270px;
+    .dashboard-content {
+      margin-left: 270px;
+    }
   }
 }
