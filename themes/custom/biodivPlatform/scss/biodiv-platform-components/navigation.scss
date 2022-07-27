@@ -1,6 +1,27 @@
 .menu-dashboard {
   position: relative;
+  padding: 100px 20px;
   ul {
     display: block;
+    li {
+      &.menu-item--active-trail {
+        a {
+          color: #D4FFBB;
+        }
+      }
+      a {
+        color: white;
+        font-size: 15px;
+        line-height: 33px;
+        font-weight: 400;
+        padding: 20px;
+        background: #0d4353;
+        border-radius: 13px;
+        margin-bottom: 18px;
+        &:hover {
+          color: #D4FFBB;
+        }
+      }
+    }
   }
 }
