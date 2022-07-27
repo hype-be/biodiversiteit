@@ -18,6 +18,7 @@
   $(".toggle-dashboard-menu").click(function(e) {
     e.preventDefault();
     $(".menu-dashboard").toggleClass("active");
+    $("body").toggleClass("menu-active");
   });
 
 })(jQuery, Drupal);
