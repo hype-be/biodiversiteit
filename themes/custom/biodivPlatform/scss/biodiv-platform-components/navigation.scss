@@ -11,17 +11,57 @@
         }
       }
       a {
-        color: white;
-        font-size: 15px;
-        line-height: 33px;
-        font-weight: 400;
-        padding: 20px;
         border-radius: 13px;
         margin-bottom: 18px;
         &:hover {
           color: #D4FFBB;
         }
+        &:before {
+          content: '';
+          display: block;
+          background-position: center;
+          margin-right: 30px;
+        }
+      }
+      .nav-link--platform-dashboard {
+        &:before {
+          background-image: url(/themes/custom/biodivPlatform/images/icons/dashboard/dashboard.svg);
+          width: 21px;
+          height: 24px;
+          background-size: 21px 24px;
+        }
+      }
+      .nav-link--platform-mijn-klassen {
+        &:before {
+          background-image: url(/themes/custom/biodivPlatform/images/icons/dashboard/klassen.svg);
+          width: 23px;
+          height: 21px;
+          background-size: 23px 21px;
+        }
+      }
+      .nav-link--platform-lesmodules {
+        &:before {
+          background-image: url(/themes/custom/biodivPlatform/images/icons/dashboard/klassen.svg);
+          width: 23px;
+          height: 21px;
+          background-size: 23px 21px;
+        }
+      }
+      .nav-link--platform-instellingen {
+        &:before {
+          background-image: url(/themes/custom/biodivPlatform/images/icons/dashboard/instellingen.svg);
+          width: 24px;
+          height: 24px;
+          background-size: 24px 24px;
+        }
       }
     }
+  }
+  ul li a, .link-user-logout {
+    color: white;
+    font-size: 0.9375rem;
+    line-height: 2.0625rem;
+    font-weight: 400;
+    padding: 20px;
   }
 }
