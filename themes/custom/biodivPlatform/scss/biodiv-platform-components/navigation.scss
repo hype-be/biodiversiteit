@@ -1,16 +1,37 @@
 .menu-dashboard {
   position: fixed;
   padding: 100px 20px;
-  /*width: 270px;*/
   width: auto;
-  min-width: 270px;
+ /* min-width: 270px;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  margin-left: -100%;
+  ul {
+    li {
+      a {
+        font-size: 0;
+      }
+    }
+  }
+  .user-profile-info {
+    display: none;
+  }
   &.active {
-    margin-left: 0;
+    min-width: 270px;
+    ul li a, .link-user-logout {
+      font-size: 15px;
+    }
+    ul {
+      li {
+        &.menu-item--active-trail a {
+          background: #0d4353;
+        }
+      }
+    }
+    .user-profile-info {
+      display: block;
+    }
   }
   .user-picture {
     margin-right: 13px;
@@ -41,7 +62,7 @@
       &.menu-item--active-trail {
         a {
           color: #D4FFBB;
-          background: #0d4353;
+          background: transparent;
         }
       }
       a {
@@ -94,8 +115,8 @@
     }
   }
   ul li a, .link-user-logout {
+    font-size: 0;
     color: white;
-    font-size: 0.9375rem;
     line-height: 2.0625rem;
     font-weight: 400;
     padding: 20px;
