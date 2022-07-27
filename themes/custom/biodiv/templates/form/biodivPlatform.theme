@@ -69,43 +69,55 @@ function biodivPlatform_theme_suggestions_page_alter(array &$suggestions, array 
     }
 }
 
+/**
+ * Implements hook_preprocess_user().
+ */
+/*function biodivPlatform_preprocess_user(&$variables) {
+  
+    $account = $variables['elements']['#user'];
+    $variables['username'] = $account->getDisplayName();
+
+    $user = \Drupal::entityTypeManager()->getStorage('user')->load($current_user->id());
+    \Drupal::logger('wimdebug2')->debug(print_r($user, true));
+}*/
+
 function biodivPlatform_preprocess_page(&$variables) {
+    /*$userCurrent = \Drupal::currentUser();
+    $uid = $userCurrent->id();*/
+
     $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
 
     if (!$user->user_picture->isEmpty()) {
-        $displayImg = file_create_url($user->user_picture->entity->getFileUri());
+      $displayImg = file_create_url($user->user_picture->entity->getFileUri());
     }else{
-        $displayImg = '';
-    }
+      $displayImg = '';    
+    } 
 
+    var_dump($user->user_picture->entity->uri->value);
     $uri = $user->user_picture->entity->uri->value;
-    $img_url = ImageStyle::load('56x56')->buildUrl($uri);
+    $style = \Drupal::entityTypeManager()->ImageStyle::load('56x56')->buildUrl($uri);    
+    /*$style = \Drupal::entityTypeManager()->getStorage('image_style')->load('56x56');*/
+    $img_url = $style->buildUrl($displayImg);
+    /*var_dump($img_url);*/
+    /*Drupal::logger('wimdebug2')->debug(print_r($img_url, true));*/
 
+    /*if (!$user->user_picture->isEmpty()) {
+      $user_img = file_create_url($user->user_picture->entity->getFileUri());
+    }else{
+      $user_img = '';    
+    } */
+
+    
+    /*$city = $user->field_city->value;*/
     $first_name = $user->field_first_name->value;
     $last_name = $user->field_last_name->value;
     $teaching_level = $user->field_teaching_level->value;
-    $teaching_level_name = '';
-
-    switch ($teaching_level) {
-        case 0:
-            $teaching_level_name = 'Basisonderwijs';
-            break;
-        case 1:
-            $teaching_level_name = 'Middelbaar onderwijs';
-            break;
-        case 2:
-            $teaching_level_name = 'Bijzonder onderwijs';
-        case 3:
-            $teaching_level_name = 'Andere (animator, sociaal werker,…)';
-            break;
-        default:
-            $teaching_level_name = 'Basisonderwijs';
-    }
 
     /*Drupal::logger('wimdebug2')->debug(print_r($city, true));*/
 
+    /*$variables['city'] = $city;*/
     $variables['picture'] = $img_url;
     $variables['firstName'] = $first_name;
     $variables['lastName'] = $last_name;
-    $variables['teachingLevel'] = $teaching_level_name;
+    $variables['teachingLevel'] = $teaching_level;
 }

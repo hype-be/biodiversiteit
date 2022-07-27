@@ -1,6 +1,30 @@
 .menu-dashboard {
   position: relative;
   padding: 100px 20px;
+  min-width: 270px;
+  .user-picture {
+    margin-right: 13px;
+  }
+  .user-info {
+    margin-bottom: 70px;
+    z-index: 1;
+    position: relative;
+    .user-name, .user-teaching-leve {
+      color: white;
+    }
+    .user-name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 33px;
+    }
+    .user-teaching-level {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      opacity: .6;
+      letter-spacing: 0.2px;
+    }
+  }
   ul {
     display: block;
     li {
@@ -66,4 +90,9 @@
     font-weight: 400;
     padding: 20px;
   }
+}
+
+.link-user-logout {
+  position: absolute;
+  bottom: 50px;
 }

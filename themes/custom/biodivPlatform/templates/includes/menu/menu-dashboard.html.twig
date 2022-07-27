@@ -1,5 +1,20 @@
 <div class="menu-dashboard h-100">
-    {{ username }}
+    <div class="user-info">
+        <div class="d-md-flex">
+            <div class="user-picture">
+                <img class="img-fluid rounded-circle" src="{{ picture }}" alt="">
+            </div>
+            <div>
+                <div class="user-name">
+                    {{- firstName }} {{ lastName -}}
+                </div>
+                <div class="user-teaching-level">
+                    {%- trans %}Leerkacht{% endtrans %} {{ teachingLevel -}}
+                </div>
+            </div>
+        </div>
+        {# {{ dd(user) }} #}
+    </div>
     <img class="img-fluid img-leaf-2" src="/themes/custom/biodivPlatform/images/leaf2.svg" alt="">
     <img class="img-fluid img-leaf-5" src="/themes/custom/biodivPlatform/images/leaf5.svg" alt="">
     {# Dashboard menu #}
