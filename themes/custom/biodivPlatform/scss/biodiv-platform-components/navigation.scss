@@ -7,6 +7,7 @@
       &.menu-item--active-trail {
         a {
           color: #D4FFBB;
+          background: #0d4353;
         }
       }
       a {
@@ -15,7 +16,6 @@
         line-height: 33px;
         font-weight: 400;
         padding: 20px;
-        background: #0d4353;
         border-radius: 13px;
         margin-bottom: 18px;
         &:hover {
