@@ -8,7 +8,7 @@ use Drupal\node\Entity\Node;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 use Drupal\Core\Form\FormStateInterface;
-
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_form_system_theme_settings_alter() for settings form.
@@ -64,4 +64,13 @@ function biodivPlatform_theme_suggestions_page_alter(array &$suggestions, array 
     if (isset($error)) {
         $suggestions[] = 'page__' . $error;
     }
+}
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function biodivPlatforme_preprocess_user(&$variables) {
+    /** @var User $account */
+    $account = $variables['elements']['#user'];
+    $variables['username'] = $account->getDisplayName();
 }
