@@ -1,9 +1,9 @@
-<div class="menu-dashboard h-100">
+<div class="menu-dashboard active h-100">
     <img class="img-fluid img-leaf-2" src="/themes/custom/biodivPlatform/images/leaf2.svg" alt="">
     <img class="img-fluid img-leaf-5" src="/themes/custom/biodivPlatform/images/leaf5.svg" alt="">
     <div class="menu-dashboard-top">
         <div class="user-info">
-            <div class="d-md-flex align-items-center">
+            <a href="/user" class="link-user-account d-md-flex align-items-center">
                 <div class="user-picture">
                     <img class="img-fluid rounded-circle" src="{{ picture }}" alt="">
                 </div>
@@ -15,7 +15,7 @@
                         {%- trans %}Leerkacht{% endtrans %} <div class="text-lowercase">{{ teachingLevel -}}</div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
         {# Dashboard menu #}
         {{ drupal_entity('block', 'platformnavigation') }}

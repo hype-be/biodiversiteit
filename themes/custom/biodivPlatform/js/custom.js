@@ -15,4 +15,9 @@
     }
   };
 
+  $(".toggle-dashboard-menu").click(function(e) {
+    e.preventDefault();
+    $(".menu-dashboard").toggleClass("active");
+  });
+
 })(jQuery, Drupal);
