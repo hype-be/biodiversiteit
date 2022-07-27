@@ -1,23 +1,27 @@
 <div class="menu-dashboard h-100">
-    <div class="user-info">
-        <div class="d-md-flex">
-            <div class="user-picture">
-                <img class="img-fluid rounded-circle" src="{{ picture }}" alt="">
-            </div>
-            <div>
-                <div class="user-name">
-                    {{- firstName }} {{ lastName -}}
-                </div>
-                <div class="user-teaching-level">
-                    {%- trans %}Leerkacht{% endtrans %} {{ teachingLevel -}}
-                </div>
-            </div>
-        </div>
-        {# {{ dd(user) }} #}
-    </div>
     <img class="img-fluid img-leaf-2" src="/themes/custom/biodivPlatform/images/leaf2.svg" alt="">
     <img class="img-fluid img-leaf-5" src="/themes/custom/biodivPlatform/images/leaf5.svg" alt="">
-    {# Dashboard menu #}
-    {{ drupal_entity('block', 'platformnavigation') }}
-    <a class="link-user-logout" href="/user/logout">{% trans %}Uitloggen{% endtrans %}</a>
+    <div class="menu-dashboard-top">
+        <div class="user-info">
+            <div class="d-md-flex align-items-center">
+                <div class="user-picture">
+                    <img class="img-fluid rounded-circle" src="{{ picture }}" alt="">
+                </div>
+                <div>
+                    <div class="user-name">
+                        {{- firstName }} {{ lastName -}}
+                    </div>
+                    <div class="user-teaching-level">
+                        {%- trans %}Leerkacht{% endtrans %} {{ teachingLevel -}}
+                    </div>
+                </div>
+            </div>
+            {# {{ dd(user) }} #}
+        </div>
+        {# Dashboard menu #}
+        {{ drupal_entity('block', 'platformnavigation') }}
+    </div>
+    <div class="menu-dashboard-bottom">
+        <a class="link-user-logout" href="/user/logout">{% trans %}Uitloggen{% endtrans %}</a>
+    </div>
 </div>

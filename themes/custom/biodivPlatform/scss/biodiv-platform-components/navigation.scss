@@ -2,6 +2,9 @@
   position: relative;
   padding: 100px 20px;
   min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .user-picture {
     margin-right: 13px;
   }
@@ -92,7 +95,7 @@
   }
 }
 
-.link-user-logout {
+/*.link-user-logout {
   position: absolute;
   bottom: 50px;
-}
+}*/
