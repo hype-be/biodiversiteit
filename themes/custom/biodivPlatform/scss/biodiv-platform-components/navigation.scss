@@ -79,6 +79,9 @@
         a {
           color: #D4FFBB;
           background: transparent;
+          &:before {
+            filter: brightness(0) saturate(100%) invert(87%) sepia(22%) saturate(425%) hue-rotate(53deg) brightness(104%) contrast(105%);
+          }
         }
       }
       a {
@@ -89,6 +92,9 @@
         justify-content: center;
         &:hover {
           color: #D4FFBB;
+          &:before {
+            filter: brightness(0) saturate(100%) invert(87%) sepia(22%) saturate(425%) hue-rotate(53deg) brightness(104%) contrast(105%);
+          }
         }
         &:before {
           content: '';
