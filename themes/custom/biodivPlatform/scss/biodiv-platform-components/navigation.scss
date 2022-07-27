@@ -7,18 +7,14 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  ul {
-    li {
-      a {
-        font-size: 0;
-      }
-    }
-  }
-  .user-profile-info {
-    display: none;
-  }
   &.active {
     min-width: 270px;
+    .user-picture {
+      margin-right: 13px;
+    }
+    .link-user-account {
+      justify-content: flex-start;
+    }
     ul li a, .link-user-logout {
       font-size: 15px;
     }
@@ -27,10 +23,29 @@
         &.menu-item--active-trail a {
           background: #0d4353;
         }
+        a {
+          justify-content: flex-start;
+        }
       }
     }
     .user-profile-info {
       display: block;
+    }
+  }
+  .user-picture {
+    margin-right: 0;
+  }
+  .link-user-account {
+    justify-content: center;
+  }
+  .user-profile-info {
+    display: none;
+  }
+  ul {
+    li {
+      a {
+        font-size: 0;
+      }
     }
   }
   .user-picture {
@@ -70,6 +85,7 @@
         margin-bottom: 18px;
         display: flex;
         align-items: center;
+        justify-content: center;
         &:hover {
           color: #D4FFBB;
         }
