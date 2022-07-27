@@ -57,12 +57,17 @@ html.platform, body.page-platform {
   }
   .img-leaf-5 {
     /*top: 881px;*/
-    bottom: 0;
+    bottom: 140px;
+    right: -30px;
   }
 }
 
 body.page-platform {
-  background-color: #00394a;
+  .menu-dashboard {
+    background-color: #00394a;
+    background: url(/themes/custom/biodiv/images/dashboard-leaves.svg), linear-gradient(45deg, #00394a, #00394a) no-repeat;
+    background-size: contain;
+  }
   .block-system-main-block {
     padding-left: 0;
     padding-right: 0;
@@ -73,10 +78,10 @@ body.page-platform {
   }
 }
 
-.page-platform {
+/*.page-platform {
   background: url(/themes/custom/biodiv/images/dashboard-leaves.svg), linear-gradient(45deg, #00394a, #00394a) no-repeat;
   background-size: contain;
-}
+}*/
 
 .page-platform form {
   input {
@@ -92,6 +97,7 @@ body.page-platform {
   background: white;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  margin-left: 270px;
   /*margin-left: auto;*/
   /*display: flex;
   flex-direction: column;

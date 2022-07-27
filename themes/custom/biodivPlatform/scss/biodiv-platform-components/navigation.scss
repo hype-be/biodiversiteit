@@ -1,6 +1,8 @@
 .menu-dashboard {
-  position: relative;
+  position: fixed;
   padding: 100px 20px;
+  /*width: 270px;*/
+  width: auto;
   min-width: 270px;
   display: flex;
   flex-direction: column;
