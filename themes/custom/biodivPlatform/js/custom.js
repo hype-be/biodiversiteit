@@ -67,22 +67,18 @@
         dots: true
       });
 
+      // Show close button when last slide is active
       var slideAmount = $(".modal-slider .field--name-field-modal-slide.field__items").slick("getSlick").slideCount-1;
-      /*console.log(slideAmount);*/
 
       $('.modal-slider .field--name-field-modal-slide.field__items').on('afterChange', function(event, slick, currentSlide){
         if(currentSlide === slideAmount ) {
-          console.log('Last slide');
           $('.modal-slider-next').hide();
           $('.modal-slider-final').show();
+        } else {
+          $('.modal-slider-final').hide();
+          $('.modal-slider-next').show();
         }
       });
-
-
-      /* var sliderNextText = $('.modal-slider-next').text();
-       if (currentSlide === slideAmount) {
-         sliderNextText.text('Aan de slag');
-       }*/
 
       $('.modal-slider').show();
     });
