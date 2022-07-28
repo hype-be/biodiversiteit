@@ -81,8 +81,56 @@
                                 <div class="dashboard-content">
                                     {#{{ page.content }}#}
                                     <button class="toggle-dashboard-menu">Toggle menu</button>
-                                    {{ drupal_entity('block', 'featuredmoduleblock') }}
-                                    {{ drupal_entity('block', 'viewedmodulesblock') }}
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1>{% trans %}Instellingen{% endtrans %}</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <h2>{% trans %}Mijn profiel{% endtrans %}</h2>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="user-picture">
+                                                    {{ content.user_picture }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="user-name">
+                                                    {% trans %}Naam:{% endtrans %} {{ content.field_first_name|render|striptags|trim }} {{ content.field_last_name|render|striptags|trim }}
+                                                </div>
+                                                <div class="user-address">
+                                                    {% trans %}Adres:{% endtrans %} {{ content.field_street|render|striptags|trim }}, {{ content.field_postal_code|render|striptags|trim }} {{ content.field_city|render|striptags|trim }}
+                                                </div>
+                                                <div class="user-mail">
+                                                    {% trans %}E-mail:{% endtrans %} {{ user.mail.value }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <h2>{% trans %}Mijn scholen/organisaties{% endtrans %}</h2>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="user-school">
+                                                    {{ content.field_teacher_school }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <h2>{% trans %}Mijn voorkeuren{% endtrans %}</h2>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="user-school">
+                                                    {{ user.langcode.value }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
