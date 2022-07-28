@@ -98,13 +98,13 @@
                                             </div>
                                             <div class="col-md-10">
                                                 <div class="user-name">
-                                                    {% trans %}Naam:{% endtrans %} {{ content.field_first_name|render|striptags|trim }} {{ content.field_last_name|render|striptags|trim }}
+                                                    {% trans %}Naam:{% endtrans %} {{ firstName }} {{ lastName }}
                                                 </div>
                                                 <div class="user-address">
-                                                    {% trans %}Adres:{% endtrans %} {{ content.field_street|render|striptags|trim }}, {{ content.field_postal_code|render|striptags|trim }} {{ content.field_city|render|striptags|trim }}
+                                                    {% trans %}Adres:{% endtrans %} {{ street }}, {{ postal_code }} {{ city }}
                                                 </div>
                                                 <div class="user-mail">
-                                                    {% trans %}E-mail:{% endtrans %} {{ user.mail.value }}
+                                                    {% trans %}E-mail:{% endtrans %} {{ userEmail }}
                                                 </div>
                                             </div>
                                         </div>
@@ -114,8 +114,11 @@
                                         <h2>{% trans %}Mijn scholen/organisaties{% endtrans %}</h2>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="user-school">
-                                                    {{ content.field_teacher_school }}
+                                                <div class="user-school fw-bold">
+                                                    {{ school }}
+                                                </div>
+                                                <div class="user-school-address">
+                                                    {{ schoolStreet }}, {{ schoolPostalCode }} {{ schoolCity }}
                                                 </div>
                                             </div>
                                         </div>
@@ -125,9 +128,14 @@
                                         <h2>{% trans %}Mijn voorkeuren{% endtrans %}</h2>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="user-school">
-                                                    {{ user.langcode.value }}
-                                                </div>
+                                                <label for="userLang" class="form-label">
+                                                    {% trans %}Taal{% endtrans %}
+                                                </label>
+                                                <select name="userLang" class="form-select" aria-label="Lang select">
+                                                    <option value="{{ userLang }}" selected>{{ userLang }}</option>
+                                                    <option value="{{ langSecond }}">{{ langSecond }}</option>
+                                                    <option value="{{ langThird }}">{{ langThird }}</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
