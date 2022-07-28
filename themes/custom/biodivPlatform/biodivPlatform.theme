@@ -71,6 +71,7 @@ function biodivPlatform_theme_suggestions_page_alter(array &$suggestions, array 
 
 function biodivPlatform_preprocess_page(&$variables) {
     $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $user_id = Drupal::currentUser()->id();
 
     if (!$user->user_picture->isEmpty()) {
         $displayImg = file_create_url($user->user_picture->entity->getFileUri());
@@ -103,7 +104,7 @@ function biodivPlatform_preprocess_page(&$variables) {
     }
 
     /*Drupal::logger('wimdebug2')->debug(print_r($city, true));*/
-
+    $variables['userId'] = $user_id;
     $variables['picture'] = $img_url;
     $variables['firstName'] = $first_name;
     $variables['lastName'] = $last_name;
