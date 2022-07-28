@@ -147,5 +147,11 @@
 }
 
 .link-user-logout {
-  margin-left: 55px;
+  /*margin-left: 55px;*/
+  &:before {
+    background-image: url(/themes/custom/biodivPlatform/images/icons/dashboard/logout.svg);
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
 }
