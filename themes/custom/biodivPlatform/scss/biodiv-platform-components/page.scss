@@ -95,11 +95,11 @@ body.page-platform {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     margin-left: 96px;
+    position: relative;
     /*margin-left: auto;*/
     /*display: flex;
     flex-direction: column;
     justify-content: center;*/
-    /*  position: relative;*/
   }
   &.menu-active {
     .dashboard-content {
