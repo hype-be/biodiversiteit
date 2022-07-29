@@ -4,6 +4,7 @@ global-styling:
     js/bootstrap.min.js: {}
     js/barrio.js: {}
     slick/slick.min.js: {}
+    js/js.cookie.min.js: {}
     js/custom.js: {}
   css:
     component:

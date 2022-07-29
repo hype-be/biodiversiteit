@@ -139,7 +139,23 @@ function biodivPlatform_theme_suggestions_page_alter(array &$suggestions, array 
     }
 }
 
+
+/*function biodivPlatform_preprocess_node(&$variables) {
+  // Get the node ID.
+  $nid = $variables['nodeId']->id();
+}
+*/
 function biodivPlatform_preprocess_page(&$variables) {
+    // Get the node ID.
+    $route_name = \Drupal::routeMatch()->getRouteName();
+    if ($route_name == 'entity.node.canonical') {
+        $entity = \Drupal::routeMatch()->getParameter('node');
+        if ($entity instanceof \Drupal\node\NodeInterface) {
+            $nid = $entity->id();
+            $variables['nodeId'] = $nid;
+        }
+    }
+
     $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
     $current_user = \Drupal::currentUser();
     $user_id = \Drupal::currentUser()->id();
@@ -159,6 +175,8 @@ function biodivPlatform_preprocess_page(&$variables) {
 
     $uri = $user->user_picture->entity->uri->value;
     $img_url = ImageStyle::load('56x56')->buildUrl($uri);
+    $img_url_lg = ImageStyle::load('170x170')->buildUrl($uri);
+
 
     $first_name = $user->field_first_name->value;
     $last_name = $user->field_last_name->value;
@@ -169,15 +187,22 @@ function biodivPlatform_preprocess_page(&$variables) {
     $postal_code = $user->field_postal_code->value;
     $city = $user->field_city->value;
 
-    if($user->field_teacher_school->entity) {
-        $school = $user->field_teacher_school->entity->getTitle();
+    $schools = [];
+    // get all values of referenced field
+    foreach ($user->field_teacher_school->getValue() as $val) {
+        // load node of referenced field by ID
+        $node = Node::load($val['target_id']);
+        if ($node) {
+            $schools[] = [
+                'id' => $val['target_id'],
+                'title' => $node->getTitle(),
+                'street' => $node->field_school_address->value,
+                'postal' => $node->field_school_postal_code->value,
+                'city' => $node->field_school_city->value
+            ];
+        }
     }
-
-    $school_street = $user->field_teacher_school->entity->field_school_address->value;
-    $school_postal_code = $user->field_teacher_school->entity->field_school_postal_code->value;
-    $school_city = $user->field_teacher_school->entity->field_school_city->value;
-
-
+    \Drupal::logger('wimdebug2')->debug(print_r($schools, true));
     switch ($teaching_level) {
         case 0:
             $teaching_level_name = 'Basisonderwijs';
@@ -203,6 +228,7 @@ function biodivPlatform_preprocess_page(&$variables) {
     $variables['langThird'] = $lang_third;
 
     $variables['picture'] = $img_url;
+    $variables['picture_lg'] = $img_url_lg;
     $variables['firstName'] = $first_name;
     $variables['lastName'] = $last_name;
     $variables['teachingLevel'] = $teaching_level_name;
@@ -210,8 +236,5 @@ function biodivPlatform_preprocess_page(&$variables) {
     $variables['street'] = $street;
     $variables['postalCode'] = $postal_code;
     $variables['city'] = $city;
-    $variables['school'] = $school;
-    $variables['schoolStreet'] = $school_street;
-    $variables['schoolPostalCode'] = $school_postal_code;
-    $variables['schoolCity'] = $school_city;
+    $variables['schools'] = $schools;
 }
