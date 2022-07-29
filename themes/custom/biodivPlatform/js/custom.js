@@ -122,7 +122,7 @@
         const toastTrigger = document.getElementById(bntEl);
         const toastMessage = document.getElementById(toastEl);
         const toastTriggerText = document.getElementById(bntEl).getAttribute('data-toast-message');
-        console.log(toastTriggerText);
+        /*console.log(toastTriggerText);*/
         if (toastTrigger) {
           toastTrigger.addEventListener('click', () => {
             const toast = new bootstrap.Toast(toastMessage);
