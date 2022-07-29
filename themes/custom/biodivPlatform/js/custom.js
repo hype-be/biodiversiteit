@@ -117,23 +117,24 @@
     }
 
     // Trigger toasts
-    function showToast(bntEl, toastEl) {
-      const toastTrigger = document.getElementById(bntEl);
-      const toastMessage = document.getElementById(toastEl);
-      const toastTriggerText = document.getElementById(bntEl).getAttribute('data-toast-message');
-      console.log(toastTriggerText);
-      if (toastTrigger) {
-        toastTrigger.addEventListener('click', () => {
-          const toast = new bootstrap.Toast(toastMessage);
-          toast.show();
-          $(toastMessage).find('.toast-body').text(toastTriggerText);
-        })
+    if($('.toast').length) {
+      function showToast(bntEl, toastEl) {
+        const toastTrigger = document.getElementById(bntEl);
+        const toastMessage = document.getElementById(toastEl);
+        const toastTriggerText = document.getElementById(bntEl).getAttribute('data-toast-message');
+        console.log(toastTriggerText);
+        if (toastTrigger) {
+          toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastMessage);
+            toast.show();
+            $(toastMessage).find('.toast-body').text(toastTriggerText);
+          })
+        }
       }
+      showToast('user-save', 'toast-settings');
+      showToast('school-save', 'toast-settings');
+      showToast('school-delete', 'toast-settings');
     }
-
-    showToast('user-save', 'toast-settings');
-    showToast('school-save', 'toast-settings');
-    showToast('school-delete', 'toast-settings');
 
 
   });
