@@ -80,7 +80,7 @@
                                 {% include '@biodivPlatform/includes/menu/menu-dashboard.html.twig' with {} %}
                                 <div class="dashboard-content">
                                     {#{{ page.content }}#}
-                                    <button class="toggle-dashboard-menu">Toggle menu</button>
+                                    {% include '@biodivPlatform/includes/menu/btn-toggle-menu.html.twig' with {} %}
                                     {{ drupal_entity('block', 'recentclassesblock') }}
                                     {{ drupal_entity('block', 'allclassesblock') }}
                                 </div>

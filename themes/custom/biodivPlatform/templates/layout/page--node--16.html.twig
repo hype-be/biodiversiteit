@@ -98,7 +98,7 @@
                                         </div>
                                     </div>
 
-                                    <button class="toggle-dashboard-menu">Toggle menu</button>
+                                    {% include '@biodivPlatform/includes/menu/btn-toggle-menu.html.twig' with {} %}
                                     {{ drupal_entity('block', 'recentclassesblock') }}
                                     {{ drupal_entity('block', 'latestmodulesblock') }}
                                 </div>
